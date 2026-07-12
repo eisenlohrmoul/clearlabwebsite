@@ -323,19 +323,4 @@
 
     </div>
   </section>
-</div>
-<script>
-addEventListener('load', () => {
-  (async () => {
-    try { await document.fonts.ready; } catch (e) {}
-    const imgs = Array.from(document.images).filter((i) => !i.complete);
-    await Promise.race([
-      Promise.allSettled(imgs.map((i) => i.decode())),
-      new Promise((r) => setTimeout(r, 8000)),
-    ]);
-    setTimeout(() => window.print(), 500);
-  })();
-});
-</script>
-
-<div style="--pseudo-background: rgba(235, 233, 67, 0.37); background-color: rgba(235, 233, 67, 0.37); height: 20px; display: none;"></div></body></html>
+</div></body></html>

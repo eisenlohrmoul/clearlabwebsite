@@ -47,6 +47,12 @@ c = re.sub(r'<link[^>]*href="assets/css2"[^>]*>', gfonts, c)
 # drop the one leftover extension highlight div class token
 c = re.sub(r'(\sclass="[^"]*?)\bcmVhZGVyLWxpbmU\w*\b([^"]*")', r"\1\2", c).replace(' class=""', '')
 
+# drop the auto-print script the PRINT export injects (calls window.print() on load) — this is
+# a website, not a printout, so it must NOT pop the print dialog. Also drop the trailing
+# extension highlight div (a display:none leftover).
+c = re.sub(r"\s*<script>\s*addEventListener\('load'.*?window\.print\(\).*?</script>", "", c, flags=re.S)
+c = re.sub(r'\s*<div style="--pseudo-background:[^"]*"[^>]*></div>', "", c)
+
 open(OUT, "w", encoding="utf-8").write(c)
 
 # sanity checks — fail loudly if the extraction didn't come out clean

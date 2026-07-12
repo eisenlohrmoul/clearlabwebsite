@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240">
+      <defs><clipPath id="bclip"><circle cx="120" cy="120" r="116"></circle></clipPath></defs>
+      <g clip-path="url(#bclip)">
+        <circle cx="120" cy="120" r="116" fill="#1a2b3d"></circle>
+        <circle cx="120" cy="88" r="37" fill="#fbca0e"></circle>
+        <polygon points="62,90 101.68,218 22.32,218" fill="#cc0001"></polygon><polygon points="120,56 172.07999999999998,224 67.92,224" fill="#f5efe2"></polygon><polygon points="178,82 220.16,218 135.84,218" fill="#fbca0e"></polygon>
+      </g>
+      <circle cx="120" cy="120" r="116" fill="none" stroke="#0e1a26" stroke-width="2" opacity="0.18"></circle>
+    </svg>

@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html style="color-scheme: light;">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<style data-omelette-injected="">html,body{background:transparent}</style><script data-omelette-injected="">(()=>{{const W=new URLSearchParams(location.search).get("theme");if(W==="light"||W==="dark"){document.documentElement.dataset.theme=W}}{const W=()=>{try{if(document.querySelector('meta[name="color-scheme"]'))return;const V=getComputedStyle(document.documentElement).getPropertyValue("color-scheme").trim();if(V&&V!=="normal")return;const z=(j)=>{if(!j)return null;const H=getComputedStyle(j).backgroundColor.match(/^rgba?\(\s*(\d+)[,\s]+(\d+)[,\s]+(\d+)(?:[,\s/]+([\d.]+%?))?\s*\)$/);if(!H)return null;const F=H[4]==null?1:parseFloat(H[4])/(H[4].endsWith("%")?100:1);if(F<0.99)return null;return[+H[1],+H[2],+H[3]]};const G=z(document.body)||z(document.documentElement);if(!G)return;const K=(j)=>{const H=j/255;return H<=0.04045?H/12.92:((H+0.055)/1.055)**2.4};const D=0.2126*K(G[0])+0.7152*K(G[1])+0.0722*K(G[2]);document.documentElement.style.setProperty("color-scheme",D<0.4?"dark":"light")}catch{}};if(document.readyState==="complete")W();else window.addEventListener("load",W)}var b=["https://claude.ai","https://preview.claude.ai","https://4e012fd4-14bf-40fa-a4f3-06c269808cdf.claudeusercontent.com"];var p=true;var O=30000;var n=3000;document.addEventListener("DOMContentLoaded",()=>{const W=window.Babel;const V="om-src-id";if(W&&W.registerPlugin&&!(W.availablePlugins&&W.availablePlugins[V])){W.registerPlugin(V,({types:D})=>({visitor:{JSXOpeningElement(j,H){const F=j.node;if(F.name&&F.name.type==="JSXMemberExpression")return;for(let Q=0;Q<F.attributes.length;Q++){const $=F.attributes[Q];if($.type==="JSXAttribute"&&$.name&&$.name.name==="data-om-id")return}const P=H.file&&H.file.opts&&H.file.opts.filename||"?";const R=F.loc&&F.loc.start;const J=`jsx:${P}:${F.start??0}:${R?R.line:0}:${R?R.column+1:0}`;F.attributes.push(D.jsxAttribute(D.jsxIdentifier("data-om-id"),D.stringLiteral(J)))}}}))}const z="om-text-extract";let G=false;if(p&&W&&W.registerPlugin&&!(W.availablePlugins&&W.availablePlugins[z])){const D=window.React;if(D&&D.useSyncExternalStore&&D.createElement){G=true;const j={};const H=new Set;let F=0;window.__omTextO=j;window.__omTextSet=(J)=>{for(const Q in J){const $=J[Q];if($==null)delete j[Q];else j[Q]=$}F++;H.forEach((Q)=>Q())};const P=(J)=>{H.add(J);return()=>H.delete(J)};const R=()=>F;window.__OmT=function J(Q){D.useSyncExternalStore(P,R,R);return D.createElement("span",{"data-om-text":Q.i,className:"__om-t"},Q.i in j?j[Q.i]:Q.children)};W.registerPlugin(z,({types:J})=>{const Q={style:1,script:1,noscript:1,textarea:1,title:1,option:1,text:1,tspan:1,textPath:1};const $={placeholder:1,alt:1,title:1,label:1,"aria-label":1,"aria-description":1,"aria-placeholder":1};const Y=(q,M)=>J.logicalExpression("??",J.memberExpression(J.logicalExpression("||",J.memberExpression(J.identifier("window"),J.identifier("__omTextO")),J.objectExpression([])),J.stringLiteral(q),true),M);const Z=(q)=>q.file&&q.file.opts&&q.file.opts.filename||"?";const B=(q)=>q.file&&q.file.code||"";const U=(q,M)=>{const L=(X)=>X&&X.start!=null&&X.end!=null&&(X.type==="StringLiteral"||X.type==="TemplateLiteral"&&X.expressions.length===0)?[X.start,X.end]:null;const N=L(M);if(N)return N;if(M&&M.type==="Identifier"){const X=q.scope.getBinding(M.name);if(X&&X.constant&&X.path.node.type==="VariableDeclarator"){return L(X.path.node.init)}}return null};const x=(q,M,L)=>{const N=q.node;let X=false;const f=(w,A)=>{X=true;return J.jsxElement(J.jsxOpeningElement(J.jsxIdentifier("__OmT"),[J.jsxAttribute(J.jsxIdentifier("i"),J.stringLiteral(w))],false),J.jsxClosingElement(J.jsxIdentifier("__OmT")),[A],false)};const C=N.children.map((w)=>{if(w.type==="JSXText"){if(w.start==null||w.end==null)return w;const A=L.slice(w.start,w.end);const k=A.length-A.trimStart().length;const u=A.length-A.trimEnd().length;if(k+u>=A.length)return w;return f(`txt:${M}:${w.start+k}:${w.end-u}`,w)}if(w.type==="JSXExpressionContainer"){const A=U(q,w.expression);if(A)return f(`str:${M}:${A[0]}:${A[1]}`,w)}return w});if(X)N.children=C};return{visitor:{JSXOpeningElement(q,M){const L=q.node;const N=Z(M);const X={};for(let f=0;f<L.attributes.length;f++){const C=L.attributes[f];if(C.type!=="JSXAttribute"||!C.name)continue;const w=C.name.name;if(!$[w])continue;if(!C.value||C.value.type!=="StringLiteral")continue;if(C.value.start==null||C.value.end==null)continue;const A=`txt:${N}:${C.value.start}:${C.value.end}`;X[w]=A;C.value=J.jsxExpressionContainer(Y(A,J.stringLiteral(C.value.value)))}if(Object.keys(X).length){L.attributes.push(J.jsxAttribute(J.jsxIdentifier("data-om-text-attrs"),J.stringLiteral(JSON.stringify(X))))}},JSXElement(q,M){const L=q.node.openingElement;const N=L&&L.name&&L.name.name;if(N==="__OmT")return;if(typeof N==="string"&&Q[N])return;x(q,Z(M),B(M))},JSXFragment(q,M){x(q,Z(M),B(M))}}}})}}const K=G?["transform-react-jsx-source",V,z]:["transform-react-jsx-source",V];document.querySelectorAll('script[type="text/babel"],script[type="text/jsx"]').forEach((D,j)=>{const H=D.getAttribute("data-plugins")||"";const F=K.filter((P)=>H.indexOf(P)<0);if(F.length){D.setAttribute("data-plugins",H?`${H},${F.join(",")}`:F.join(","))}if(!D.hasAttribute("data-filename")){D.setAttribute("data-filename",D.getAttribute("src")||`inline-${j}`)}})});var v=window.parent;var g="not editable here — open the project in the Claude Design editor to save";var d=()=>Promise.resolve({persisted:false,noHost:true,reason:g});var S=d;var h="data/storage.json";var i=()=>{try{const W=new URL(document.baseURI);const V=W.pathname.match(/\/projects\/([^/]+)\/serve\//);if(V)return V[1];return W.hostname.split(".")[0]||""}catch{return location.hostname.split(".")[0]||""}};var o=()=>{try{const W=new URL(document.baseURI);const V=W.pathname.indexOf("/serve/");if(V>=0)return W.origin+W.pathname.slice(0,V+"/serve/".length)+h}catch{}return"./"+h};var I=null;var _=()=>{if(!I){I=fetch(o(),{cache:"no-store"}).then((W)=>{if(W.ok)return W.text();return W.status===404?"":null}).catch(()=>null).then((W)=>{if(W===null){I=null;return null}const V=new Map;if(!W)return V;let z;try{z=JSON.parse(W)}catch{console.warn("[omelette.storage] "+h+" is not valid JSON; treating the store as unreadable so a save cannot overwrite the "+"hand-edited bytes. Fix the JSON (or delete the file) to re-enable persistence.");I=null;return null}if(z===null||typeof z!=="object"||Array.isArray(z)){console.warn("[omelette.storage] "+h+" doesn't hold a JSON object; treating the store as unreadable so a save cannot "+"overwrite the hand-edited bytes. Make the top level a JSON object to re-enable persistence.");I=null;return null}const G=z;if("data"in G){const K=G.data;if(K===null||typeof K!=="object"||Array.isArray(K)){console.warn("[omelette.storage] "+h+' has a "data" field that is not a JSON object; treating the store as unreadable so a '+'save cannot overwrite the hand-edited bytes. Make "data" a JSON object to re-enable persistence.');I=null;return null}const D=G._meta;const j=D!==null&&typeof D==="object"?D.project:undefined;if(typeof j==="string"&&j!==""&&j!==i())return V;for(const H of Object.keys(K))V.set(H,K[H]);return V}for(const K of Object.keys(G)){if(K!=="_meta")V.set(K,G[K])}return V})}return I};var y=(W)=>S(h,JSON.stringify({_meta:{project:i(),version:1},data:Object.fromEntries(W)},null,2));var m=Promise.resolve();var T=(W)=>{const V=m.then(W);m=V.then(()=>{return},()=>{return});return V};var s=/sk-(?:ant-)?[A-Za-z0-9_-]{16,}|AKIA[0-9A-Z]{16}|gh[pousr]_[A-Za-z0-9]{20,}|xox[a-z]-[A-Za-z0-9][A-Za-z0-9-]{9,}|AIza[0-9A-Za-z_-]{30,}|-----BEGIN [A-Z ]*PRIVATE KEY-----/;var a=/password|passwd|secret|api[_-]?key|access[_-]?token|auth[_-]?token|credential/i;var r=(W,V,z)=>{if(s.test(V)||a.test(W)&&typeof z==="string"&&z.length>=8){console.warn('[omelette.storage] the value for "'+W+'" looks like a credential. The storage file is a plaintext project file — visible to '+"everyone with project access and copied when the project is duplicated. Do not store secrets here.")}};var l={persisted:false,reason:"could not load the existing store — not overwriting it"};var c={persisted:false,reason:"stored value changed since a failed read — re-read this key before saving"};var E=new Set;var t={get:(W)=>{if(typeof W!=="string"){return Promise.reject(new TypeError("storage.get: key must be a string"))}return T(_).then((V)=>{if(V===null){E.add(W);return null}E.delete(W);if(!V.has(W))return null;const z=V.get(W);return z==null?null:JSON.parse(JSON.stringify(z))})},set:(W,V)=>{if(typeof W!=="string"){return Promise.reject(new TypeError("storage.set: key must be a string"))}let z;try{z=JSON.stringify(V)}catch(K){return Promise.reject(new TypeError("storage.set: value must be JSON-serializable ("+String(K)+")"))}if(z===undefined){return Promise.reject(new TypeError("storage.set: value must be JSON-serializable"))}r(W,z,V);const G=JSON.parse(z);return T(()=>_().then((K)=>{if(K===null)return l;if(E.has(W)){if(K.has(W))return c;E.delete(W)}K.set(W,G);return y(K)}))},delete:(W)=>{if(typeof W!=="string"){return Promise.reject(new TypeError("storage.delete: key must be a string"))}return T(()=>_().then((V)=>{if(V===null)return l;if(E.has(W)){if(V.has(W))return c;E.delete(W)}V.delete(W);return y(V)}))},keys:()=>T(_).then((W)=>W===null?[]:Array.from(W.keys()))};window.omelette={writeFile:(W,V)=>S(W,V).then((z)=>{if(!z.persisted&&!z.noHost){throw new Error(z.reason||"write failed")}}),storage:t};if(v&&v!==window){const W=(J,Q)=>{try{v.postMessage({__omelette_log:true,type:J,data:Q},"*")}catch{}};["log","warn","error"].forEach((J)=>{const Q=console[J];console[J]=(...$)=>{const Y=$.map((Z)=>{try{return typeof Z==="object"?JSON.stringify(Z):String(Z)}catch{try{return String(Z)}catch{return"[unstringifiable]"}}}).join(" ");W(J,Y);Q.apply(console,$)}});window.addEventListener("error",(J)=>{const Q=J.target;if(Q&&Q!==window&&Q.tagName){const $=Q.src||Q.href||"";W("resource_error",`${Q.tagName} failed to load: ${$}`)}else{W("error",`${J.message||"Unknown error"} at ${J.filename||"?"}:${J.lineno||0}:${J.colno||0}`)}},true);window.addEventListener("unhandledrejection",(J)=>{const Q=J.reason;const $=Q instanceof Error?`${Q.message} ${Q.stack}`:String(Q);W("error",`Unhandled rejection: ${$}`)});window.addEventListener("click",(J)=>{if(J.defaultPrevented||J.button!==0)return;if(J.metaKey||J.ctrlKey||J.shiftKey||J.altKey)return;const Q=J.composedPath?J.composedPath():[];const $=["button","input","select","textarea","summary","label"];let Y=null;for(const x of Q){if(!(x instanceof Element))continue;if(x.localName==="a"){if(!(x instanceof HTMLAnchorElement))return;Y=x;break}if($.indexOf(x.localName)!==-1)return}if(!Y)return;if(Y.isContentEditable)return;const Z=Y.closest("[contenteditable]");if(Z&&Z.getAttribute("contenteditable")!=="false")return;const B=(Y.getAttribute("target")||"_self").toLowerCase();if(B!=="_self"&&B!=="_top"&&B!=="_parent")return;let U;try{U=new URL(Y.href)}catch{return}if(U.protocol!=="http:"&&U.protocol!=="https:")return;if(location.origin==="null")return;if(U.origin===location.origin)return;J.preventDefault();window.open(U.href,"_blank","noopener,noreferrer")});const V=()=>{try{v.postMessage({type:"omelette:height",height:document.documentElement.scrollHeight},"*")}catch{}};if(window.ResizeObserver)new ResizeObserver(V).observe(document.documentElement);const z=()=>{V();if(!document.querySelector('script[type="text/babel"],script[type="text/jsx"]'))return;const J=()=>document.getElementById("root")||document.querySelector("body > div[id]");const Q=J()?.firstElementChild??null;let $=0;const Y=()=>{const Z=J();if(Z&&Z.firstElementChild!==Q||++$>30){V();return}setTimeout(Y,100)};setTimeout(Y,100)};if(document.readyState==="complete")z();else window.addEventListener("load",z);const G={};let K=0;const D=(J)=>new Promise((Q,$)=>{if(!b.length){$(new Error("claude.complete: no parent origin"));return}const Y=`c${++K}`;const Z=()=>setTimeout(()=>{delete G[Y];$(new Error(`claude.complete: no data for ${O/1000}s`))},O);const B=Z();G[Y]={resolve:Q,reject:$,text:"",t:B,arm:Z};try{for(const U of b){v.postMessage({__om_api:true,id:Y,body:J},U)}}catch(U){clearTimeout(B);delete G[Y];$(U)}});const j=8;const H=async(J,Q)=>{if(!Array.isArray(J.messages)){throw new Error("claude.complete: tools require a messages array")}const $=J.messages.slice();const Y={...J,tools:J.tools.map((U)=>{if(U===null||typeof U!=="object")return U;const x={};for(const q of Object.keys(U)){if(typeof U[q]!=="function")x[q]=U[q]}return x})};const Z=Y.tool_choice;const B=Z!=null&&(Z.type==="any"||Z.type==="tool")?{...Y,tool_choice:Z.disable_parallel_tool_use!==undefined?{type:"auto",disable_parallel_tool_use:Z.disable_parallel_tool_use}:{type:"auto"}}:Y;for(let U=0;U<j;U++){const x=await D({...U===0?Y:B,messages:$});const q=x.message;const M=q&&Array.isArray(q.content)?q.content:null;const L=M?M.filter((X)=>X?.type==="tool_use"):[];if(q?.stop_reason!=="tool_use"||L.length===0){return x.text}const N=[];for(const X of L){const f=Q.get(X.name);if(!f){N.push({type:"tool_result",tool_use_id:X.id,content:`no handler for tool "${X.name}"`,is_error:true});continue}try{const C=await f(X.input);const w=typeof C==="string"?C:R(C)??"";N.push({type:"tool_result",tool_use_id:X.id,content:w})}catch(C){N.push({type:"tool_result",tool_use_id:X.id,content:String(C?.message??C??"tool handler failed"),is_error:true})}}$.push({role:"assistant",content:M},{role:"user",content:N})}throw new Error(`claude.complete: exceeded ${j} tool turns`)};window.claude={complete(J){const Q=J;if(Q!==null&&typeof Q==="object"&&Array.isArray(Q.tools)&&Q.tools.some(($)=>$!==null&&typeof $==="object"&&typeof $.run==="function")){const $=new Map;for(const Y of Q.tools){if(Y!==null&&typeof Y==="object"&&typeof Y.run==="function"){$.set(String(Y.name),Y.run)}}return H(Q,$)}return D(J).then(($)=>$.text)}};const F={};let P=0;S=(J,Q)=>new Promise(($)=>{if(!b.length){$({persisted:false,noHost:true,reason:g});return}const Y=`f${++P}`;const Z=setTimeout(()=>{delete F[Y];$({persisted:false,noHost:true,reason:g})},n);F[Y]={settle:$,t:Z};try{for(const B of b){v.postMessage({__om_file:true,id:Y,op:"write",path:J,content:Q},B)}}catch{clearTimeout(Z);delete F[Y];$({persisted:false,noHost:true,reason:g})}});const R=(J)=>{try{return JSON.stringify(J)}catch{return JSON.stringify(String(J))}};window.addEventListener("message",(J)=>{if(b.indexOf(J.origin)<0)return;if(J.source!==v)return;const Q=J.data;if(!Q)return;if(Q.type==="omelette-preview-refresh"){if(typeof Q.token!=="string"||!/^[0-9a-f.-]+(\.(rc|pr-[0-9]+))?(\.[0-9]+\.[0-9a-f]{16})?$/.test(Q.token))return;const Z=Math.max(1,Math.floor((Q.expiresAt||0)-Date.now()/1000));document.cookie="__Host-omelette-preview="+Q.token+"; Path=/; Secure; SameSite=None; Partitioned; Max-Age="+Z;return}if(Q.__om_file_r){const Z=F[Q.id];if(!Z)return;clearTimeout(Z.t);delete F[Q.id];Z.settle(Q.ok?{persisted:true}:{persisted:false,reason:Q.error||"write failed"});return}if(Q.__om_api_r){const Z=G[Q.id];if(!Z)return;if(Q.error!=null){clearTimeout(Z.t);delete G[Q.id];Z.reject(new Error(Q.error));return}if(Q.chunk!=null){clearTimeout(Z.t);Z.t=Z.arm();Z.text+=Q.chunk;return}if(Q.done){clearTimeout(Z.t);delete G[Q.id];Z.resolve({text:Q.text!=null?Q.text:Z.text,message:Q.message});return}return}if(!Q.__om_eval)return;const $=Q;const Y=(Z)=>{J.source.postMessage({...Z,__om_eval_r:1,id:$.id},J.origin)};try{const Z=(0,eval)($.code);if(Z&&typeof Z.then==="function"){Z.then((B)=>Y({ok:1,v:R(B)}),(B)=>Y({ok:0,e:String(B)}))}else{Y({ok:1,v:R(Z)})}}catch(Z){Y({ok:0,e:String(Z)})}})}})();
+</script>
+
+
+<title>CLEAR Lab Signs</title>
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=DM+Mono:wght@500&family=Hanken+Grotesk:wght@400;500;600;700;800&family=Schibsted+Grotesk:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  html, body { margin: 0; padding: 0; background: #e7e9ec; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; font-family: 'Hanken Grotesk', system-ui, sans-serif; color: #1b2a3d; }
+  @page land { size: letter landscape; margin: 0.2in; }
+  @page port { size: letter portrait; margin: 0.2in; }
+  .sheet-land { page: land; width: 1017px; height: 777px; }
+  .sheet-port { page: port; width: 777px; height: 1017px; }
+  .sheet-land, .sheet-port { margin: 0 auto; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+  .sheet-land > section { flex: none; transform: scale(0.94); transform-origin: center center; }
+  .sheet-port > section { flex: none; transform: scale(0.95); transform-origin: center center; }
+  @media screen {
+    body { display: flex; flex-direction: column; align-items: center; gap: 22px; padding: 22px 0; }
+    .sheet-land, .sheet-port { background: #ffffff; border-radius: 10px; box-shadow: 0 20px 60px -30px rgba(27,42,61,.4); }
+  }
+  @media print {
+    html, body { background: #ffffff; }
+    .sheet-land { break-after: page; }
+    .sheet-port { break-after: auto; }
+    section { box-shadow: none !important; }
+  }
+</style>
+<style data-styled="" data-styled-version="4.3.1"></style></head>
+<body>
+<div class="sheet-land">
+<section data-screen-label="Sign 1: Welcome" style="position:relative; width:1056px; height:816px; background:#ffffff; border-radius:14px; box-shadow:0 30px 80px -44px rgba(27,42,61,.5); overflow:hidden; display:flex; flex-direction:column;">
+    <div style="height:12px; background:linear-gradient(90deg,#1b2a3d 0 33%,#d8232a 33% 66%,#f5b30f 66% 100%);"></div>
+    <div style="flex:1; display:flex; flex-direction:column; padding:30px 68px 26px; position:relative;">
+      <div style="display:flex; align-items:center; justify-content:space-between; gap:28px;">
+        <div style="flex:none;">
+          <img src="assets/clear-logo-horizontal.png" alt="CLEAR: Clarifying the Endocrinology of Acute Risk" style="height:96px; width:auto;">
+        </div>
+        <div style="flex:1; display:flex; flex-direction:column; align-items:flex-end; gap:7px;">
+          <div style="display:flex; align-items:center;">
+            <img src="assets/ph-te.webp" alt="" style="width:46px; height:46px; border-radius:50%; object-fit:cover; border:2.5px solid #fff; box-shadow:0 3px 8px -3px rgba(20,34,51,.4); margin-left:0;">
+            <img src="assets/ph-jr.webp" alt="" style="width:46px; height:46px; border-radius:50%; object-fit:cover; border:2.5px solid #fff; box-shadow:0 3px 8px -3px rgba(20,34,51,.4); margin-left:-16px;">
+            <img src="assets/ph-mw.webp" alt="" style="width:46px; height:46px; border-radius:50%; object-fit:cover; border:2.5px solid #fff; box-shadow:0 3px 8px -3px rgba(20,34,51,.4); margin-left:-16px;">
+            <img src="assets/ph-sh.webp" alt="" style="width:46px; height:46px; border-radius:50%; object-fit:cover; border:2.5px solid #fff; box-shadow:0 3px 8px -3px rgba(20,34,51,.4); margin-left:-16px;">
+            <img src="assets/ph-ar.webp" alt="" style="width:46px; height:46px; border-radius:50%; object-fit:cover; border:2.5px solid #fff; box-shadow:0 3px 8px -3px rgba(20,34,51,.4); margin-left:-16px;">
+            <img src="assets/ph-ap.webp" alt="" style="width:46px; height:46px; border-radius:50%; object-fit:cover; border:2.5px solid #fff; box-shadow:0 3px 8px -3px rgba(20,34,51,.4); margin-left:-16px;">
+            <img src="assets/ph-nr.webp" alt="" style="width:46px; height:46px; border-radius:50%; object-fit:cover; border:2.5px solid #fff; box-shadow:0 3px 8px -3px rgba(20,34,51,.4); margin-left:-16px;">
+            <img src="assets/ph-lx.webp" alt="" style="width:46px; height:46px; border-radius:50%; object-fit:cover; border:2.5px solid #fff; box-shadow:0 3px 8px -3px rgba(20,34,51,.4); margin-left:-16px;">
+            <img src="assets/ph-id.webp" alt="" style="width:46px; height:46px; border-radius:50%; object-fit:cover; border:2.5px solid #fff; box-shadow:0 3px 8px -3px rgba(20,34,51,.4); margin-left:-16px;">
+            <img src="assets/ph-ss.webp" alt="" style="width:46px; height:46px; border-radius:50%; object-fit:cover; border:2.5px solid #fff; box-shadow:0 3px 8px -3px rgba(20,34,51,.4); margin-left:-16px;">
+            <img src="assets/ph-ks.webp" alt="" style="width:46px; height:46px; border-radius:50%; object-fit:cover; border:2.5px solid #fff; box-shadow:0 3px 8px -3px rgba(20,34,51,.4); margin-left:-16px;">
+            <img src="assets/ph-em.webp" alt="" style="width:46px; height:46px; border-radius:50%; object-fit:cover; border:2.5px solid #fff; box-shadow:0 3px 8px -3px rgba(20,34,51,.4); margin-left:-16px;">
+            <img src="assets/ph-ht.webp" alt="" style="width:46px; height:46px; border-radius:50%; object-fit:cover; border:2.5px solid #fff; box-shadow:0 3px 8px -3px rgba(20,34,51,.4); margin-left:-16px;">
+            <img src="assets/ph-an.webp" alt="" style="width:46px; height:46px; border-radius:50%; object-fit:cover; border:2.5px solid #fff; box-shadow:0 3px 8px -3px rgba(20,34,51,.4); margin-left:-16px;">
+            <img src="assets/ph-jb.webp" alt="" style="width:46px; height:46px; border-radius:50%; object-fit:cover; border:2.5px solid #fff; box-shadow:0 3px 8px -3px rgba(20,34,51,.4); margin-left:-16px;">
+          </div>
+        </div>
+      </div>
+
+      <div style="flex:1; display:flex; flex-direction:column; justify-content:center; gap:8px;">
+        <div style="display:flex; align-items:center; gap:30px;">
+          <div style="flex:1; min-width:0;">
+            <div style="font-family:&#39;Schibsted Grotesk&#39;,sans-serif; font-weight:800; font-size:35px; line-height:1.03; color:#1b2a3d; letter-spacing:-.02em; text-wrap:balance;">Welcome to the CLEAR Lab!</div>
+            <div style="margin-top:11px; font-size:16.5px; font-weight:600; color:#46535f; max-width:720px; line-height:1.45; text-wrap:pretty;">We study why the monthly hormone cycle destabilizes mood and safety for <em style="font-style:normal; color:#1b2a3d; font-weight:700;">some</em> people, not others. We’re new to UChicago, so come say hi!</div>
+          </div>
+          <div style="flex:none; width:342px; display:flex; align-items:center; gap:14px; padding:13px 18px; background:#f4f6f9; border:1px solid #e2e7ec; border-left:4px solid #d8232a; border-radius:16px;">
+            <img src="assets/ph-te.webp" alt="Tory Eisenlohr-Moul" style="flex:none; width:62px; height:62px; border-radius:50%; object-fit:cover; box-shadow:0 0 0 3px #fff, 0 5px 12px -6px rgba(20,34,51,.5);">
+            <div style="min-width:0;">
+              <div style="font-family:&#39;Schibsted Grotesk&#39;,sans-serif; font-weight:800; font-size:16px; color:#1b2a3d; line-height:1.15; white-space:nowrap;">Tory Eisenlohr-Moul<span style="font-weight:400; opacity:.7;">, PhD</span></div>
+              <div style="margin-top:3px; font-family:&#39;Schibsted Grotesk&#39;,sans-serif; font-weight:800; font-size:10px; letter-spacing:.07em; text-transform:uppercase; color:#d8232a;">PROFESSOR / PI</div>
+              <div style="margin-top:2px; font-size:12px; font-weight:500; color:#6b7785;">Psychiatry &amp; Behavioral Neuroscience</div>
+            </div>
+          </div>
+        </div>
+        <div style="display:flex; align-items:center; gap:14px;">
+          <span style="font-family:&#39;Schibsted Grotesk&#39;,sans-serif; font-weight:800; font-size:13px; letter-spacing:.16em; text-transform:uppercase; color:#d8232a;">What we do</span>
+          <span style="flex:1; height:2px; background:linear-gradient(90deg,#f0d3d4,rgba(240,211,212,0));"></span>
+        </div>
+
+        <div style="display:grid; grid-template-columns:repeat(3, 1fr); gap:16px; align-items:stretch;">
+
+          <div style="display:flex; flex-direction:column; padding:12px 20px; background:#f4f6f9; border:1px solid #e2e7ec; border-left:6px solid #1b2a3d; border-radius:18px; justify-content:flex-start;">
+            <div style="min-height:277px;">
+              <div style="display:flex; align-items:center; gap:10px; margin-bottom:10px;">
+                <span style="flex:none; width:32px; height:32px; display:grid; place-items:center; border-radius:50%; background:#1b2a3d; color:#fff; font-family:&#39;Schibsted Grotesk&#39;,sans-serif; font-weight:800; font-size:16px;">1</span>
+                <span style="font-family:&#39;Schibsted Grotesk&#39;,sans-serif; font-weight:800; font-size:10.5px; letter-spacing:.12em; text-transform:uppercase; color:#9aa4b1;">FRAMEWORK DEVELOPMENT</span>
+              </div>
+              <div style="font-family:&#39;Schibsted Grotesk&#39;,sans-serif; font-weight:800; font-size:18px; line-height:1.2; color:#1b2a3d; letter-spacing:-.01em; text-wrap:balance;">Develop personalized models of cycle sensitivity.</div>
+              <div style="margin-top:9px; font-size:14px; line-height:1.45; color:#46535f; text-wrap:pretty;">The&nbsp;<strong data-om-id="3f62767e:59">DASH-MC</strong> framework, Dimensional Affective Sensitivity to Hormones, maps why some people are sensitive to estradiol (E2), progesterone (P4), or both, while most people have no sensitivities at all.&nbsp; We think about hormone-related psychiatric symptoms&nbsp;as transdiagnostic, not disorder-specific.</div>
+            </div>
+            <div style="margin-top:8px;">
+              <div style="display:flex; flex-direction:column; align-items:center; gap:10px;">
+                <svg viewBox="0 0 140 140" width="150" height="150" role="img" aria-label="DASH-MC: E2 and P4 sensitivity across the menstrual cycle" style="flex:none;">
+                  <defs><clippath id="dashCirc"><circle cx="70" cy="70" r="64"></circle></clippath></defs>
+                  <g clip-path="url(#dashCirc)">
+                    <rect x="6" y="6" width="128" height="128" fill="#fdfbf6"></rect>
+                    <rect x="18" y="6" width="30" height="128" fill="#f2c9da" opacity="0.5"></rect>
+                    <rect x="58" y="6" width="26" height="128" fill="#bcd6ef" opacity="0.5"></rect>
+                    <rect x="100" y="6" width="26" height="128" fill="#f7de9b" opacity="0.6"></rect>
+                    <line x1="10" y1="98" x2="130" y2="98" stroke="#cbd2da" stroke-width="1.2"></line>
+                    <path d="M10,74 C24,54 34,46 46,48 C62,52 80,86 100,90 C114,93 126,91 130,90" fill="none" stroke="#1b2a3d" stroke-width="1.8" stroke-dasharray="4 3" stroke-linecap="round"></path>
+                    <path d="M10,86 C24,78 33,66 45,66 C58,66 78,88 98,91 C110,88 116,50 120,40 C124,52 128,84 130,90" fill="none" stroke="#1b2a3d" stroke-width="2.3" stroke-linecap="round"></path>
+                  </g>
+                  <circle cx="70" cy="70" r="64" fill="none" stroke="#1b2a3d" stroke-width="3"></circle>
+                  <line x1="44" y1="26" x2="54" y2="26" stroke="#1b2a3d" stroke-width="2.3" stroke-linecap="round"></line>
+                  <text x="57" y="29" font-family="&#39;Hanken Grotesk&#39;,sans-serif" font-size="9" font-weight="700" fill="#46535f">E2</text>
+                  <line x1="72" y1="26" x2="82" y2="26" stroke="#1b2a3d" stroke-width="1.8" stroke-dasharray="3 2" stroke-linecap="round"></line>
+                  <text x="85" y="29" font-family="&#39;Hanken Grotesk&#39;,sans-serif" font-size="9" font-weight="700" fill="#46535f">P4</text>
+                </svg>
+              </div>
+            </div>
+            <div style="margin-top:12px; font-size:10px; font-weight:600; color:#5b6673; line-height:1.3; text-align:center;">Peters et al., 2024 · <em>Molecular Psychiatry</em></div>
+          </div>
+
+          <div style="display:flex; flex-direction:column; padding:12px 20px; background:#fdf8ee; border:1px solid #eee0be; border-left:6px solid #f5b30f; border-radius:18px; justify-content:flex-start;">
+            <div style="min-height:277px;">
+              <div style="display:flex; align-items:center; gap:10px; margin-bottom:10px;">
+                <span style="flex:none; width:32px; height:32px; display:grid; place-items:center; border-radius:50%; background:#f5b30f; color:#5a4204; font-family:&#39;Schibsted Grotesk&#39;,sans-serif; font-weight:800; font-size:16px;">2</span>
+                <span style="font-family:&#39;Schibsted Grotesk&#39;,sans-serif; font-weight:800; font-size:10.5px; letter-spacing:.12em; text-transform:uppercase; color:#c19a3c;">MEASUREMENT &amp; MODELING</span>
+              </div>
+              <div style="font-family:&#39;Schibsted Grotesk&#39;,sans-serif; font-weight:800; font-size:18px; line-height:1.2; color:#1b2a3d; letter-spacing:-.01em; text-wrap:balance;">Build better tools to study the menstrual cycle.</div><div style="margin-top: 9px; font-size: 14px; line-height: 1.45; color: #46535f; text-wrap: pretty">Our phase-aligned cycle time scaling (PACTS) approach, implemented in our open-source <strong>menstrualcycleR</strong> R package, realigns hormonal cycles across patients and months. Generalized additive models can be used to model average, subgroup, and person-specific cycle effects.</div>
+            </div>
+            <div style="margin-top:8px;">
+              <div style="display:flex; flex-direction:column; align-items:center; gap:10px;">
+                <img src="assets/menstrualcycleR.png" alt="menstrualcycleR" style="height:150px; width:150px; flex:none;">
+              </div>
+              <div style="margin-top:12px; font-size:10px; font-weight:600; color:#5b6673; line-height:1.3; text-align:center;">Nagpal et al., 2025 · <em>Psychoneuroendocrinology</em></div>
+            </div>
+          </div>
+
+          <div style="display:flex; flex-direction:column; padding:12px 20px; background:#fdf2f2; border:1px solid #f1d6d6; border-left:6px solid #d8232a; border-radius:18px; justify-content:flex-start;">
+            <div style="min-height:277px;">
+              <div style="display:flex; align-items:center; gap:10px; margin-bottom:10px;">
+                <span style="flex:none; width:32px; height:32px; display:grid; place-items:center; border-radius:50%; background:#d8232a; color:#fff; font-family:&#39;Schibsted Grotesk&#39;,sans-serif; font-weight:800; font-size:16px;">3</span>
+                <span style="font-family:&#39;Schibsted Grotesk&#39;,sans-serif; font-weight:800; font-size:10.5px; letter-spacing:.12em; text-transform:uppercase; color:#c67a80;">CLINICAL TRIALS</span>
+              </div>
+              <div style="font-family:&#39;Schibsted Grotesk&#39;,sans-serif; font-weight:800; font-size:18px; line-height:1.2; color:#1b2a3d; letter-spacing:-.01em; text-wrap:balance;">Test the mechanisms of different cycle sensitivities.</div>
+              <div style="margin-top:9px; font-size:14px; line-height:1.45; color:#46535f; text-wrap:pretty;">We pair randomized crossover hormone trials with real-time symptom reports, neuroimaging, and passive smartphone data to isolate how estradiol (E2) and progesterone (P4) each drive risk, revealing distinct biological pathways we can target.</div>
+            </div>
+            <div style="margin-top:8px;">
+              <div style="display:flex; flex-direction:column; align-items:center; gap:10px;">
+                <img src="assets/pines-badge.svg" alt="PINES Study" style="height:150px; width:150px; flex:none;">
+              </div>
+              <div style="margin-top:12px; font-size:10px; font-weight:600; color:#5b6673; line-height:1.3; text-align:center;">Eisenlohr-Moul, 2025 · <em>Am J Psychiatry</em></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+
+    </div>
+  </section>
+</div>
+<div class="sheet-port">
+<section data-screen-label="Meet the Lab" style="position:relative; width:816px; height:1056px; background:#ffffff; border-radius:14px; box-shadow:0 30px 80px -44px rgba(27,42,61,.5); overflow:hidden; display:flex; flex-direction:column; padding:38px 44px 34px;">
+    <header style="display:flex; align-items:center; justify-content:space-between; gap:20px; padding-bottom:18px; border-bottom:1px solid #edeef0;">
+      <div style="font-family:&#39;Schibsted Grotesk&#39;,sans-serif; font-weight:900; font-size:38px; letter-spacing:-.015em; color:#1b2a3d; line-height:1;">Meet the Lab</div>
+      <img src="assets/clear-logo-horizontal.png" alt="CLEAR: Clarifying the Endocrinology of Acute Risk" style="height:60px; width:auto;">
+    </header>
+
+    <div style="flex:1; display:flex; flex-direction:column; justify-content:space-between; padding-top:18px; min-height:0;">
+
+      <div>
+        <div style="display:flex; align-items:center; gap:9px; margin-bottom:11px; font-family:&#39;Schibsted Grotesk&#39;,sans-serif; font-weight:800; font-size:13.5px; letter-spacing:.05em; text-transform:uppercase; color:#1b2a3d;"><span style="width:12px; height:12px; border-radius:3px; background:#1b2a3d;"></span>Leadership, Faculty &amp; Staff<span style="flex:1; height:1px; background:#eef0f2; margin-left:4px;"></span></div>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:11px;">
+          <div style="display:flex; align-items:center; gap:12px; padding:11px 13px; background:#f2f5f9; border:1px solid #dbe3ec; border-left:5px solid #1b2a3d; border-radius:13px;">
+            <img src="assets/ph-te.webp" alt="Tory Eisenlohr-Moul" style="flex:none; width:50px; height:50px; border-radius:50%; object-fit:cover; box-shadow:0 0 0 3px #fff, 0 4px 10px -5px rgba(20,34,51,.5);">
+            <div style="min-width:0;">
+              <div style="font-size:14.5px; font-weight:600; line-height:1.15;">Tory Eisenlohr-Moul<span style="font-weight:400; opacity:.75;">, PhD</span></div>
+              <div style="margin-top:2px; font-size:12px; font-weight:800; color:#1b2a3d; line-height:1.2;">Director / PI</div>
+              <div style="margin-top:1px; font-size:11px; font-weight:500; color:#6b7785; line-height:1.3;">Licensed Clinical Psychologist</div>
+            </div>
+          </div>
+          <div style="display:flex; align-items:center; gap:12px; padding:11px 13px; background:#f2f5f9; border:1px solid #dbe3ec; border-left:5px solid #1b2a3d; border-radius:13px;">
+            <img src="assets/ph-jr.webp" alt="Jaclyn Ross" style="flex:none; width:50px; height:50px; border-radius:50%; object-fit:cover; box-shadow:0 0 0 3px #fff, 0 4px 10px -5px rgba(20,34,51,.5);">
+            <div style="min-width:0;">
+              <div style="font-size:14.5px; font-weight:600; line-height:1.15;">Jaclyn Ross<span style="font-weight:400; opacity:.75;">, PhD</span></div>
+              <div style="margin-top:2px; font-size:12px; font-weight:800; color:#1b2a3d; line-height:1.2;">Associate Director</div>
+              <div style="margin-top:1px; font-size:11px; font-weight:500; color:#6b7785; line-height:1.3;">Clinical Risk Management, Research Scientist</div>
+            </div>
+          </div>
+          <div style="display:flex; align-items:center; gap:12px; padding:11px 13px; background:#f2f5f9; border:1px solid #dbe3ec; border-left:5px solid #1b2a3d; border-radius:13px;">
+            <img src="assets/ph-mw.webp" alt="Melissa Wagner-Schuman" style="flex:none; width:50px; height:50px; border-radius:50%; object-fit:cover; box-shadow:0 0 0 3px #fff, 0 4px 10px -5px rgba(20,34,51,.5);">
+            <div style="min-width:0;">
+              <div style="font-size:14.5px; font-weight:600; line-height:1.15;">Melissa Wagner-Schuman<span style="font-weight:400; opacity:.75;">, MD/PhD</span><span style="display:inline-flex; align-items:center; margin-left:6px; padding:1px 6px; border-radius:5px; font-family:&#39;Schibsted Grotesk&#39;,sans-serif; font-size:9px; font-weight:800; letter-spacing:.02em; vertical-align:middle; white-space:nowrap; background:#001e62; color:#fff;">UIC</span></div>
+              <div style="margin-top:2px; font-size:12px; font-weight:800; color:#1b2a3d; line-height:1.2;">Medical Director / Co-I</div>
+              <div style="margin-top:1px; font-size:11px; font-weight:500; color:#6b7785; line-height:1.3;">Reproductive Psychiatrist</div>
+            </div>
+          </div>
+          <div style="display:flex; align-items:center; gap:12px; padding:11px 13px; background:#eef5f7; border:1px solid #d2e4e9; border-left:5px solid #3a7a8c; border-radius:13px;">
+            <img src="assets/ph-sh.webp" alt="Sophia Hovakimian" style="flex:none; width:50px; height:50px; border-radius:50%; object-fit:cover; box-shadow:0 0 0 3px #fff, 0 4px 10px -5px rgba(20,34,51,.5);">
+            <div style="min-width:0;">
+              <div style="font-size:14.5px; font-weight:600; line-height:1.15;">Sophia Hovakimian<span style="font-weight:400; opacity:.75;">, BA</span></div>
+              <div style="margin-top:2px; font-size:12px; font-weight:800; color:#245968; line-height:1.2;">Clinical Research Associate</div>
+              <div style="margin-top:1px; font-size:11px; font-weight:500; color:#6b7785; line-height:1.3;">Leads clinical trials &amp; neuroimaging</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div style="display:flex; align-items:center; gap:9px; margin-bottom:11px; font-family:&#39;Schibsted Grotesk&#39;,sans-serif; font-weight:800; font-size:13.5px; letter-spacing:.05em; text-transform:uppercase; color:#b81d23;"><span style="width:12px; height:12px; border-radius:3px; background:#d8232a;"></span>MD/PhD Students &amp; Postdocs<span style="flex:1; height:1px; background:#eef0f2; margin-left:4px;"></span></div>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:11px;">
+          <div style="display:flex; align-items:center; gap:12px; padding:11px 13px; background:#fdf2f2; border:1px solid #f1d6d6; border-left:5px solid #d8232a; border-radius:13px;">
+            <img src="assets/ph-ar.webp" alt="Ashley Ross" style="flex:none; width:50px; height:50px; border-radius:50%; object-fit:cover; box-shadow:0 0 0 3px #fff, 0 4px 10px -5px rgba(20,34,51,.5);">
+            <div style="min-width:0;">
+              <div style="font-size:14.5px; font-weight:600; line-height:1.15;">Ashley Ross<span style="font-weight:400; opacity:.75;">, MS</span></div>
+              <div style="margin-top:2px; font-size:12px; font-weight:800; color:#b81d23; line-height:1.2;">Graduate Student · G4</div>
+              <div style="margin-top:1px; font-size:11px; font-weight:500; color:#6b7785; line-height:1.3;">Adolescent Cycle Maturation and Sensitivity</div>
+            </div>
+          </div>
+          <div style="display:flex; align-items:center; gap:12px; padding:11px 13px; background:#fdf2f2; border:1px solid #f1d6d6; border-left:5px solid #d8232a; border-radius:13px;">
+            <img src="assets/ph-ap.webp" alt="Anna Patterson" style="flex:none; width:50px; height:50px; border-radius:50%; object-fit:cover; box-shadow:0 0 0 3px #fff, 0 4px 10px -5px rgba(20,34,51,.5);">
+            <div style="min-width:0;">
+              <div style="font-size:14.5px; font-weight:600; line-height:1.15;">Anna Patterson<span style="font-weight:400; opacity:.75;">, BS</span></div>
+              <div style="margin-top:2px; font-size:12px; font-weight:800; color:#b81d23; line-height:1.2;">Graduate Student · G4</div>
+              <div style="margin-top:1px; font-size:11px; font-weight:500; color:#6b7785; line-height:1.3;">F30 Fellow: Cannabis Use Across the Cycle</div>
+            </div>
+          </div>
+          <div style="display:flex; align-items:center; gap:12px; padding:11px 13px; background:#ffffff; border:2px dashed #e6929a; border-radius:13px;">
+            <span style="flex:none; width:50px; height:50px; border-radius:50%; display:grid; place-items:center; background:#fbd7db; border:2px dashed #d8676f; color:#c33540; font-size:28px; font-weight:300;">+</span>
+            <div style="min-width:0;">
+              <div style="display:inline-flex; align-items:center; gap:6px; font-size:10px; font-weight:800; letter-spacing:.07em; text-transform:uppercase; color:#c02a35;"><span style="width:7px; height:7px; border-radius:50%; background:#d8232a;"></span>Now Recruiting</div>
+              <div style="margin-top:3px; font-size:14px; font-weight:700; color:#1b2a3d; line-height:1.2;">MD/PhD Student</div>
+            </div>
+          </div>
+          <div style="display:flex; align-items:center; gap:12px; padding:11px 13px; background:#ffffff; border:2px dashed #ecb521; border-radius:13px;">
+            <span style="flex:none; width:50px; height:50px; border-radius:50%; display:grid; place-items:center; background:#fbeec4; border:2px dashed #e3a90c; color:#c2900b; font-size:28px; font-weight:300;">+</span>
+            <div style="min-width:0;">
+              <div style="display:inline-flex; align-items:center; gap:6px; font-size:10px; font-weight:800; letter-spacing:.07em; text-transform:uppercase; color:#a9790a;"><span style="width:7px; height:7px; border-radius:50%; background:#e0a800;"></span>Now Recruiting</div>
+              <div style="margin-top:3px; font-size:14px; font-weight:700; color:#1b2a3d; line-height:1.2;">Postdoctoral Fellow</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div style="display:flex; align-items:center; gap:9px; margin-bottom:11px; font-family:&#39;Schibsted Grotesk&#39;,sans-serif; font-weight:800; font-size:13.5px; letter-spacing:.05em; text-transform:uppercase; color:#17715f;"><span style="width:12px; height:12px; border-radius:3px; background:#1f9e8c;"></span>Research Affiliates &amp; Volunteers<span style="flex:1; height:1px; background:#eef0f2; margin-left:4px;"></span></div>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:11px;">
+          <div style="display:flex; align-items:center; gap:11px; padding:9px 12px; background:#f1f8f5; border:1px solid #d6e9e3; border-left:4px solid #1f9e8c; border-radius:12px;">
+            <img src="assets/ph-nr.webp" alt="Natasha Reddy" style="flex:none; width:42px; height:42px; border-radius:50%; object-fit:cover; box-shadow:0 0 0 2px #fff, 0 3px 8px -4px rgba(20,34,51,.4);">
+            <div style="min-width:0;">
+              <div style="font-size:13px; font-weight:600; line-height:1.15;">Natasha Reddy<span style="font-weight:400; opacity:.7;">, BA</span></div>
+              <div style="margin-top:2px; font-size:11px; font-weight:700; color:#17715f; line-height:1.25;">Medical Student · MS2</div>
+            </div>
+          </div>
+          <div style="display:flex; align-items:center; gap:11px; padding:9px 12px; background:#f1f8f5; border:1px solid #d6e9e3; border-left:4px solid #1f9e8c; border-radius:12px;">
+            <img src="assets/ph-lx.webp" alt="Larissa Xu" style="flex:none; width:42px; height:42px; border-radius:50%; object-fit:cover; box-shadow:0 0 0 2px #fff, 0 3px 8px -4px rgba(20,34,51,.4);">
+            <div style="min-width:0;">
+              <div style="font-size:13px; font-weight:600; line-height:1.15;">Larissa Xu<span style="font-weight:400; opacity:.7;">, BA</span></div>
+              <div style="margin-top:2px; font-size:11px; font-weight:700; color:#17715f; line-height:1.25;">MA · Computational Social Science</div>
+            </div>
+          </div>
+          <div style="display:flex; align-items:center; gap:11px; padding:9px 12px; background:#f1f8f5; border:1px solid #d6e9e3; border-left:4px solid #1f9e8c; border-radius:12px;">
+            <img src="assets/ph-id.webp" alt="Ida Diab" style="flex:none; width:42px; height:42px; border-radius:50%; object-fit:cover; box-shadow:0 0 0 2px #fff, 0 3px 8px -4px rgba(20,34,51,.4);">
+            <div style="min-width:0;">
+              <div style="font-size:13px; font-weight:600; line-height:1.15;">Ida Diab</div>
+              <div style="margin-top:2px; font-size:11px; font-weight:700; color:#17715f; line-height:1.25;">Undergraduate · Junior</div>
+            </div>
+          </div>
+          <div style="display:flex; align-items:center; gap:11px; padding:9px 12px; background:#f1f8f5; border:1px solid #d6e9e3; border-left:4px solid #1f9e8c; border-radius:12px;">
+            <img src="assets/ph-ss.webp" alt="Sajal Shukla" style="flex:none; width:42px; height:42px; border-radius:50%; object-fit:cover; box-shadow:0 0 0 2px #fff, 0 3px 8px -4px rgba(20,34,51,.4);">
+            <div style="min-width:0;">
+              <div style="font-size:13px; font-weight:600; line-height:1.15;">Sajal Shukla<span style="font-weight:400; opacity:.7;">, BS</span></div>
+              <div style="margin-top:2px; font-size:11px; font-weight:700; color:#17715f; line-height:1.25;">Post-Baccalaureate</div>
+            </div>
+          </div>
+          <div style="grid-column:1 / -1; display:flex; align-items:center; gap:11px; padding:9px 12px; background:#ffffff; border:2px dashed #9ed4c9; border-radius:12px;">
+            <span style="flex:none; width:42px; height:42px; border-radius:50%; display:grid; place-items:center; background:#dcefe9; border:2px dashed #6cbdad; color:#1f9e8c; font-size:22px; font-weight:300;">+</span>
+            <div style="min-width:0;">
+              <div style="font-size:9.5px; font-weight:800; letter-spacing:.06em; text-transform:uppercase; color:#17715f;">Rolling Openings</div>
+              <div style="margin-top:2px; font-size:11px; font-weight:700; color:#1b2a3d; line-height:1.2;">Volunteers welcome</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div style="display:flex; align-items:center; gap:9px; margin-bottom:11px; font-family:&#39;Schibsted Grotesk&#39;,sans-serif; font-weight:800; font-size:13.5px; letter-spacing:.05em; text-transform:uppercase; color:#6b7785;"><svg viewBox="0 0 24 24" width="15" height="15" fill="#9aa4b1" aria-hidden="true"><path d="M12 3 1 8l11 5 9-4.09V14h2V8L12 3zM5 13.18v3.72L12 21l7-4.1v-3.72l-7 3.18-7-3.36z"></path></svg>Graduate &amp; Postdoc Alums<span style="flex:1; height:1px; background:#eef0f2; margin-left:4px;"></span></div>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:11px;">
+          <div style="display:flex; align-items:center; gap:11px; padding:9px 12px; background:#f7f8f9; border:1px solid #ecedef; border-left:4px solid #9aa4b1; border-radius:12px;">
+            <img src="assets/ph-ht.webp" alt="Hafsah Tauseef" style="flex:none; width:42px; height:42px; border-radius:50%; object-fit:cover; box-shadow:0 0 0 2px #fff, 0 3px 8px -4px rgba(20,34,51,.4);">
+            <div style="min-width:0;">
+              <div style="font-size:13px; font-weight:600; line-height:1.15;">Hafsah Tauseef<span style="font-weight:400; opacity:.7;">, PhD</span></div>
+              <div style="margin-top:2px; font-size:11px; font-weight:600; color:#6b7785; line-height:1.3;">Fellow · Orange County Children’s Hospital</div>
+            </div>
+          </div>
+          <div style="display:flex; align-items:center; gap:11px; padding:9px 12px; background:#f7f8f9; border:1px solid #ecedef; border-left:4px solid #9aa4b1; border-radius:12px;">
+            <img src="assets/ph-an.webp" alt="Anisha Nagpal" style="flex:none; width:42px; height:42px; border-radius:50%; object-fit:cover; box-shadow:0 0 0 2px #fff, 0 3px 8px -4px rgba(20,34,51,.4);">
+            <div style="min-width:0;">
+              <div style="font-size:13px; font-weight:600; line-height:1.15;">Anisha Nagpal<span style="font-weight:400; opacity:.7;">, PhD</span></div>
+              <div style="margin-top:2px; font-size:11px; font-weight:600; color:#6b7785; line-height:1.3;">M3 Medical Student · UIC</div>
+            </div>
+          </div>
+          <div style="display:flex; align-items:center; gap:11px; padding:9px 12px; background:#f7f8f9; border:1px solid #ecedef; border-left:4px solid #9aa4b1; border-radius:12px;">
+            <img src="assets/ph-jb.webp" alt="Jordan Barone" style="flex:none; width:42px; height:42px; border-radius:50%; object-fit:cover; box-shadow:0 0 0 2px #fff, 0 3px 8px -4px rgba(20,34,51,.4);">
+            <div style="min-width:0;">
+              <div style="font-size:13px; font-weight:600; line-height:1.15;">Jordan Barone<span style="font-weight:400; opacity:.7;">, MD/PhD</span></div>
+              <div style="margin-top:2px; font-size:11px; font-weight:600; color:#6b7785; line-height:1.3;">Pediatrics Resident · Medical College of Wisconsin</div>
+            </div>
+          </div>
+          <div style="display:flex; align-items:center; gap:11px; padding:9px 12px; background:#f7f8f9; border:1px solid #ecedef; border-left:4px solid #9aa4b1; border-radius:12px;">
+            <img src="assets/ph-ks.webp" alt="Katja Schmalenberger" style="flex:none; width:42px; height:42px; border-radius:50%; object-fit:cover; box-shadow:0 0 0 2px #fff, 0 3px 8px -4px rgba(20,34,51,.4);">
+            <div style="min-width:0;">
+              <div style="font-size:13px; font-weight:600; line-height:1.15;">Katja Schmalenberger<span style="font-weight:400; opacity:.7;">, PhD</span></div>
+              <div style="margin-top:2px; font-size:11px; font-weight:600; color:#6b7785; line-height:1.3;">Research Professor · Ulm University, Germany</div>
+            </div>
+          </div>
+          <div style="grid-column:1 / -1; display:flex; align-items:center; gap:11px; padding:9px 12px; background:#f7f8f9; border:1px solid #ecedef; border-left:4px solid #9aa4b1; border-radius:12px;">
+            <img src="assets/ph-em.webp" alt="Elizabeth Mulligan" style="flex:none; width:42px; height:42px; border-radius:50%; object-fit:cover; box-shadow:0 0 0 2px #fff, 0 3px 8px -4px rgba(20,34,51,.4);">
+            <div style="min-width:0;">
+              <div style="font-size:13px; font-weight:600; line-height:1.15;">Elizabeth Mulligan<span style="font-weight:400; opacity:.7;">, PhD</span></div>
+              <div style="margin-top:2px; font-size:11px; font-weight:600; color:#6b7785; line-height:1.3;">Private Practice · Chicago PMD Clinic</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</div>
+<script>
+addEventListener('load', () => {
+  (async () => {
+    try { await document.fonts.ready; } catch (e) {}
+    const imgs = Array.from(document.images).filter((i) => !i.complete);
+    await Promise.race([
+      Promise.allSettled(imgs.map((i) => i.decode())),
+      new Promise((r) => setTimeout(r, 8000)),
+    ]);
+    setTimeout(() => window.print(), 500);
+  })();
+});
+</script>
+
+<div style="--pseudo-background: rgba(235, 233, 67, 0.37); background-color: rgba(235, 233, 67, 0.37); height: 20px; display: none;"></div></body></html>

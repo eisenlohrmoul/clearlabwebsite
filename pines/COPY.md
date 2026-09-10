@@ -48,8 +48,8 @@ flux.
 That figure comes from our own clinical samples. It describes people already in
 psychiatric care, not people who menstruate in general.
 
-In three earlier randomized trials, our team found that supplementing estradiol
-across those days prevented the expected worsening of depression and suicidal
+In three earlier randomized trials, our team found that supplementing estradiol,
+the main estrogen, across those days prevented the expected worsening of depression and suicidal
 thinking, compared with placebo. Progesterone, the other main ovarian hormone,
 did not have that effect. PINES asks the next question: how does that benefit
 actually work, and does it work the same way in everyone?
@@ -57,6 +57,10 @@ actually work, and does it work the same way in everyone?
 We expect that it does not. Sensitivity to hormonal change appears to differ
 between people. Many show no relationship at all. PINES is built to find those
 differences rather than average across them.
+
+Estrogen and progesterone are not abnormal in these patients. People with and
+without this pattern have the same levels and the same cycles. What differs is
+sensitivity to ordinary change.
 
 ---
 

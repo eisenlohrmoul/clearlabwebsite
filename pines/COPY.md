@@ -39,26 +39,45 @@ Supported by the National Institute of Mental Health · R01MH140472 · 2026–20
 
 ## What we are studying
 
-Suicide risk is not steady over time. For many people who menstruate, it rises
-and falls in a recurring monthly pattern, with the hardest days clustering
-around the start of a period. That is also when the ovarian hormones are in their
-greatest flux.
+Suicide risk is not steady over time. Among people who menstruate and who
+already experience suicidal thoughts, roughly six in ten see that risk rise and
+fall in a recurring monthly pattern, with the hardest days clustering around the
+start of a period. That is also when the ovarian hormones are in their greatest
+flux.
 
-In three earlier randomized trials, our team found that giving supplemental
-estradiol across those days prevented the expected worsening of depression and
-suicidal thinking, compared with placebo. PINES asks the next question: how does
-that benefit actually work, and does it work the same way in everyone?
+That figure comes from our own clinical samples. It describes people already in
+psychiatric care, not people who menstruate in general.
 
-We expect that it does not. Sensitivity to hormones appears to differ between
-people in both its trigger and its underlying biology. PINES is built to find
-those differences rather than average across them.
+In three earlier randomized trials, our team found that supplementing estradiol
+across those days prevented the expected worsening of depression and suicidal
+thinking, compared with placebo. Progesterone, the other main ovarian hormone,
+did not have that effect. PINES asks the next question: how does that benefit
+actually work, and does it work the same way in everyone?
+
+We expect that it does not. Sensitivity to hormonal change appears to differ
+between people. Many show no relationship at all. PINES is built to find those
+differences rather than average across them.
+
+## Two things worth understanding
+
+**The hormones themselves are normal.** When we compared people who do and do
+not show this monthly pattern, we found no difference in their hormone levels or
+in how those levels changed across the cycle. What differs is sensitivity to
+ordinary hormonal change, not the hormones.
+
+**This is not a treatment we can simply prescribe.** Taking supplemental
+estradiol month after month carries long-term risks, including elevated risk of
+blood clots and cancer. That is precisely why the mechanism matters. If we can
+identify how estradiol produces its benefit, that opens a path to safer
+treatments that reproduce the benefit without the risk.
 
 ---
 
 ## Study design at a glance
 
-**Phase 1 — Two-month baseline.** Participants track daily mood and thoughts
-alongside at-home hormone testing across about two menstrual cycles.
+**Phase 1 — Two-month baseline.** Participants report mood and thoughts twice
+daily alongside at-home urinary hormone testing, across about two menstrual
+cycles.
 
 **Phase 2 — Crossover trial with brain imaging.** A subset of participants
 completes a placebo-controlled crossover trial of perimenstrual estradiol, with
@@ -72,7 +91,10 @@ months.
 ## Research aims
 
 **Aim 1.** Identify person-specific patterns linking daily hormone change to
-mood and suicidal thinking.
+mood and suicidal thinking. Following the DASH framework, we expect an
+estradiol-sensitive subgroup (low mood, anhedonia, poor concentration), a
+progesterone-sensitive subgroup (irritability, rejection sensitivity, conflict),
+and a subgroup with no hormonal influence.
 
 **Aim 2.** Identify the brain-network changes that accompany the benefit of
 stabilizing estradiol during the perimenstrual window.
@@ -92,9 +114,9 @@ menstruate regularly, are between 20 and 40 years old, have had thoughts of
 suicide in the past month, and are currently in outpatient mental health care.
 Full criteria are reviewed during screening.
 
-**What taking part involves.** Short daily surveys, at-home hormone testing, and
-study visits. Participants who continue into the trial phase also complete MRI
-scans.
+**What taking part involves.** Short surveys twice a day, at-home hormone
+testing, and study visits. Participants who continue into the trial phase also
+complete MRI scans.
 
 **Your own care continues.** Taking part does not replace your existing
 treatment, and you stay with your own providers throughout.
@@ -127,7 +149,8 @@ within-person crossover pharmacological manipulation and resting-state fMRI.
 Analyses use subgrouping group iterative multiple model estimation (S-GIMME) to
 estimate directed networks at the group, subgroup, and individual level, so that
 shared structure and person-specific structure are recovered in the same model
-rather than assumed.
+rather than assumed. Exploratory seed-based analyses are also planned, to keep
+findings comparable with the wider imaging literature.
 
 Prior trials from this line of work: NCT03720847, NCT04112368, NCT03498313.
 

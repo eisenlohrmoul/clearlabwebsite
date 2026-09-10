@@ -43,6 +43,13 @@ main{flex:1; display:flex; align-items:center; justify-content:center; padding:4
 .link .t{font-family:'Schibsted Grotesk',sans-serif; font-weight:800; font-size:18px}
 .link .d{font-size:15px; color:var(--ink-2); margin-top:5px}
 .link .go{margin-top:11px; font-weight:700; font-size:14px; color:var(--accent)}
+.contact{margin:34px 0 0; padding-top:24px; border-top:1px solid var(--border)}
+.contact .k{font-family:'Schibsted Grotesk',sans-serif; font-weight:800; font-size:12px;
+  letter-spacing:.14em; text-transform:uppercase; color:var(--ink-3)}
+.contact a{display:inline-block; margin-top:7px; font-family:'Schibsted Grotesk',sans-serif;
+  font-weight:800; font-size:clamp(18px,2.6vw,22px); color:var(--accent); text-decoration:none;
+  border-bottom:2px solid color-mix(in srgb,var(--accent) 35%,transparent)}
+.contact a:hover{border-bottom-color:var(--accent)}
 footer{border-top:1px solid var(--border); padding:22px 24px 30px}
 footer .wrap{max-width:640px; margin:0 auto; font-size:13.5px; color:var(--ink-3); line-height:1.55}
 footer a{color:var(--accent)}
@@ -70,6 +77,11 @@ img.logo{height:66px; width:auto; margin-bottom:26px}
       <div class="d">People, publications, and current projects, until the new site replaces it.</div>
       <div class="go">Visit &rarr;</div>
     </a>
+  </div>
+
+  <div class="contact">
+    <div class="k">Get in touch</div>
+    <a href="mailto:clearlab@uchicago.edu">clearlab@uchicago.edu</a>
   </div>
 </div></main>
 

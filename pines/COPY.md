@@ -24,8 +24,8 @@ Supported by the National Institute of Mental Health · R01MH140472 · 2026–20
 
 Suicide risk is not steady over time. For many people who menstruate, it rises
 and falls in a recurring monthly pattern, with the hardest days clustering
-around the start of a period. That is also when estradiol and progesterone, the
-two main ovarian hormones, fall most sharply.
+around the start of a period. That is also when the ovarian hormones are in their
+greatest flux.
 
 In three earlier randomized trials, our team found that giving supplemental
 estradiol across those days prevented the expected worsening of depression and

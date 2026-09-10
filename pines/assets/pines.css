@@ -4,7 +4,7 @@
   --navy:#1a2b3d; --navy-deep:#0e1a26; --red:#cc0001; --gold:#fbca0e;
   --cream:#f5efe2; --cream-2:#ebe3cc;
   --bg:#ffffff; --surface:#f6f7f9; --border:#e2e7ec;
-  --ink:#1a2b3d; --ink-2:#46535f; --ink-3:#6b7785;
+  --ink:#1a2b3d; --ink-2:#46535f; --ink-3:#626d7a;  /* AA on --surface (4.91) and --bg (5.27) */
   --accent:var(--red);
   --maxw:1080px; --radius:18px;
 }
@@ -58,7 +58,7 @@ header{padding:38px 0 0}
 .door:nth-child(2){border-left-color:var(--red)}
 .door:nth-child(3){border-left-color:var(--gold)}
 .door:nth-child(4){border-left-color:var(--ink-3)}
-.door .k{font-family:'Schibsted Grotesk',sans-serif; font-weight:800; font-size:10.5px; letter-spacing:.12em; text-transform:uppercase; color:var(--ink-3)}
+.door .k{font-family:'Schibsted Grotesk',sans-serif; font-weight:800; font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:var(--ink-3)}
 .door h2{font-size:21px; font-weight:800; margin:8px 0 6px}
 .door p{margin:0; font-size:15.5px; color:var(--ink-2)}
 .door .go{margin-top:12px; font-weight:700; font-size:14px; color:var(--accent)}
@@ -86,7 +86,7 @@ h2{font-size:clamp(24px,3.6vw,33px); font-weight:800; margin:0 0 6px}
 .step{display:flex; align-items:center; gap:10px; margin-bottom:12px}
 .num{flex:none; width:30px; height:30px; display:grid; place-items:center; border-radius:50%; background:var(--navy); color:#fff; font-family:'Schibsted Grotesk',sans-serif; font-weight:800; font-size:15px}
 .card.red .num{background:var(--red)} .card.gold .num{background:var(--gold); color:var(--navy-deep)}
-.label{font-family:'Schibsted Grotesk',sans-serif; font-weight:800; font-size:10.5px; letter-spacing:.12em; text-transform:uppercase; color:var(--ink-3)}
+.label{font-family:'Schibsted Grotesk',sans-serif; font-weight:800; font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:var(--ink-3)}
 
 /* aims + team lists */
 .aims,.team{list-style:none; padding:0; margin:24px 0 0; display:grid; gap:14px}

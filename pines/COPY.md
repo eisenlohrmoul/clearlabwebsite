@@ -90,17 +90,13 @@ months.
 
 ## Research aims
 
-**Aim 1.** Identify person-specific patterns linking daily hormone change to
-mood and suicidal thinking. Following the DASH framework, we expect an
-estradiol-sensitive subgroup (low mood, anhedonia, poor concentration), a
-progesterone-sensitive subgroup (irritability, rejection sensitivity, conflict),
-and a subgroup with no hormonal influence.
+**Aim 1.** Identify idiographic hormone-symptom networks associated with
+proximal suicide risk. Subgroup analyses are expected to include at least one
+group showing no hormonal effects.
 
-**Aim 2.** Identify the brain-network changes that accompany the benefit of
-stabilizing estradiol during the perimenstrual window.
-
-**Aim 3 (exploratory).** Test whether those patterns help predict longer-term
-risk.
+**Aim 2.** Identify person-specific and subgroup-level effects of estradiol
+stabilization on behavioral and neural networks that may explain the benefit of
+perimenstrual estradiol treatment.
 
 ---
 
@@ -146,11 +142,13 @@ study contact.
 PINES combines densely sampled hormone and symptom time series with a
 within-person crossover pharmacological manipulation and resting-state fMRI.
 
-Analyses use subgrouping group iterative multiple model estimation (S-GIMME) to
-estimate directed networks at the group, subgroup, and individual level, so that
-shared structure and person-specific structure are recovered in the same model
-rather than assumed. Exploratory seed-based analyses are also planned, to keep
-findings comparable with the wider imaging literature.
+Analyses use group iterative multiple model estimation (GIMME), which recovers
+shared and person-specific network structure within the same model rather than
+assuming it in advance.
+
+NOTE: keep this page at the level of the public NIH RePORTER award abstract.
+Anything more specific — hypothesized subgroup profiles, the scan-contrast
+structure, exploratory analysis plans — should not appear here.
 
 Prior trials from this line of work: NCT03720847, NCT04112368, NCT03498313.
 

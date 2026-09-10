@@ -6,6 +6,7 @@
   --bg:#ffffff; --surface:#f6f7f9; --border:#e2e7ec;
   --ink:#1a2b3d; --ink-2:#46535f; --ink-3:#626d7a;  /* AA on --surface (4.91) and --bg (5.27) */
   --accent:var(--red);
+  --badge-ring:rgba(14,26,38,.18);
   --maxw:1080px; --radius:18px;
 }
 @media (prefers-color-scheme:dark){
@@ -14,6 +15,7 @@
     --ink:#eef2f6; --ink-2:#b7c4d2; --ink-3:#8fa0b3;
     --cream:#16273a; --cream-2:#1d3049;
     --red:#ff5a5b; --accent:#ff5a5b;
+    --badge-ring:rgba(183,196,210,.5);
   }
 }
 *{box-sizing:border-box}
@@ -43,6 +45,7 @@ header{padding:38px 0 0}
 
 /* hub */
 .hub{padding:60px 0 20px; text-align:center}
+.badge{flex:none; margin-bottom:6px}
 .hub h1{font-size:clamp(52px,12vw,104px); font-weight:900; margin:0; letter-spacing:.02em}
 .hub .expand{font-size:clamp(15px,2.2vw,19px); font-weight:700; color:var(--ink-2); margin:14px 0 0; letter-spacing:.01em}
 .hub .one{font-size:clamp(17px,2.1vw,20px); color:var(--ink-2); max-width:52ch; margin:22px auto 0}
@@ -102,6 +105,15 @@ h2{font-size:clamp(24px,3.6vw,33px); font-weight:800; margin:0 0 6px}
 .team .nm{font-family:'Schibsted Grotesk',sans-serif; font-weight:800; font-size:16px}
 .team .rl{font-size:14px; color:var(--ink-2); margin-top:2px}
 .team .af{font-size:13px; color:var(--ink-3); margin-top:3px}
+
+/* enrollment status — the first thing a prospective participant needs */
+.notice{display:flex; gap:14px; align-items:flex-start; margin:0 0 8px;
+  padding:18px 20px; background:var(--surface); border:1px solid var(--border);
+  border-left:6px solid var(--gold); border-radius:16px}
+.notice .dot{flex:none; width:11px; height:11px; margin-top:8px; border-radius:50%;
+  background:var(--gold); box-shadow:0 0 0 4px color-mix(in srgb,var(--gold) 25%,transparent)}
+.notice .t{font-family:'Schibsted Grotesk',sans-serif; font-weight:800; font-size:17px; color:var(--ink)}
+.notice .d{font-size:15.5px; color:var(--ink-2); margin-top:3px}
 
 /* deliberate blanks — must be visually impossible to ship by accident */
 .ph{display:block; margin:14px 0; padding:12px 16px; border-radius:12px;

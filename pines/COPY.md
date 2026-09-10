@@ -6,6 +6,22 @@ Plain-text source for the PINES pages. Reuse these blocks anywhere
 Anything marked `[PLACEHOLDER: ...]` is a deliberate blank — a fact only the
 study team can supply. Do not publish with placeholders still in place.
 
+## Naming the hormones
+
+Press page: **estrogen** and **progesterone**. Plain words for a general
+audience.
+
+Clinician and researcher pages: **estradiol** and **progesterone**. Those
+readers want the specific molecule, and estradiol is what the trials
+administer.
+
+Participant page and hub: neither. Both deliberately avoid naming hormones
+at all — see the note below on recruitment framing.
+
+Exception: co-investigator research areas ("cognition, estrogen, and the
+brain") describe a person's field, not the study drug, and stay as written
+wherever they appear.
+
 ## Page structure
 
     pines/                 hub — logo, name, one line, four doors
@@ -48,8 +64,8 @@ flux.
 That figure comes from our own clinical samples. It describes people already in
 psychiatric care, not people who menstruate in general.
 
-In three earlier randomized trials, our team found that supplementing estradiol,
-the main estrogen, across those days prevented the expected worsening of depression and suicidal
+In three earlier randomized trials, our team found that supplementing estrogen
+across those days prevented the expected worsening of depression and suicidal
 thinking, compared with placebo. Progesterone, the other main ovarian hormone,
 did not have that effect. PINES asks the next question: how does that benefit
 actually work, and does it work the same way in everyone?

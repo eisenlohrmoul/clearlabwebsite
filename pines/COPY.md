@@ -193,12 +193,14 @@ guidance.
 
 **Consultants**
 
-- Crystal Schiller, PhD — affect, estrogen, and the brain
-- Jessica Peters, PhD — clinical phenotyping, irritability, and the brain
+- Crystal Schiller, PhD — affect, estrogen, and the brain, University of North
+  Carolina at Chapel Hill
+- Jessica Peters, PhD — clinical phenotyping, irritability, and the brain,
+  Brown University
 - Natania Crane, PhD — neuroimaging of reward processes, substance use,
-  University of Illinois Chicago
+  Ohio State University
 
-[PLACEHOLDER: institutional affiliations for Schiller, Peters, and Aftab]
+[PLACEHOLDER: institutional affiliation for Aftab]
 
 ---
 

@@ -4,7 +4,12 @@ Plain-text source for the PINES pages. Reuse these blocks anywhere
 (Squarespace, Notion, IRB recruitment packets, one-pagers).
 
 Anything marked `[PLACEHOLDER: ...]` is a deliberate blank — a fact only the
-study team can supply. Do not publish with placeholders still in place.
+study team can supply.
+
+The published pages no longer show these as visible blocks. They are HTML
+comments in the source instead, so a visitor sees a page with a section
+missing rather than a page with a hole in it. Search the HTML for
+`TO FILL IN` to find them.
 
 ## Naming the hormones
 
@@ -174,16 +179,25 @@ guidance.
 
 ## Team
 
-- Tory Eisenlohr-Moul, PhD — Principal Investigator
-- Pauline Maki, PhD — Co-Investigator, cognition, estrogen, and the brain
-- Kathleen M. Gates, PhD — Co-Investigator, dynamic network modeling (GIMME)
-- Sarah Keedy, PhD — Co-Investigator, neuroimaging
-- Crystal Schiller, PhD — Co-Investigator, affect, estrogen, and the brain
-- Jessica Peters, PhD — Co-Investigator, clinical phenotyping, irritability, and the brain
-- Melissa Wagner-Schuman, MD, PhD — Study physician, reproductive psychiatry
+**Study team**
 
-[PLACEHOLDER: institutional affiliations for each (Keedy is University of Chicago)]
-[PLACEHOLDER: study coordinator and staff, if they should be listed]
+- Tory Eisenlohr-Moul, PhD — Principal Investigator, University of Chicago
+- Kathleen M. Gates, PhD — Co-Investigator, dynamic network modeling,
+  University of North Carolina at Chapel Hill
+- Sarah Keedy, PhD — Co-Investigator, neuroimaging, University of Chicago
+- Pauline Maki, PhD — Co-Investigator, cognition, estrogen, and the brain,
+  University of Illinois Chicago
+- Melissa Wagner-Schuman, MD, PhD — Study medical supervisor, reproductive
+  psychiatry, University of Illinois Chicago
+
+**Consultants**
+
+- Crystal Schiller, PhD — affect, estrogen, and the brain
+- Jessica Peters, PhD — clinical phenotyping, irritability, and the brain
+- Natania Crane, PhD — neuroimaging of reward processes, substance use,
+  University of Illinois Chicago
+
+[PLACEHOLDER: institutional affiliations for Schiller and Peters]
 
 ---
 

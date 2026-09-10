@@ -94,9 +94,14 @@ h2{font-size:clamp(24px,3.6vw,33px); font-weight:800; margin:0 0 6px}
 .aims .k{flex:none; font-family:'Schibsted Grotesk',sans-serif; font-weight:800; font-size:13px; letter-spacing:.08em; text-transform:uppercase; color:var(--accent); min-width:74px; padding-top:2px}
 .aims p{margin:0; color:var(--ink-2); font-size:16px}
 .team{grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:12px}
+.teamhead{font-family:'Schibsted Grotesk',sans-serif; font-weight:800; font-size:12px;
+  letter-spacing:.14em; text-transform:uppercase; color:var(--ink-3);
+  margin:26px 0 -8px}
+.teamhead:first-of-type{margin-top:0}
 .team li{padding:16px 18px; background:var(--surface); border:1px solid var(--border); border-radius:14px}
 .team .nm{font-family:'Schibsted Grotesk',sans-serif; font-weight:800; font-size:16px}
-.team .rl{font-size:14px; color:var(--ink-3); margin-top:2px}
+.team .rl{font-size:14px; color:var(--ink-2); margin-top:2px}
+.team .af{font-size:13px; color:var(--ink-3); margin-top:3px}
 
 /* deliberate blanks — must be visually impossible to ship by accident */
 .ph{display:block; margin:14px 0; padding:12px 16px; border-radius:12px;

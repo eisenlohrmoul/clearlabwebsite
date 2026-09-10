@@ -174,15 +174,15 @@ guidance.
 
 ## Team
 
-- Tory Eisenlohr-Moul — Principal Investigator
-- Pauline Maki — Co-Investigator, cognition, estrogen, and the brain
-- Kathleen M. Gates — Co-Investigator, dynamic network modeling (GIMME)
-- Sarah Keedy, PhD — Co-Investigator, neuroimaging (University of Chicago)
-- Crystal Schiller — Co-Investigator, affect, estrogen, and the brain
-- Jessica Peters — Co-Investigator, clinical phenotyping, irritability, and the brain
-- Melissa Wagner-Schuman — Study physician, reproductive psychiatry
+- Tory Eisenlohr-Moul, PhD — Principal Investigator
+- Pauline Maki, PhD — Co-Investigator, cognition, estrogen, and the brain
+- Kathleen M. Gates, PhD — Co-Investigator, dynamic network modeling (GIMME)
+- Sarah Keedy, PhD — Co-Investigator, neuroimaging
+- Crystal Schiller, PhD — Co-Investigator, affect, estrogen, and the brain
+- Jessica Peters, PhD — Co-Investigator, clinical phenotyping, irritability, and the brain
+- Melissa Wagner-Schuman, MD, PhD — Study physician, reproductive psychiatry
 
-[PLACEHOLDER: confirm degrees, titles, and institutional affiliations for each]
+[PLACEHOLDER: institutional affiliations for each (Keedy is University of Chicago)]
 [PLACEHOLDER: study coordinator and staff, if they should be listed]
 
 ---

@@ -161,11 +161,6 @@ NOTE: keep this page to what is in the public NIH RePORTER award abstract.
 Anything more specific — hypothesized subgroup profiles, the scan-contrast
 structure, exploratory analysis plans — should not appear here.
 
-Prior trials from this line of work: NCT03720847, NCT04112368, NCT03498313.
-
-[PLACEHOLDER: this study's ClinicalTrials.gov registration number]
-[PLACEHOLDER: data and code sharing plan, preregistrations, protocol links]
-
 ---
 
 ## For press and general public
@@ -189,7 +184,8 @@ guidance.
   University of Illinois Chicago
 - Melissa Wagner-Schuman, MD, PhD — Study medical supervisor, reproductive
   psychiatry, University of Chicago
-- Zehra Aftab, MD — Study physician
+- Zehra Aftab, MD — Study physician, consultation-liaison and reproductive
+  psychiatry
 
 **Consultants**
 

@@ -1,10 +1,27 @@
 # PINES study landing page — copy blocks
 
-Plain-text source for the PINES landing page. Reuse these blocks anywhere
+Plain-text source for the PINES pages. Reuse these blocks anywhere
 (Squarespace, Notion, IRB recruitment packets, one-pagers).
 
 Anything marked `[PLACEHOLDER: ...]` is a deliberate blank — a fact only the
 study team can supply. Do not publish with placeholders still in place.
+
+## Page structure
+
+    pines/                 hub — logo, name, one line, four doors
+    pines/participants/    recruitment. IRB-governed language only.
+    pines/clinicians/      referral, safety, how care continues
+    pines/researchers/     design, aims, S-GIMME, registrations, team
+    pines/press/           plain-language summary, media contact, team
+
+The split exists for a methodological reason, not a cosmetic one. The approved
+recruitment framing describes this as a study "on the biology of depression,
+stress, and suicide," with no mention of the cycle, hormones, female sex, or
+women, because a participant who expects a cyclical pattern may report one.
+Ads and screening materials should therefore link **directly to
+`pines/participants/`**, never to the hub, and that page must not acquire cycle
+or hormone content. The other three pages are written for audiences who are not
+generating the study's data.
 
 ---
 
@@ -133,7 +150,7 @@ guidance.
 - Tory Eisenlohr-Moul — Principal Investigator
 - Pauline Maki — Co-Investigator
 - Kathleen M. Gates — Co-Investigator, dynamic network modeling (GIMME)
-- Natania Crane — Co-Investigator, neuroimaging
+- Sarah Keedy, PhD — Co-Investigator, neuroimaging (University of Chicago)
 - Crystal Schiller — Co-Investigator
 - Jessica Peters — Co-Investigator
 - Melissa Wagner-Schuman — Study physician

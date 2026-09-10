@@ -1,0 +1,110 @@
+/* PINES study pages — shared styles.
+   Palette taken from pines-logo.svg (navy / red / gold / cream). */
+:root{
+  --navy:#1a2b3d; --navy-deep:#0e1a26; --red:#cc0001; --gold:#fbca0e;
+  --cream:#f5efe2; --cream-2:#ebe3cc;
+  --bg:#ffffff; --surface:#f6f7f9; --border:#e2e7ec;
+  --ink:#1a2b3d; --ink-2:#46535f; --ink-3:#6b7785;
+  --accent:var(--red);
+  --maxw:1080px; --radius:18px;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#0e1a26; --surface:#16273a; --border:#23384f;
+    --ink:#eef2f6; --ink-2:#b7c4d2; --ink-3:#8fa0b3;
+    --cream:#16273a; --cream-2:#1d3049;
+    --red:#ff5a5b; --accent:#ff5a5b;
+  }
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0; background:var(--bg); color:var(--ink);
+  font-family:'Hanken Grotesk',system-ui,-apple-system,sans-serif;
+  font-size:17px; line-height:1.6; -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3,.display{font-family:'Schibsted Grotesk',system-ui,sans-serif; letter-spacing:-.02em; line-height:1.12; text-wrap:balance}
+p{text-wrap:pretty}
+a{color:var(--accent)}
+.wrap{max-width:var(--maxw); margin:0 auto; padding:0 24px}
+
+/* crisis banner — present on every page */
+.crisis{background:var(--navy); color:#fff; font-size:15px; padding:12px 0}
+.crisis strong{color:var(--gold)}
+.crisis a{color:#fff}
+.rule{height:10px; background:linear-gradient(90deg,var(--navy) 0 33%,var(--red) 33% 66%,var(--gold) 66% 100%)}
+
+/* masthead */
+header{padding:38px 0 0}
+.brandrow{display:flex; align-items:center; gap:18px; flex-wrap:wrap}
+.brandrow a,.brandrow .plain{text-decoration:none; color:inherit; display:flex; align-items:center; gap:18px; flex-wrap:wrap}
+.trees{flex:none}
+.eyebrow{font-family:'Schibsted Grotesk',sans-serif; font-weight:800; font-size:12px; letter-spacing:.16em; text-transform:uppercase; color:var(--accent)}
+
+/* hub */
+.hub{padding:60px 0 20px; text-align:center}
+.hub h1{font-size:clamp(52px,12vw,104px); font-weight:900; margin:0; letter-spacing:.02em}
+.hub .expand{font-size:clamp(15px,2.2vw,19px); font-weight:700; color:var(--ink-2); margin:14px 0 0; letter-spacing:.01em}
+.hub .one{font-size:clamp(17px,2.1vw,20px); color:var(--ink-2); max-width:52ch; margin:22px auto 0}
+/* Four doors, never an orphan: 4-up, then 2x2, then stacked.
+   auto-fit would leave a full-width fourth card at mid widths. */
+.doors{display:grid; gap:16px; grid-template-columns:1fr; margin:44px 0 8px}
+@media (min-width:600px){ .doors{grid-template-columns:repeat(2,1fr)} }
+@media (min-width:1000px){ .doors{grid-template-columns:repeat(4,1fr)} }
+.door{display:block; text-decoration:none; color:inherit; text-align:left;
+  background:var(--surface); border:1px solid var(--border); border-left:6px solid var(--navy);
+  border-radius:var(--radius); padding:22px 24px; transition:transform .12s ease, box-shadow .12s ease}
+.door:hover{transform:translateY(-2px); box-shadow:0 14px 30px -20px rgba(20,34,51,.55)}
+.door:nth-child(2){border-left-color:var(--red)}
+.door:nth-child(3){border-left-color:var(--gold)}
+.door:nth-child(4){border-left-color:var(--ink-3)}
+.door .k{font-family:'Schibsted Grotesk',sans-serif; font-weight:800; font-size:10.5px; letter-spacing:.12em; text-transform:uppercase; color:var(--ink-3)}
+.door h2{font-size:21px; font-weight:800; margin:8px 0 6px}
+.door p{margin:0; font-size:15.5px; color:var(--ink-2)}
+.door .go{margin-top:12px; font-weight:700; font-size:14px; color:var(--accent)}
+
+/* interior pages */
+.hero{padding:26px 0 40px}
+.hero h1{font-size:clamp(32px,6vw,52px); font-weight:900; margin:.15em 0 0}
+.hero .sub{font-size:clamp(17px,2.2vw,21px); font-weight:600; color:var(--ink-2); max-width:46ch; margin:18px 0 0}
+.meta{margin-top:24px; display:flex; gap:10px; flex-wrap:wrap}
+.chip{font-size:13px; font-weight:600; padding:6px 13px; border-radius:999px; background:var(--surface); border:1px solid var(--border); color:var(--ink-2)}
+.back{display:inline-block; margin-top:22px; font-size:14px; font-weight:700; text-decoration:none}
+section{padding:48px 0; border-top:1px solid var(--border)}
+h2{font-size:clamp(24px,3.6vw,33px); font-weight:800; margin:0 0 6px}
+.lede{font-size:19px; color:var(--ink-2); max-width:62ch; margin:0 0 24px}
+.prose{max-width:62ch}
+.prose p{margin:0 0 18px}
+
+/* cards */
+.grid{display:grid; gap:18px; margin-top:24px}
+.g3{grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+.card{background:var(--surface); border:1px solid var(--border); border-left:6px solid var(--navy); border-radius:var(--radius); padding:22px 24px}
+.card.red{border-left-color:var(--red)} .card.gold{border-left-color:var(--gold)}
+.card h3{font-size:20px; font-weight:800; margin:0 0 8px}
+.card p{margin:0; color:var(--ink-2); font-size:16px}
+.step{display:flex; align-items:center; gap:10px; margin-bottom:12px}
+.num{flex:none; width:30px; height:30px; display:grid; place-items:center; border-radius:50%; background:var(--navy); color:#fff; font-family:'Schibsted Grotesk',sans-serif; font-weight:800; font-size:15px}
+.card.red .num{background:var(--red)} .card.gold .num{background:var(--gold); color:var(--navy-deep)}
+.label{font-family:'Schibsted Grotesk',sans-serif; font-weight:800; font-size:10.5px; letter-spacing:.12em; text-transform:uppercase; color:var(--ink-3)}
+
+/* aims + team lists */
+.aims,.team{list-style:none; padding:0; margin:24px 0 0; display:grid; gap:14px}
+.aims li{display:flex; gap:16px; align-items:flex-start; padding:18px 20px; background:var(--surface); border:1px solid var(--border); border-radius:14px}
+.aims .k{flex:none; font-family:'Schibsted Grotesk',sans-serif; font-weight:800; font-size:13px; letter-spacing:.08em; text-transform:uppercase; color:var(--accent); min-width:74px; padding-top:2px}
+.aims p{margin:0; color:var(--ink-2); font-size:16px}
+.team{grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:12px}
+.team li{padding:16px 18px; background:var(--surface); border:1px solid var(--border); border-radius:14px}
+.team .nm{font-family:'Schibsted Grotesk',sans-serif; font-weight:800; font-size:16px}
+.team .rl{font-size:14px; color:var(--ink-3); margin-top:2px}
+
+/* deliberate blanks — must be visually impossible to ship by accident */
+.ph{display:block; margin:14px 0; padding:12px 16px; border-radius:12px;
+  background:repeating-linear-gradient(135deg,rgba(251,202,14,.16) 0 12px,rgba(251,202,14,.28) 12px 24px);
+  border:1px dashed var(--gold); color:var(--ink); font-size:15px; font-weight:600}
+.ph::before{content:"TO FILL IN — "; font-family:'Schibsted Grotesk',sans-serif; font-weight:800; font-size:11px; letter-spacing:.1em; color:var(--accent)}
+
+footer{background:var(--navy); color:#cdd7e2; padding:44px 0 52px; font-size:15px; margin-top:56px}
+footer a{color:#fff}
+footer .fine{font-size:13.5px; color:#93a4b6; max-width:70ch; margin-top:16px; line-height:1.55}
+@media (max-width:640px){ body{font-size:16px} section{padding:38px 0} .hub{padding:44px 0 12px} }

@@ -58,19 +58,6 @@ We expect that it does not. Sensitivity to hormonal change appears to differ
 between people. Many show no relationship at all. PINES is built to find those
 differences rather than average across them.
 
-## Two things worth understanding
-
-**The hormones themselves are normal.** When we compared people who do and do
-not show this monthly pattern, we found no difference in their hormone levels or
-in how those levels changed across the cycle. What differs is sensitivity to
-ordinary hormonal change, not the hormones.
-
-**This is not a treatment we can simply prescribe.** Taking supplemental
-estradiol month after month carries long-term risks, including elevated risk of
-blood clots and cancer. That is precisely why the mechanism matters. If we can
-identify how estradiol produces its benefit, that opens a path to safer
-treatments that reproduce the benefit without the risk.
-
 ---
 
 ## Study design at a glance
@@ -105,8 +92,7 @@ perimenstrual estradiol treatment.
 [PLACEHOLDER: one-paragraph plain-language description, in IRB-approved
 recruitment language. See note on recruitment framing in the README.]
 
-**Who may be eligible.** In broad terms, the study is open to adults who
-menstruate regularly, are between 20 and 40 years old, have had thoughts of
+**Who may be eligible.** The study is open to adults who menstruate regularly, are between 20 and 40 years old, have had thoughts of
 suicide in the past month, and are currently in outpatient mental health care.
 Full criteria are reviewed during screening.
 
@@ -146,7 +132,7 @@ Analyses use group iterative multiple model estimation (GIMME), which recovers
 shared and person-specific network structure within the same model rather than
 assuming it in advance.
 
-NOTE: keep this page at the level of the public NIH RePORTER award abstract.
+NOTE: keep this page to what is in the public NIH RePORTER award abstract.
 Anything more specific — hypothesized subgroup profiles, the scan-contrast
 structure, exploratory analysis plans — should not appear here.
 

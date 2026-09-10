@@ -189,6 +189,7 @@ guidance.
   University of Illinois Chicago
 - Melissa Wagner-Schuman, MD, PhD — Study medical supervisor, reproductive
   psychiatry, University of Illinois Chicago
+- Zehra Aftab, MD — Study physician
 
 **Consultants**
 
@@ -197,7 +198,7 @@ guidance.
 - Natania Crane, PhD — neuroimaging of reward processes, substance use,
   University of Illinois Chicago
 
-[PLACEHOLDER: institutional affiliations for Schiller and Peters]
+[PLACEHOLDER: institutional affiliations for Schiller, Peters, and Aftab]
 
 ---
 

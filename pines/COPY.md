@@ -129,7 +129,8 @@ complete MRI scans.
 treatment, and you stay with your own providers throughout.
 
 [PLACEHOLDER: current enrollment status — open, waitlist, or not yet recruiting]
-[PLACEHOLDER: how to get in touch — screening link, email, phone]
+**Questions.** Email clearlab@uchicago.edu. We are not enrolling yet, so we cannot sign
+anyone up, but we are glad to answer questions.
 [PLACEHOLDER: compensation]
 
 ---
@@ -143,7 +144,8 @@ not a treatment program, and it is not a substitute for clinical care.
 Risk assessment and safety planning are built into screening and into ongoing
 study contact.
 
-[PLACEHOLDER: referral pathway and provider-facing contact]
+**Referring a patient.** Email clearlab@uchicago.edu. We expect to begin enrolling in
+January 2027.
 [PLACEHOLDER: whether providers are notified or asked to confirm care status]
 
 ---
@@ -165,7 +167,7 @@ structure, exploratory analysis plans — should not appear here.
 
 ## For press and general public
 
-[PLACEHOLDER: media contact]
+**Media inquiries.** clearlab@uchicago.edu
 
 Journalists covering suicide are encouraged to follow established safe-reporting
 guidance.

@@ -188,7 +188,7 @@ guidance.
 - Pauline Maki, PhD — Co-Investigator, cognition, estrogen, and the brain,
   University of Illinois Chicago
 - Melissa Wagner-Schuman, MD, PhD — Study medical supervisor, reproductive
-  psychiatry, University of Illinois Chicago
+  psychiatry, University of Chicago
 - Zehra Aftab, MD — Study physician
 
 **Consultants**

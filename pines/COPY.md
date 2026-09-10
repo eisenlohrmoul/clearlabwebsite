@@ -185,7 +185,7 @@ guidance.
 - Melissa Wagner-Schuman, MD, PhD — Study medical supervisor, reproductive
   psychiatry, University of Chicago
 - Zehra Aftab, MD — Study physician, consultation-liaison and reproductive
-  psychiatry
+  psychiatry, University of Chicago
 
 **Consultants**
 
@@ -195,8 +195,6 @@ guidance.
   Brown University
 - Natania Crane, PhD — neuroimaging of reward processes, substance use,
   Ohio State University
-
-[PLACEHOLDER: institutional affiliation for Aftab]
 
 ---
 

@@ -104,6 +104,31 @@ h2{font-size:clamp(24px,3.6vw,33px); font-weight:800; margin:0 0 6px}
   border:1px dashed var(--gold); color:var(--ink); font-size:15px; font-weight:600}
 .ph::before{content:"TO FILL IN — "; font-family:'Schibsted Grotesk',sans-serif; font-weight:800; font-size:11px; letter-spacing:.1em; color:var(--accent)}
 
+/* ---- figure palette -------------------------------------------------
+   Brand gold is 1.55:1 on white, unusable as a line or a label, so the
+   figure uses a darkened gold in light mode and the true brand gold in
+   dark mode. Navy is 1.22:1 on the dark ground, so it flips to a light
+   blue there. Every value below clears 3:1 for strokes, 4.5:1 for text. */
+:root{
+  --fig-a:#1a2b3d; --fig-b:#cc0001; --fig-c:#8f6c05;
+  --fig-avg:#46535f; --fig-grid:#dbe1e8; --fig-band:#f3ece0; --fig-axis:#8b96a3;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --fig-a:#7fb0e8; --fig-b:#ff5a5b; --fig-c:#fbca0e;
+    --fig-avg:#b7c4d2; --fig-grid:#23384f; --fig-band:#1b2f47; --fig-axis:#7b8ea3;
+  }
+}
+figure.chart{margin:26px 0 0; padding:22px 20px 16px; background:var(--surface);
+  border:1px solid var(--border); border-radius:var(--radius)}
+figure.chart svg{display:block; width:100%; height:auto}
+figure.chart .cap{font-size:14.5px; color:var(--ink-2); margin:12px 0 0; max-width:62ch}
+figure.chart .cap b{color:var(--ink)}
+.chart-title{font-family:'Schibsted Grotesk',sans-serif; font-weight:800;
+  font-size:clamp(17px,2.2vw,20px); line-height:1.25; margin:0 0 4px; color:var(--ink)}
+.chart-note{font-size:12.5px; font-weight:700; letter-spacing:.08em;
+  text-transform:uppercase; color:var(--ink-3); margin:0 0 16px}
+
 footer{background:var(--navy); color:#cdd7e2; padding:44px 0 52px; font-size:15px; margin-top:56px}
 footer a{color:#fff}
 footer .fine{font-size:13.5px; color:#93a4b6; max-width:70ch; margin-top:16px; line-height:1.55}

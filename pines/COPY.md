@@ -173,7 +173,7 @@ guidance.
 - Kathleen M. Gates — Co-Investigator, dynamic network modeling (GIMME)
 - Sarah Keedy, PhD — Co-Investigator, neuroimaging (University of Chicago)
 - Crystal Schiller — Co-Investigator, affect, estrogen, and the brain
-- Jessica Peters — Co-Investigator, clinical phenotyping and mechanisms
+- Jessica Peters — Co-Investigator, clinical phenotyping, irritability, and the brain
 - Melissa Wagner-Schuman — Study physician, reproductive psychiatry
 
 [PLACEHOLDER: confirm degrees, titles, and institutional affiliations for each]

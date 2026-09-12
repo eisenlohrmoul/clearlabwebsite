@@ -48,6 +48,15 @@ img{max-width:100%}
 @media (prefers-color-scheme:dark){ :root:not([data-theme="light"]) .banner{background:#22364d; color:var(--ink)} }
 :root[data-theme="dark"] .banner{background:#22364d; color:var(--ink)}
 .banner .wrap{display:flex; align-items:center; gap:10px; padding-top:9px; padding-bottom:9px}
+.recruit{background:var(--gold); color:#1a2b3d}
+@media (prefers-color-scheme:dark){ :root:not([data-theme="light"]) .recruit{background:#3a2f10; color:var(--ink)} }
+:root[data-theme="dark"] .recruit{background:#3a2f10; color:var(--ink)}
+.recruit .wrap{display:flex; align-items:baseline; gap:8px 14px; flex-wrap:wrap;
+  padding-top:11px; padding-bottom:11px}
+.recruit .k{font-family:'Schibsted Grotesk',sans-serif; font-weight:800; font-size:11px;
+  letter-spacing:.14em; text-transform:uppercase; flex:none}
+.recruit .v{font-size:14.5px; font-weight:600}
+.recruit .v a{color:inherit; text-decoration:underline; text-underline-offset:2px}
 .banner .dot{width:7px; height:7px; border-radius:50%; background:var(--gold); flex:none}
 .banner span{font-family:'Schibsted Grotesk',sans-serif; font-weight:800; font-size:11.5px;
   letter-spacing:.16em; text-transform:uppercase}
@@ -55,13 +64,13 @@ img{max-width:100%}
 section{padding:46px 0; border-bottom:1px solid var(--border)}
 
 /* masthead + hero */
-.top{padding:34px 0 0}
+.top{padding-top:34px}
 img.logo{height:60px; width:auto}
 @media (prefers-color-scheme:dark){ :root:not([data-theme="light"]) img.logo{filter:brightness(0) invert(1) opacity(.92)} }
 :root[data-theme="dark"] img.logo{filter:brightness(0) invert(1) opacity(.92)}
 .unit{font-family:'Schibsted Grotesk',sans-serif; font-weight:800; font-size:11px; letter-spacing:.13em;
       text-transform:uppercase; color:var(--ink-3); margin-top:14px}
-.hero{padding:26px 0 44px; border-bottom:1px solid var(--border);
+.hero{padding-top:26px; padding-bottom:44px; border-bottom:1px solid var(--border);
   display:grid; grid-template-columns:1.1fr .9fr; gap:38px; align-items:center}
 @media (max-width:860px){ .hero{grid-template-columns:1fr; gap:26px} }
 .hero h1{max-width:18ch; margin-top:10px}
@@ -133,6 +142,11 @@ footer p{font-size:13.5px; color:var(--ink-3); line-height:1.55; margin:0; max-w
 <div class="rule"></div>
 
 <div class="banner"><div class="wrap"><i class="dot"></i><span>New site coming soon</span></div></div>
+
+<div class="recruit"><div class="wrap">
+  <span class="k">Recruiting</span>
+  <span class="v">An MD/PhD student and a T32 postdoctoral fellow. Email Dr Eisenlohr-Moul with your CV: <a href="mailto:temo@uchicago.edu">temo@uchicago.edu</a></span>
+</div></div>
 
 <div class="wrap top">
   <img class="logo" src="assets/clear-logo-horizontal.png" alt="CLEAR: Clarifying the Endocrinology of Acute Risk">

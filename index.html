@@ -193,6 +193,24 @@ a.fund:hover{background:#e0b200; text-decoration:none}
 footer{padding:24px 0 34px}
 footer p{font-size:13.5px; color:var(--ink-3); line-height:1.55; margin:0; max-width:72ch}
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
+
+.nav{position:sticky; top:0; z-index:20; background:var(--bg);
+  border-bottom:1px solid var(--border); margin-top:22px;
+  -webkit-backdrop-filter:saturate(140%) blur(8px); backdrop-filter:saturate(140%) blur(8px)}
+.nav .wrap{display:flex; align-items:center; gap:4px; flex-wrap:nowrap;
+  overflow-x:auto; scrollbar-width:none; padding-top:9px; padding-bottom:9px}
+.nav .wrap::-webkit-scrollbar{display:none}
+.nav a{font-family:'Schibsted Grotesk',sans-serif; font-weight:700; font-size:13.5px;
+  letter-spacing:-.005em; color:var(--ink-2); text-decoration:none;
+  padding-top:6px; padding-bottom:6px; padding-left:11px; padding-right:11px;
+  border-radius:7px; white-space:nowrap}
+.nav a:hover{background:var(--surface); color:var(--ink)}
+.nav a:focus-visible{outline:2px solid var(--red); outline-offset:2px}
+.nav a.cta{margin-left:auto; color:var(--red)}
+.nav a.cta:hover{background:var(--red); color:#fff}
+@media (max-width:560px){.nav a{font-size:12.5px; padding-left:9px; padding-right:9px}}
+section[id]{scroll-margin-top:54px}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
 </style>
 </head>
 <body>
@@ -216,6 +234,13 @@ footer p{font-size:13.5px; color:var(--ink-3); line-height:1.55; margin:0; max-w
   <div class="unit">University of Chicago · Department of Psychiatry &amp; Behavioral Neuroscience</div>
 </div>
 
+<nav class="nav" aria-label="Sections"><div class="wrap">
+  <a href="#work">What we do</a>
+  <a href="#people">Meet the lab</a>
+  <a href="#trial">PINES trial</a>
+  <a class="cta" href="mailto:temo@uchicago.edu">Contact</a>
+</div></nav>
+
 <div class="wrap hero">
   <div>
     <h1>The CLEAR Lab studies brain sensitivity to hormones across the menstrual cycle.</h1>
@@ -226,7 +251,7 @@ footer p{font-size:13.5px; color:var(--ink-3); line-height:1.55; margin:0; max-w
   </figure>
 </div>
 
-<section>
+<section id="work">
   <div class="wrap">
     <p class="eyebrow">What we do</p>
     <div class="cards">
@@ -272,7 +297,7 @@ footer p{font-size:13.5px; color:var(--ink-3); line-height:1.55; margin:0; max-w
   </div>
 </section>
 
-<section>
+<section id="people">
   <div class="wrap">
         <h2>Meet the lab</h2>
 
@@ -448,7 +473,7 @@ footer p{font-size:13.5px; color:var(--ink-3); line-height:1.55; margin:0; max-w
   </div>
 </section>
 
-<section>
+<section id="trial">
   <div class="wrap">
     <h2>Upcoming R01 trial (coming soon)</h2>
     <div class="links">

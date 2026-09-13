@@ -8,11 +8,9 @@ Public pages for the **CLEAR Lab**, served by GitHub Pages from `main`.
 ## Layout
 
 ```
-/           holding page — "the website is being rebuilt", links out to PINES
-            and the lab wiki
+/           the landing page: what the lab studies, three research cards,
+            the roster, and the upcoming PINES trial
 /pines/     the PINES study site: a hub plus four audience pages
-/signs/     the printable "CLEAR Lab Signs" sheets (was at the root until
-            Sept 2026)
 /assets/    logos, headshots, the PINES badge
 ```
 
@@ -40,16 +38,13 @@ A fixed-width print layout (two letter-size sheets), intentionally not
 responsive. It is designed in Claude's design tool, not hand-edited. To
 publish a new version:
 
-1. Save the "CLEAR Lab Signs" design from the browser to
-   `~/Desktop/CLEAR Lab Signs.htm`.
-2. `python3 tools/build_index.py` — writes `signs/index.html`, strips the
-   browser-extension junk, and swaps in real Google Fonts links.
-3. Copy new images from `CLEAR Lab Signs_files/` into `assets/`.
-4. Commit and push; Pages redeploys in about a minute.
+The wall signage is **not part of this site**. It lives on the `lab-signage`
+branch, deliberately off `main`, because Pages serves everything on `main` from
+the root — anything committed here is live on the public web.
 
-Note that `build_index.py` still writes to the repo root by default. Point it
-at `signs/index.html`, and remember that the page references assets as
-`../assets/` now that it is one level down.
+    git checkout lab-signage    # signs/posters-11x17.html, signs/README.md
+
+`tools/build_index.py` belonged to that workflow and moved with it.
 
 ## Notes
 

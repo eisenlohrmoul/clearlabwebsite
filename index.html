@@ -1,18 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>CLEAR Lab</title>
-<meta name="description" content="The CLEAR Lab at the University of Chicago studies brain sensitivity to hormones across the menstrual cycle: who is susceptible, which hormonal event is responsible, and what helps.">
+<title>The CLEAR Lab for Cyclical Neuroendocrinology | Clarifying the Endocrinology of Acute Risk for distress, substance use, and suicide</title>
+<meta name="description" content="The The CLEAR Lab for Cyclical Neuroendocrinology at the University of Chicago studies brain sensitivity to hormones across the menstrual cycle: who is susceptible, which hormonal event is responsible, and what helps.">
 <link rel="icon" href="assets/pines-badge.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=Schibsted+Grotesk:wght@600;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --navy:#1a2b3d; --red:#cc0001; --gold:#fbca0e;
-  --d1:#9a6b05; --d2:#b8342c; --d3:#1f6f8b;
+  --navy:#1a2b3d; --red:#a50002; --gold:#fbca0e;
+  --d1:#946705; --d2:#b8342c; --d3:#1f6f8b;
   --bg:#ffffff; --surface:#f6f7f9; --border:#e2e7ec;
   --ink:#1a2b3d; --ink-2:#46535f; --ink-3:#626d7a; --accent:var(--red);
   --w1:#fdf8e8; --w2:#fdf2f1; --w3:#eff5f8;
@@ -23,7 +23,7 @@
     --navy:#a9c0da; --gold:#ffd94f;
     --d1:#e0b53d; --d2:#ff8d84; --d3:#77bcd6;
     --bg:#0e1a26; --surface:#16273a; --border:#23384f;
-    --ink:#eef2f6; --ink-2:#b7c4d2; --ink-3:#8fa0b3; --accent:#ff5a5b;
+    --ink:#eef2f6; --ink-2:#b7c4d2; --ink-3:#8fa0b3; --red:#e8706f; \1
     --w1:#241f10; --w2:#2a1a19; --w3:#12242e;
     --topic:#79c9b2;
   }
@@ -32,16 +32,16 @@
   --navy:#a9c0da; --gold:#ffd94f;
   --d1:#e0b53d; --d2:#ff8d84; --d3:#77bcd6;
   --bg:#0e1a26; --surface:#16273a; --border:#23384f;
-  --ink:#eef2f6; --ink-2:#b7c4d2; --ink-3:#8fa0b3; --accent:#ff5a5b;
+  --ink:#eef2f6; --ink-2:#b7c4d2; --ink-3:#8fa0b3; --red:#e8706f; \1
   --w1:#241f10; --w2:#2a1a19; --w3:#12242e;
   --topic:#79c9b2;
 }
 *{box-sizing:border-box}
 body{margin:0; background:var(--bg); color:var(--ink); font-size:17px; line-height:1.6;
-  font-family:'Hanken Grotesk',system-ui,-apple-system,sans-serif; -webkit-font-smoothing:antialiased}
-h1,h2,h3{font-family:'Schibsted Grotesk',sans-serif; line-height:1.15; text-wrap:balance; margin:0}
-h1{font-weight:900; letter-spacing:-.02em; font-size:clamp(29px,5vw,44px)}
-h2{font-weight:800; font-size:clamp(21px,2.8vw,27px)}
+  font-family:'IBM Plex Sans',system-ui,-apple-system,sans-serif; -webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:'IBM Plex Sans',sans-serif; line-height:1.15; text-wrap:balance; margin:0}
+h1{font-weight:700; letter-spacing:-.008em; font-size:clamp(25px,3.9vw,35px)}
+h2{font-weight:700; font-size:clamp(21px,2.8vw,27px)}
 p{margin:0 0 14px; max-width:64ch}
 a{color:var(--accent)}
 a:focus-visible{outline:3px solid var(--gold); outline-offset:2px}
@@ -56,12 +56,12 @@ img{max-width:100%}
 :root[data-theme="dark"] .recruit{background:#3a2f10; color:var(--ink)}
 .recruit .wrap{display:flex; align-items:baseline; gap:8px 14px; flex-wrap:wrap;
   padding-top:11px; padding-bottom:11px}
-.recruit .k{font-family:'Schibsted Grotesk',sans-serif; font-weight:800; font-size:11px;
+.recruit .k{font-family:'IBM Plex Sans',sans-serif; font-weight:700; font-size:11px;
   letter-spacing:.14em; text-transform:uppercase; flex:none}
 .recruit .v{font-size:14.5px; font-weight:600}
 .recruit .v a{color:inherit; text-decoration:underline; text-underline-offset:2px}
 .banner .dot{width:7px; height:7px; border-radius:50%; background:var(--gold); flex:none}
-.banner span{font-family:'Schibsted Grotesk',sans-serif; font-weight:800; font-size:11.5px;
+.banner span{font-family:'IBM Plex Sans',sans-serif; font-weight:700; font-size:11.5px;
   letter-spacing:.16em; text-transform:uppercase}
 .wrap{max-width:1000px; margin:0 auto; padding:0 24px}
 section{padding:46px 0; border-bottom:1px solid var(--border)}
@@ -72,49 +72,49 @@ section{padding:46px 0; border-bottom:1px solid var(--border)}
 .brand .markwrap{width:106px; height:106px; flex:none; background:#fff; border-radius:18px;
   display:flex; align-items:center; justify-content:center}
 .brand .mark{width:94px; height:94px; display:block}
-.brand .clear{font-family:'Schibsted Grotesk',sans-serif; font-weight:900; font-size:clamp(34px,5vw,46px);
-  letter-spacing:.015em; color:var(--red); line-height:.95}
-.brand .tag{font-family:'Schibsted Grotesk',sans-serif; font-weight:700; font-size:11.5px; letter-spacing:.13em;
-  text-transform:uppercase; color:var(--navy); margin-top:8px; line-height:1.35}
-.unit{font-family:'Schibsted Grotesk',sans-serif; font-weight:800; font-size:11px; letter-spacing:.13em;
-      text-transform:uppercase; color:var(--ink-3); margin-top:14px}
-.hero{padding-top:26px; padding-bottom:44px; border-bottom:1px solid var(--border);
-  display:grid; grid-template-columns:1.1fr .9fr; gap:38px; align-items:center}
-@media (max-width:860px){ .hero{grid-template-columns:1fr; gap:26px} }
-.hero h1{max-width:20ch; margin-top:10px}
-.hero .lede{font-size:clamp(17px,2.1vw,19.5px); color:var(--ink-2); margin-top:20px; max-width:54ch}
+.brand .labname{font-family:'IBM Plex Sans',sans-serif; font-weight:700; font-size:clamp(19px,2.9vw,30px);
+  letter-spacing:-.012em; color:var(--navy); line-height:1.12}
+.brand .tag{font-family:'IBM Plex Sans',sans-serif; font-weight:600; font-size:13px; letter-spacing:.01em;
+  color:var(--navy); margin-top:9px; line-height:1.35}
+
+.hero{padding-top:24px; padding-bottom:32px; border-bottom:1px solid var(--border);
+  display:block}
+
+.hero h1{max-width:26ch; margin-top:8px}
+.hero .lede{font-size:clamp(16.5px,2vw,18.5px); color:var(--ink-2); margin-top:16px; max-width:62ch}
 .hero figure{margin:0}
 .hero img{width:100%; aspect-ratio:4/3; object-fit:cover; border-radius:14px; display:block}
 .hero figcaption{font-size:12.5px; color:var(--ink-3); margin-top:9px}
 .hero .lede b{color:var(--ink)}
 
 /* three contributions */
-.eyebrow{font-family:'Schibsted Grotesk',sans-serif; font-weight:800; font-size:11.5px;
+.eyebrow{font-family:'IBM Plex Sans',sans-serif; font-weight:700; font-size:11.5px;
   letter-spacing:.15em; text-transform:uppercase; color:var(--accent); margin:0 0 20px}
 .cards{display:grid; grid-template-columns:repeat(auto-fit,minmax(272px,1fr)); gap:16px}
-.card{border:1px solid var(--border); border-top:4px solid; border-radius:12px; padding:22px 23px; display:flex; flex-direction:column}
+.card{border:1px solid var(--border); border-top:4px solid; border-radius:12px; overflow:hidden; display:flex; flex-direction:column}
+.card .inner{padding:19px 23px 20px; display:flex; flex-direction:column; flex:1}
 .card.a{border-top-color:var(--navy); background:var(--surface)}
 .card.b{border-top-color:var(--gold); background:var(--w1)}
 .card.c{border-top-color:var(--accent); background:var(--w2)}
-.card .n{font-family:'Schibsted Grotesk',sans-serif; font-weight:800; font-size:10.5px;
+.card .n{font-family:'IBM Plex Sans',sans-serif; font-weight:700; font-size:11px;
   letter-spacing:.13em; text-transform:uppercase; color:var(--ink-3); margin-bottom:9px}
-.card h3{font-size:17.5px; margin-bottom:9px; min-height:3.45em}
+.card h3{font-size:17.5px; margin-bottom:9px}
 .card p{font-size:15px; color:var(--ink-2); margin-bottom:12px}
-.card .art{display:flex; align-items:center; justify-content:center; height:176px; margin:auto 0 14px}
-.card:not(:has(.triggers)) .art{margin-bottom:45px}
-.card .art svg, .card .art img{width:150px; height:150px; display:block}
+.card .art{display:flex; align-items:center; justify-content:center; background:var(--bg); border-bottom:1px solid var(--border); height:238px; padding:0; margin:0; flex:none}
+
+.card .art svg, .card .art img{width:186px; height:186px; display:block}
 /* a hexagon covers ~65% of its box against a circle's ~79%, so it needs a bigger one to read the same */
-.card .art img.hex{width:176px; height:176px}
+.card .art img.hex{width:200px; height:200px}
 .card .art img{object-fit:contain}
 .triggers{display:flex; justify-content:center; gap:14px; flex-wrap:wrap; margin:0 0 14px}
-.triggers span{font-size:11px; font-weight:700; letter-spacing:.04em; padding-left:8px; border-left:3px solid}
+.triggers span{font-size:11px; font-weight:600; letter-spacing:.04em; padding-left:8px; border-left:3px solid}
 .triggers .t1{color:var(--d1); border-color:var(--d1)}
 .triggers .t2{color:var(--d2); border-color:var(--d2)}
 .triggers .t3{color:var(--d3); border-color:var(--d3)}
 .card .meta{font-size:12.5px; color:var(--ink-3); border-top:1px solid var(--border); padding-top:11px;
   margin:0; min-height:5.2em; text-align:center; display:flex; flex-direction:column; gap:5px}
 .card .meta .cite{line-height:1.4}
-.card .meta .lnk{font-weight:700; line-height:1.3}
+.card .meta .lnk{font-weight:600; line-height:1.3}
 
 
 
@@ -127,65 +127,64 @@ section{padding:46px 0; border-bottom:1px solid var(--border)}
 .link:hover{transform:translateY(-2px); box-shadow:0 14px 30px -20px rgba(20,34,51,.55)}
 .link img{width:64px; height:64px; flex:none; margin-top:2px}
 .link .body{flex:1}
-.link .t{font-family:'Schibsted Grotesk',sans-serif; font-weight:800; font-size:17px}
+.link .t{font-family:'IBM Plex Sans',sans-serif; font-weight:700; font-size:17px}
 .link .d{font-size:14.5px; color:var(--ink-2); margin-top:5px}
-.link .go{margin-top:10px; font-weight:700; font-size:13.5px; color:var(--accent)}
+.link .go{margin-top:10px; font-weight:600; font-size:13.5px; color:var(--accent)}
 .contact{margin-top:30px}
-.contact .k{font-family:'Schibsted Grotesk',sans-serif; font-weight:800; font-size:11.5px;
+.contact .k{font-family:'IBM Plex Sans',sans-serif; font-weight:700; font-size:11.5px;
   letter-spacing:.13em; text-transform:uppercase; color:var(--ink-3)}
-.contact a{display:inline-block; margin-top:6px; font-family:'Schibsted Grotesk',sans-serif;
-  font-weight:800; font-size:clamp(17px,2.4vw,21px); text-decoration:none;
+.contact a{display:inline-block; margin-top:6px; font-family:'IBM Plex Sans',sans-serif;
+  font-weight:700; font-size:clamp(17px,2.4vw,21px); text-decoration:none;
   border-bottom:2px solid color-mix(in srgb,var(--accent) 35%,transparent)}
 /* ---------- roster, on the Design.pdf system ---------- */
-.tier{font-family:'Schibsted Grotesk',sans-serif; font-weight:800; font-size:11.5px; letter-spacing:.12em;
+.tier{font-family:'IBM Plex Sans',sans-serif; font-weight:700; font-size:11.5px; letter-spacing:.12em;
   text-transform:uppercase; color:var(--navy); border-left:4px solid var(--accent); padding-left:11px;
   margin:30px 0 4px; display:flex; align-items:baseline; gap:10px; flex-wrap:wrap}
-.tier.s2{border-left-color:var(--gold)} .tier.s3{border-left-color:#2f8f74} .tier.s4{border-left-color:var(--ink-3)}
+.tier.s2{border-left-color:var(--gold)} .tier.s3{border-left-color:#297c65} .tier.s4{border-left-color:var(--ink-3)}
 .tier .count{font-weight:600; letter-spacing:.04em; text-transform:none; color:var(--ink-3); font-size:11.5px}
 .people{display:grid; grid-template-columns:repeat(auto-fill,minmax(305px,1fr)); gap:14px; margin-top:14px}
 
 .pc{position:relative; background:var(--surface); border:1px solid var(--border); border-radius:12px;
   border-bottom:4px solid var(--ink-3); padding:16px 16px 14px; display:flex; gap:13px; align-items:flex-start}
-.pc.lead{border-bottom-color:var(--navy)} .pc.staff{border-bottom-color:#2f8f74}
+.pc.lead{border-bottom-color:var(--navy)} .pc.staff{border-bottom-color:#297c65}
 .pc.trainee{border-bottom-color:var(--accent)} .pc.alum{border-bottom-color:var(--gold)}
 .pc>img{width:62px; height:62px; border-radius:50%; object-fit:cover; flex:none; background:var(--bg)}
 .pc .body{flex:1; min-width:0}
-.pn{font-family:'Schibsted Grotesk',sans-serif; font-weight:800; font-size:14.5px; line-height:1.25}
+.pn{font-family:'IBM Plex Sans',sans-serif; font-weight:700; font-size:14.5px; line-height:1.25}
 .pc:has(.loc) .pn{padding-right:78px}
 .pn span{font-weight:500; color:var(--ink-2)}
-.pr{font-size:12.5px; font-weight:700; color:var(--accent); margin-top:2px; line-height:1.3}
-.pc.lead .pr{color:var(--navy)} .pc.staff .pr{color:#2f8f74} .pc.alum .pr{color:#8a6d00}
+.pr{font-size:12.5px; font-weight:600; color:var(--accent); margin-top:2px; line-height:1.3}
+.pc.lead .pr{color:var(--navy)} .pc.staff .pr{color:#297c65} .pc.alum .pr{color:#8a6d00}
 .pd{font-size:11.5px; color:var(--ink-2); margin-top:4px; line-height:1.4}
-.loc{position:absolute; top:0; right:13px; background:var(--accent); color:#fff; font-size:8.5px;
-  font-weight:800; letter-spacing:.08em; padding:3px 8px 3px 7px; border-radius:0 0 5px 5px}
+.loc{position:absolute; top:0; right:13px; background:var(--accent); color:#fff; font-size:11px;
+  font-weight:700; letter-spacing:.08em; padding:3px 8px 3px 7px; border-radius:0 0 5px 5px}
 .loc.uc{background:#7a0b10}
-.fund{display:inline-block; background:var(--gold); color:#4a3800; font-size:9px; font-weight:800;
+.fund{display:inline-block; background:var(--gold); color:#4a3800; font-size:11px; font-weight:700;
   letter-spacing:.06em; padding:2px 8px; border-radius:5px; margin-top:7px; text-decoration:none}
 a.fund:hover{background:#e0b200; text-decoration:none}
-.track{display:flex; gap:3px; flex-wrap:wrap; margin-top:8px}
-.track i{font-style:normal; font-size:8.5px; font-weight:700; letter-spacing:.03em; padding:2px 5px;
-  border-radius:4px; background:var(--border); color:var(--ink-3); line-height:1.5}
-.track i.on{background:var(--accent); color:#fff}
-.track i.done{background:var(--navy); color:#fff}
-.subtier{font-family:'Schibsted Grotesk',sans-serif; font-weight:700; font-size:10px; letter-spacing:.11em;
+
+
+
+
+.subtier{font-family:'IBM Plex Sans',sans-serif; font-weight:600; font-size:11px; letter-spacing:.11em;
   text-transform:uppercase; color:var(--ink-3); margin:18px 0 0; display:flex; gap:8px; align-items:baseline}
-.subtier span{font-weight:800; color:var(--ink-2)}
+.subtier span{font-weight:700; color:var(--ink-2)}
 .subnote{font-size:11.5px; color:var(--ink-3); margin:6px 0 0; max-width:60ch; font-style:italic}
 .diss{font-size:11px; color:var(--ink-2); margin-top:8px; line-height:1.4}
-.diss b{display:block; font-size:8.5px; font-weight:800; letter-spacing:.11em; text-transform:uppercase;
+.diss b{display:block; font-size:11px; font-weight:700; letter-spacing:.11em; text-transform:uppercase;
   color:var(--ink-3); margin-bottom:2px}
 .diss i{font-style:italic}
-.honor{font-size:11.5px; font-weight:700; color:var(--accent); margin-top:8px; line-height:1.35}
+.honor{font-size:11.5px; font-weight:600; color:var(--accent); margin-top:8px; line-height:1.35}
 .now{margin-top:9px; font-size:11.5px; color:var(--ink-2); line-height:1.4; padding-top:8px;
   border-top:1px solid var(--border)}
-.now b{display:block; font-size:8.5px; font-weight:800; letter-spacing:.11em; text-transform:uppercase;
+.now b{display:block; font-size:11px; font-weight:700; letter-spacing:.11em; text-transform:uppercase;
   color:var(--ink-3); margin-bottom:2px}
 .open{border:2px dashed var(--gold); background:transparent; align-items:center}
 .open.red{border-color:var(--accent)}
 .open .plus{width:46px; height:46px; border-radius:50%; border:2px dashed var(--gold); flex:none;
-  display:flex; align-items:center; justify-content:center; font-size:22px; color:var(--gold); line-height:1}
+  display:flex; align-items:center; justify-content:center; font-size:22px; color:#8d7108; line-height:1}
 .open.red .plus{border-color:var(--accent); color:var(--accent)}
-.open .rec{font-size:9px; font-weight:800; letter-spacing:.11em; text-transform:uppercase; color:#8a6d00;
+.open .rec{font-size:11px; font-weight:700; letter-spacing:.11em; text-transform:uppercase; color:#8a6d00;
   display:flex; align-items:center; gap:5px}
 .open.red .rec{color:var(--accent)}
 .open .rec::before{content:""; width:6px; height:6px; border-radius:50%; background:currentColor}
@@ -200,7 +199,7 @@ footer p{font-size:13.5px; color:var(--ink-3); line-height:1.55; margin:0; max-w
 .nav .wrap{display:flex; align-items:center; gap:4px; flex-wrap:nowrap;
   overflow-x:auto; scrollbar-width:none; padding-top:9px; padding-bottom:9px}
 .nav .wrap::-webkit-scrollbar{display:none}
-.nav a{font-family:'Schibsted Grotesk',sans-serif; font-weight:700; font-size:13.5px;
+.nav a{font-family:'IBM Plex Sans',sans-serif; font-weight:600; font-size:13.5px;
   letter-spacing:-.005em; color:var(--ink-2); text-decoration:none;
   padding-top:6px; padding-bottom:6px; padding-left:11px; padding-right:11px;
   border-radius:7px; white-space:nowrap}
@@ -211,27 +210,99 @@ footer p{font-size:13.5px; color:var(--ink-3); line-height:1.55; margin:0; max-w
 @media (max-width:560px){.nav a{font-size:12.5px; padding-left:9px; padding-right:9px}}
 section[id]{scroll-margin-top:54px}
 @media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+.top > .brand{flex:1; min-width:0}
+.top > .affil{flex:none}
+.brand .word{flex:1; min-width:0}
+.brand .labname{color:var(--navy)}
+.brand .labname .redname{color:var(--red); font-weight:900}
+.brand .expansion u{text-decoration:underline; text-decoration-thickness:1px;
+  text-underline-offset:2px; text-decoration-color:var(--navy)}
+.brand .keywords{font-family:'IBM Plex Sans',sans-serif; font-weight:600;
+  font-size:11px; letter-spacing:.13em; text-transform:uppercase;
+  color:var(--navy); margin-top:7px; line-height:1.5}
+.brand .keywords i{display:inline-block; width:4px; height:4px; border-radius:50%;
+  background:var(--gold); margin-left:9px; margin-right:9px; vertical-align:2px}
+.brand .labname .forcyc{font-weight:700; font-size:.64em; color:var(--navy);
+  letter-spacing:.005em}
+.brand .expansion{font-family:'IBM Plex Sans',sans-serif; font-weight:400;
+  font-size:13.5px; color:var(--navy); margin-top:7px; letter-spacing:.008em;
+  line-height:1.45}
+.brand .expansion b{color:var(--red); font-weight:700}
+.labphoto{width:100%; aspect-ratio:21/9; object-fit:cover; object-position:50% 2%;
+  border-radius:14px; display:block; margin-top:16px; margin-bottom:6px}
+.card .meta .lnk{display:inline-block; min-height:24px; padding-top:4px}
+.fund{min-height:24px; padding-top:4px; padding-bottom:4px; display:inline-flex; align-items:center}
+.contact a, .diss a{display:inline-block; min-height:24px; padding-top:4px}
+/* the university's own maroon, from the official kit */
+:root{--uchicago:#800000}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--uchicago:#d98f8f}}
+:root[data-theme="dark"]{--uchicago:#d98f8f}
+.top{display:flex; align-items:center; justify-content:space-between;
+  gap:26px; flex-wrap:wrap}
+.affil{display:flex; align-items:center; gap:13px;
+  padding-left:20px; border-left:3px solid var(--uchicago)}
+@media (max-width:720px){.affil{margin-left:0; margin-top:16px; width:100%}}
+.affil .shield{height:54px; width:44.8px; flex:none; display:block;
+  object-fit:contain}
+.affil .shield.dark{display:none}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .affil .shield.light{display:none}
+  :root:not([data-theme="light"]) .affil .shield.dark{display:block}}
+:root[data-theme="dark"] .affil .shield.light{display:none}
+:root[data-theme="dark"] .affil .shield.dark{display:block}
+.affil-uni{font-family:'IBM Plex Sans',sans-serif; font-weight:600; font-size:14.5px;
+  color:var(--uchicago); line-height:1.25; letter-spacing:-.004em}
+.affil-dept{font-family:'IBM Plex Sans',sans-serif; font-weight:400; font-size:12px;
+  color:var(--ink-3); margin-top:4px; line-height:1.4}
+.hero{display:grid; grid-template-columns:1fr 300px; gap:40px; align-items:start}
+@media (max-width:840px){.hero{grid-template-columns:1fr; gap:26px}}
+.welcome{display:flex; flex-direction:column; gap:14px;
+  background:var(--surface); border:1px solid var(--border);
+  border-top:4px solid var(--red); border-radius:3px 3px 13px 13px;
+  padding:20px 21px 19px}
+.welcome .pi{width:96px; height:96px; border-radius:50%; object-fit:cover;
+  object-position:50% 32%; display:block; border:3px solid var(--bg);
+  box-shadow:0 0 0 1px var(--border)}
+.welcome-name{font-family:'IBM Plex Sans',sans-serif; font-weight:700;
+  font-size:16.5px; line-height:1.25; color:var(--ink); letter-spacing:-.008em}
+.welcome-name span{font-weight:600; color:var(--ink-2)}
+.welcome-title .uc-inline{color:var(--uchicago); font-weight:600}
+.welcome-title{font-size:13px; line-height:1.4; color:var(--red);
+  font-weight:600; margin-top:5px}
+footer .affil{margin-bottom:18px; padding-bottom:16px;
+  border-bottom:1px solid var(--border); border-left:0; padding-left:0}
+footer .affil .shield{height:40px; width:33.1px}
+.brand .ucmark{flex:none; display:flex; flex-direction:column;
+  align-items:center; justify-content:center; gap:7px;
+  margin-left:auto; padding-left:20px;
+  border-left:1px solid var(--border)}
+.brand .ucmark .shield{height:72px; width:59.6px; display:block}
+.brand .uccap{font-family:'IBM Plex Sans',sans-serif; font-weight:600;
+  font-size:11px; letter-spacing:.07em; text-transform:uppercase;
+  color:var(--uchicago); text-align:center; line-height:1.3;
+  max-width:104px}
+.brand .ucmark .shield.dark{display:none}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .brand .ucmark .shield.light{display:none}
+  :root:not([data-theme="light"]) .brand .ucmark .shield.dark{display:block}}
+:root[data-theme="dark"] .brand .ucmark .shield.light{display:none}
+:root[data-theme="dark"] .brand .ucmark .shield.dark{display:block}
 </style>
 </head>
 <body>
 <div class="rule"></div>
 
-<div class="banner"><div class="wrap"><i class="dot"></i><span>New site coming soon</span></div></div>
 
-<div class="recruit"><div class="wrap">
-  <span class="k">Recruiting</span>
-  <span class="v">An MD/PhD student and a T32 postdoctoral fellow. Email Dr. Eisenlohr-Moul with your CV to start the conversation: <a href="mailto:temo@uchicago.edu">temo@uchicago.edu</a></span>
-</div></div>
 
 <div class="wrap top">
   <div class="brand">
-    <span class="markwrap"><img class="mark" src="assets/web/clear-mark.png?v5" alt=""></span>
+    <span class="markwrap"><img class="mark" src="assets/web/clear-mark.png?v6" alt=""></span>
     <div class="word">
-      <div class="clear">CLEAR</div>
-      <div class="tag">Clarifying the Endocrinology of Acute Risk</div>
+      <div class="labname"><span class="redname">The CLEAR Lab</span> <span class="forcyc">for Cyclical Neuroendocrinology</span></div>
+      <div class="expansion"><u>CL</u>arifying the <u>E</u>ndocrinology of <u>A</u>cute <u>R</u>isk for distress, substance use, and suicide across the menstrual cycle.</div>
     </div>
+    <span class="ucmark"><img class="shield light" src="assets/web/uchicago-shield.svg" alt=""><img class="shield dark" src="assets/web/uchicago-shield-white.svg" alt=""><span class="uccap">University of Chicago</span></span>
   </div>
-  <div class="unit">University of Chicago · Department of Psychiatry &amp; Behavioral Neuroscience</div>
+  
+  
 </div>
 
 <nav class="nav" aria-label="Sections"><div class="wrap">
@@ -243,12 +314,17 @@ section[id]{scroll-margin-top:54px}
 
 <div class="wrap hero">
   <div>
-    <h1>The CLEAR Lab studies brain sensitivity to hormones across the menstrual cycle.</h1>
-    <p class="lede"><b>Hormone sensitivity</b> is an unusually strong brain response to ordinary hormone shifts, and it can drive severe depression, irritability, suicide risk, and harmful substance use. We measure and manipulate the menstrual cycle to identify and treat these sensitivities.</p>
+    <h1>We study why some people&rsquo;s brains are far more sensitive to hormone shifts than others.</h1>
+    <p class="lede"><b>Hormone sensitivity</b> is an unusually strong brain response to ordinary hormone shifts, and it can drive severe depression, irritability, suicide risk, and harmful substance use.</p>
   </div>
-  <figure>
-    <img src="assets/web/lab-hero.jpg" alt="Members of the CLEAR Lab at a scientific meeting">
-  </figure>
+  
+  <aside class="welcome">
+    <img class="pi" src="assets/web/tory.jpg" alt="Tory Eisenlohr-Moul">
+    <div class="welcome-txt">
+      <div class="welcome-name">Tory Eisenlohr-Moul, <span>PhD</span></div>
+      <div class="welcome-title">Professor of Psychiatry and Behavioral Neuroscience, <span class="uc-inline">The University of Chicago</span></div>
+    </div>
+  </aside>
 </div>
 
 <section id="work">
@@ -257,9 +333,6 @@ section[id]{scroll-margin-top:54px}
     <div class="cards">
 
       <div class="card a">
-        <div class="n">1 · Framework development</div>
-        <h3>Develop personalized models of cycle sensitivity.</h3>
-        <p>The <b>DASH-MC</b> framework, Dimensional Affective Sensitivity to Hormones, maps why some people are sensitive to estradiol (E2), progesterone (P4), or both, while most are unaffected. We think about hormone sensitivity across disorders, not only in PMDD.</p>
         <div class="art"><svg viewBox="0 0 84 84" width="134" height="134" role="img" aria-label="Estrogen and progesterone across the menstrual cycle, with the three sensitivity windows marked">
 <defs><clipPath id="cyc"><circle cx="42" cy="42" r="38.5"></circle></clipPath></defs>
 <g clip-path="url(#cyc)">
@@ -273,24 +346,30 @@ section[id]{scroll-margin-top:54px}
 </g>
 <circle cx="42" cy="42" r="38.5" fill="none" stroke="#1b2a3d" stroke-width="2"></circle>
 </svg></div>
+        <div class="inner"><div class="n">1 · Framework development</div>
+        <h3>Develop personalized models of cycle sensitivity.</h3>
+        <p>The <b>DASH-MC</b> framework, Dimensional Affective Sensitivity to Hormones, maps why some people are sensitive to estradiol (E2), progesterone (P4), or both, while most are unaffected. We think about hormone sensitivity across disorders, not only in PMDD.</p>
+        
         <div class="triggers"><span class="t3">E2 surge</span><span class="t1">P4/ALLO surge</span><span class="t2">E2 drop</span></div>
-          <p class="meta"><span class="cite">Peters et al., <em>Molecular Psychiatry</em>, 2025</span><a class="lnk" href="https://dashmc.base44.app/">dashmc.base44.app</a></p>
+          <p class="meta"><span class="cite">Peters et al., <em>Molecular Psychiatry</em>, 2025</span><a class="lnk" href="https://dashmc.base44.app/">dashmc.base44.app</a></p></div>
       </div>
 
       <div class="card b">
-        <div class="n">2 · Measurement &amp; modeling</div>
+        <div class="art"><img class="hex" src="assets/menstrualcycleR.png" alt="menstrualcycleR package logo"></div>
+        <div class="inner"><div class="n">2 · Measurement &amp; modeling</div>
         <h3>Build better tools to study the menstrual cycle.</h3>
         <p>Our phase-aligned cycle time scaling (PACTS) approach, implemented in our open-source <b>menstrualcycleR</b> R package, realigns hormonal cycles across patients and months. Generalized additive models can be used to model average, subgroup, and person-specific cycle effects.</p>
-        <div class="art"><img class="hex" src="assets/menstrualcycleR.png" alt="menstrualcycleR package logo"></div>
-        <p class="meta"><span class="cite">Nagpal et al., <em>PNEC</em>, 2025</span><a class="lnk" href="https://menstrualcycler.base44.app/">menstrualcycler.base44.app</a></p>
+        
+        <p class="meta"><span class="cite">Nagpal et al., <em>PNEC</em>, 2025</span><a class="lnk" href="https://menstrualcycler.base44.app/">menstrualcycler.base44.app</a></p></div>
       </div>
 
       <div class="card c">
-        <div class="n">3 · Clinical trials</div>
+        <div class="art"><img src="assets/pines-badge.svg" alt="PINES study badge"></div>
+        <div class="inner"><div class="n">3 · Clinical trials</div>
         <h3>Test the mechanisms of different cycle sensitivities.</h3>
         <p>We pair randomized crossover hormone trials with real-time symptom reports, neuroimaging, and passive smartphone data to isolate how estradiol (E2) and progesterone (P4) each drive risk, revealing distinct biological pathways we can target.</p>
-        <div class="art"><img src="assets/pines-badge.svg" alt="PINES study badge"></div>
-        <p class="meta"><span class="cite">Eisenlohr-Moul et al., <em>Transl Psych</em>, 2022</span><a class="lnk" href="pines/">Upcoming trial: the PINES study</a></p>
+        
+        <p class="meta"><span class="cite">Eisenlohr-Moul et al., <em>Transl Psych</em>, 2022</span><a class="lnk" href="pines/">Upcoming trial: the PINES study</a></p></div>
       </div>
 
     </div>
@@ -300,6 +379,7 @@ section[id]{scroll-margin-top:54px}
 <section id="people">
   <div class="wrap">
         <h2>Meet the lab</h2>
+    <img class="labphoto" src="assets/web/lab-hero.jpg" alt="Members of the Cyclical Neuroendocrinology Lab at a scientific meeting">
 
     <div class="tier">Leadership, faculty &amp; staff <span class="count">4 members</span></div>
     <div class="people">
@@ -335,7 +415,6 @@ section[id]{scroll-margin-top:54px}
           <div class="pn">Sophia Hovakimian, <span>BA</span></div>
           <div class="pr">Clinical Research Associate</div>
           <div class="pd">University of Michigan · three years in clinical trials with integrated neuroimaging</div>
-          <div class="track"><i>PostBac 1</i><i>PostBac 2</i><i>PostBac 3</i><i class="on">PostBac 4</i></div>
         </div>
       </div>
     </div>
@@ -360,7 +439,6 @@ section[id]{scroll-margin-top:54px}
           <div class="pn">Ashley Ross, <span>MS</span></div>
           <div class="pr">MD/PhD Student</div>
           <a class="fund" href="https://reporter.nih.gov/project-details/11390425">F30 (NIMH)</a>
-          <div class="track"><i>M1</i><i>M2</i><i>G1</i><i>G2</i><i>G3</i><i class="on">G4</i><i>M3</i><i>M4</i></div>
           <div class="diss"><b>Dissertation</b><i>Idiographic ovarian hormone effects on suicidality in adolescent female psychiatric patients</i></div>
           <div class="diss"><b>Interests</b><i>Cycle maturation and sensitivity in adolescence · exogenous hormone sensitivity</i></div>
         </div>
@@ -371,7 +449,6 @@ section[id]{scroll-margin-top:54px}
           <div class="pn">Anna Patterson, <span>BS</span></div>
           <div class="pr">MD/PhD Student</div>
           <a class="fund" href="https://reporter.nih.gov/project-details/11243039">F30 (NIDA)</a>
-          <div class="track"><i>M1</i><i>M2</i><i>G1</i><i>G2</i><i>G3</i><i class="on">G4</i><i>M3</i><i>M4</i></div>
           <div class="diss"><b>Dissertation</b><i>Ovarian steroid mechanisms of female cannabis use: longitudinal and experimental models</i></div>
           <div class="diss"><b>Interests</b><i>Substance use across the cycle</i></div>
         </div>
@@ -391,22 +468,20 @@ section[id]{scroll-margin-top:54px}
       <div class="pc staff"><span class="loc">UIC</span><img src="assets/ph-nr.webp" alt="Natasha Reddy">
         <div class="body"><div class="pn">Natasha Reddy, <span>BA</span></div>
         <div class="pr">Medical Student</div>
-        <div class="track"><i>M1</i><i class="on">M2</i><i>M3</i><i>M4</i></div></div></div>
+</div></div>
       <div class="pc staff"><span class="loc uc">UChicago</span><img src="assets/ph-lx.webp" alt="Larissa Xu">
         <div class="body"><div class="pn">Larissa Xu, <span>BA</span></div>
         <div class="pr">Master&rsquo;s Student, Computational Social Science</div>
-        <div class="track"><i class="on">MS1</i><i>MS2</i></div>
         <div class="diss"><b>Interests</b><i>Applying GAMs to the cycle · missingness in cyclic GAMs</i></div></div></div>
       <div class="pc staff"><span class="loc">UIC</span><img src="assets/ph-id.webp" alt="Ida Diab">
         <div class="body"><div class="pn">Ida Diab</div>
         <div class="pr">Undergraduate · Junior</div>
         <div class="pd">Accepted to medical school</div>
-        <div class="track"><i>Pre-med 1</i><i>Pre-med 2</i><i class="on">Pre-med 3</i><i>Pre-med 4</i><i>M1</i><i>M2</i><i>M3</i><i>M4</i></div></div></div>
+</div></div>
       <div class="pc staff"><span class="loc">UIC</span><img src="assets/ph-ss.webp" alt="Sajal Shukla">
         <div class="body"><div class="pn">Sajal Shukla, <span>BS</span></div>
         <div class="pr">Post-Baccalaureate</div>
         <div class="pd">Accepted to medical school</div>
-        <div class="track"><i class="on">PostBac</i><i>M1</i><i>M2</i><i>M3</i><i>M4</i></div>
         <div class="diss"><b>Interests</b><i>Digital mental health · drivers of neurosteroid flux in males</i></div></div></div>
     </div>
 
@@ -440,7 +515,6 @@ section[id]{scroll-margin-top:54px}
         <div class="body">
           <div class="pn">Hafsah Tauseef, <span>PhD</span></div>
           <div class="pr">Former Doctoral Student</div>
-          <div class="track"><i>G1</i><i>G2</i><i>G3</i><i>G4</i><i>G5</i><i>Intern</i><i class="done">PhD</i></div>
           <div class="diss"><b>Dissertation</b><i>Psychiatric symptoms and suicidality across the female lifespan: an idiographic temporal network approach</i></div>
           <div class="diss"><b>Interests</b><i>Idiographic models of hormones, affect, and suicidality</i></div>
           <div class="now"><b>Now</b> Fellow · Orange County Children&rsquo;s Hospital</div>
@@ -451,7 +525,6 @@ section[id]{scroll-margin-top:54px}
           <div class="pn">Anisha Nagpal, <span>PhD</span></div>
           <div class="pr">Former MD/PhD Student</div>
           <a class="fund" href="https://reporter.nih.gov/project-details/11336322">F30 (NIMH)</a>
-          <div class="track"><i>M1</i><i>M2</i><i>G1</i><i>G2</i><i>G3</i><i>G4</i><i class="on">M3</i><i>M4</i></div>
           <div class="diss"><b>Dissertation</b><i>Sleep as a mechanism of premenstrual exacerbation of depression and suicidality</i></div>
           <div class="diss"><b>Interests</b><i>Applying GAMs to the cycle · cyclical sleep sensitivity</i></div>
           <div class="honor">Developer of menstrualcycleR</div>
@@ -463,7 +536,6 @@ section[id]{scroll-margin-top:54px}
           <div class="pn">Jordan Barone, <span>MD/PhD</span></div>
           <div class="pr">Former MD/PhD Student</div>
           <a class="fund" href="https://researchtraining.nih.gov/programs/training-grants/T32">T32</a>
-          <div class="track"><i>M1</i><i>M2</i><i>G1</i><i>G2</i><i>G3</i><i>G4</i><i>M3</i><i>M4</i><i class="done">MD/PhD</i></div>
           <div class="diss"><b>Dissertation</b><i>Peripheral GABA-A receptor subunit expression in perimenstrual exacerbation of affect and suicidality</i></div>
           <div class="diss"><b>Interests</b><i>Peripheral biomarker screening in menstrual-cycle affective change</i></div>
           <div class="now"><b>Now</b> Pediatrics resident · Medical College of Wisconsin</div>
@@ -494,6 +566,13 @@ section[id]{scroll-margin-top:54px}
 </section>
 
 <footer><div class="wrap">
+  <div class="affil">
+      <img class="shield light" src="assets/web/uchicago-shield.svg" alt="">
+      <img class="shield dark" src="assets/web/uchicago-shield-white.svg" alt="">
+      <div class="affil-txt">
+        <div class="affil-uni">The University of Chicago</div>
+      </div>
+    </div>
   <p>This site is not a crisis service and is not monitored. If you are in crisis, call or text <strong>988</strong> in the US, or see <a href="https://findahelpline.com">findahelpline.com</a>.</p>
 </div></footer>
 

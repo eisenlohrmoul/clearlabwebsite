@@ -152,13 +152,9 @@ section{padding:46px 0; border-bottom:1px solid var(--border)}
 .pc>img{width:62px; height:62px; border-radius:50%; object-fit:cover; flex:none; background:var(--bg)}
 .pc .body{flex:1; min-width:0}
 .pn{font-family:'IBM Plex Sans',sans-serif; font-weight:700; font-size:14.5px; line-height:1.25}
-.pc:has(.loc) .pn{padding-right:78px}
 .pn span{font-weight:500; color:var(--ink-2)}
 .pr{font-size:12.5px; font-weight:600; color:var(--navy); margin-top:2px; line-height:1.3}
 .pd{font-size:11.5px; color:var(--ink-2); margin-top:4px; line-height:1.4}
-.loc{position:absolute; top:0; right:13px; background:#626d7a; color:#fff; font-size:11px;
-  font-weight:700; letter-spacing:.08em; padding:3px 8px 3px 7px; border-radius:0 0 5px 5px}
-.loc.uc{background:#800000}
 
 
 
@@ -394,7 +390,7 @@ footer .affil .shield{height:40px; width:33.1px}
 
     <div class="tier">Leadership, faculty &amp; staff <span class="count">4 members</span></div>
     <div class="people">
-      <div class="pc lead"><span class="loc uc">UChicago</span>
+      <div class="pc lead">
         <img src="assets/ph-te.webp" alt="Tory Eisenlohr-Moul">
         <div class="body">
           <div class="pn">Tory Eisenlohr-Moul, <span>PhD</span></div>
@@ -403,7 +399,7 @@ footer .affil .shield{height:40px; width:33.1px}
           <div class="diss"><b>Interests</b><i>Dimensional models and mechanisms of transdiagnostic hormone sensitivity</i></div>
         </div>
       </div>
-      <div class="pc lead"><span class="loc uc">UChicago</span>
+      <div class="pc lead">
         <img src="assets/ph-mw.webp" alt="Melissa Wagner-Schuman">
         <div class="body">
           <div class="pn">Melissa Wagner-Schuman, <span>MD/PhD</span></div>
@@ -411,7 +407,7 @@ footer .affil .shield{height:40px; width:33.1px}
           <div class="pd">Triple board certified: peds, psych &amp; child psych · reproductive psychiatrist</div>
         </div>
       </div>
-      <div class="pc lead" id="jaclyn-ross"><span class="loc uc">UChicago</span>
+      <div class="pc lead" id="jaclyn-ross">
         <img src="assets/ph-jr.webp" alt="Jaclyn Ross">
         <div class="body">
           <div class="pn">Jaclyn Ross, <span>PhD</span></div>
@@ -420,7 +416,7 @@ footer .affil .shield{height:40px; width:33.1px}
           <div class="diss"><b>Interests</b><i>Behavioral interventions for menstrually-related mood disorders</i></div>
         </div>
       </div>
-      <div class="pc staff"><span class="loc uc">UChicago</span>
+      <div class="pc staff">
         <img src="assets/ph-sh.webp" alt="Sophia Hovakimian">
         <div class="body">
           <div class="pn">Sophia Hovakimian, <span>BA</span></div>
@@ -444,20 +440,22 @@ footer .affil .shield{height:40px; width:33.1px}
 
     <div class="tier">MD/PhD students <span class="count">2 members · 1 open role</span></div>
     <div class="people">
-      <div class="pc trainee"><span class="loc">UIC</span>
+      <div class="pc trainee">
         <img src="assets/ph-ar.webp" alt="Ashley Ross">
         <div class="body">
           <div class="pn">Ashley Ross, <span>MS</span></div>
           <div class="pr">MD/PhD Student</div>
+          <div class="pd">University of Illinois Chicago · Neuroscience</div>
           <div class="diss"><b>Dissertation</b><i>Idiographic ovarian hormone effects on suicidality in adolescent female psychiatric patients</i></div>
           <div class="diss"><b>Funding</b><a href="https://reporter.nih.gov/project-details/11390425">F30 (NIMH)</a></div>
         </div>
       </div>
-      <div class="pc trainee"><span class="loc">UIC</span>
+      <div class="pc trainee">
         <img src="assets/ph-ap.webp" alt="Anna Patterson">
         <div class="body">
           <div class="pn">Anna Patterson, <span>BS</span></div>
           <div class="pr">MD/PhD Student</div>
+          <div class="pd">University of Illinois Chicago · Neuroscience</div>
           <div class="diss"><b>Dissertation</b><i>Ovarian steroid mechanisms of female cannabis use: longitudinal and experimental models</i></div>
           <div class="diss"><b>Funding</b><a href="https://reporter.nih.gov/project-details/11243039">F30 (NIDA)</a></div>
         </div>
@@ -472,31 +470,44 @@ footer .affil .shield{height:40px; width:33.1px}
       </div>
     </div>
 
-    <div class="tier s3">Research affiliates &amp; volunteers <span class="count">5 members</span></div>
+    <div class="tier s3">Research affiliates &amp; volunteers <span class="count">7 members</span></div>
     <div class="people">
-      <div class="pc staff"><span class="loc">UIC</span><img src="assets/ph-nr.webp" alt="Natasha Reddy">
+      <div class="pc staff"><img src="assets/ph-nr.webp" alt="Natasha Reddy">
         <div class="body"><div class="pn">Natasha Reddy, <span>BA</span></div>
-        <div class="pr">Medical Student</div>
+        <div class="pr">Medical Student · MS2</div>
+        <div class="pd">University of Illinois Chicago · College of Medicine</div>
 </div></div>
-      <div class="pc staff"><span class="loc uc">UChicago</span><img src="assets/ph-lx.webp" alt="Larissa Xu">
+      <div class="pc staff"><img src="assets/ph-lx.webp" alt="Larissa Xu">
         <div class="body"><div class="pn">Larissa Xu, <span>BA</span></div>
-        <div class="pr">Master&rsquo;s Student, Computational Social Science</div>
+        <div class="pr">Master&rsquo;s Student</div>
+        <div class="pd">University of Chicago · Computational Social Science</div>
         <div class="diss"><b>Interests</b><i>Applying GAMs to the cycle · missingness in cyclic GAMs</i></div></div></div>
-      <div class="pc staff"><span class="loc">UIC</span><img src="assets/ph-id.webp" alt="Ida Diab">
+      <div class="pc staff"><img src="assets/ph-id.webp" alt="Ida Diab">
         <div class="body"><div class="pn">Ida Diab</div>
         <div class="pr">Undergraduate · Junior</div>
-        <div class="pd">BS/MD Program</div>
+        <div class="pd">University of Illinois Chicago · BS/MD Program</div>
 </div></div>
-      <div class="pc staff"><span class="loc">UIC</span><img src="assets/ph-ia.webp" alt="Imaan Ali">
+      <div class="pc staff"><img src="assets/ph-ia.webp" alt="Imaan Ali">
         <div class="body"><div class="pn">Imaan Ali</div>
         <div class="pr">Undergraduate · Junior</div>
-        <div class="pd">BS/MD Program</div>
+        <div class="pd">University of Illinois Chicago · BS/MD Program</div>
 </div></div>
-      <div class="pc staff"><span class="loc">UIC</span><img src="assets/ph-ss.webp" alt="Sajal Shukla">
+      <div class="pc staff"><img src="assets/ph-ss.webp" alt="Sajal Shukla">
         <div class="body"><div class="pn">Sajal Shukla, <span>BS</span></div>
         <div class="pr">Post-Baccalaureate</div>
-        <div class="pd">BS/MD Program</div>
+        <div class="pd">University of Illinois Chicago · BS/MD Program</div>
         <div class="diss"><b>Interests</b><i>Digital mental health · neurosteroid flux in males</i></div></div></div>
+      <div class="pc staff"><img src="assets/ph-ie.webp" alt="Isabella Escalante">
+        <div class="body"><div class="pn">Isabella Escalante, <span>BS</span></div>
+        <div class="pr">Post-Baccalaureate</div>
+        <div class="pd">University of Wisconsin&ndash;Madison · Neurobiology</div>
+        <div class="diss"><b>Interests</b><i>Perinatal depression and psychosis · community-based mental health care in minoritized communities</i></div></div></div>
+      <div class="pc staff"><img src="assets/ph-ps.webp" alt="Preetha Swaminathan">
+        <div class="body"><div class="pn">Preetha Swaminathan</div>
+        <div class="pr">Research Volunteer · PINES</div>
+        <div class="pd">NAMI Chicago · suicide prevention and crisis support</div>
+        <div class="diss"><b>Interests</b><i>How hormonal health shapes mental health crises</i></div>
+</div></div>
     </div>
 
     <div class="tier s4">Alumni <span class="count">5 alumni</span></div>
@@ -507,6 +518,7 @@ footer .affil .shield{height:40px; width:33.1px}
         <div class="body">
           <div class="pn">Katja Schmalenberger, <span>PhD</span></div>
           <div class="pr">Former Postdoctoral Fellow</div>
+          <div class="pd">PhD in Medical Psychology</div>
           <div class="diss"><b>Interests</b><i>Cycle methods standardization · cognitive and cardiac function across the cycle</i></div>
           <div class="diss"><b>Funding</b><a href="https://gepris.dfg.de/project/568773664?lang=en">Emmy Noether</a></div>
           <div class="now"><b>Now</b> Research Professor · Ulm University, Germany</div>
@@ -529,15 +541,17 @@ footer .affil .shield{height:40px; width:33.1px}
         <div class="body">
           <div class="pn">Hafsah Tauseef, <span>PhD</span></div>
           <div class="pr">Former Doctoral Student</div>
+          <div class="pd">PhD in Clinical Psychology</div>
           <div class="diss"><b>Dissertation</b><i>Psychiatric symptoms and suicidality across the female lifespan: an idiographic temporal network approach</i></div>
           <div class="diss"><b>Interests</b><i>Idiographic models of hormones, affect, and suicidality</i></div>
           <div class="now"><b>Now</b> Fellow · Orange County Children&rsquo;s Hospital</div>
         </div>
       </div>
-      <div class="pc trainee"><span class="loc">UIC</span><img src="assets/ph-an.webp" alt="Anisha Nagpal">
+      <div class="pc trainee"><img src="assets/ph-an.webp" alt="Anisha Nagpal">
         <div class="body">
           <div class="pn">Anisha Nagpal, <span>PhD</span></div>
           <div class="pr">Former MD/PhD Student</div>
+          <div class="pd">PhD in Neuroscience</div>
           <div class="diss"><b>Dissertation</b><i>Sleep as a mechanism of premenstrual exacerbation of depression and suicidality</i></div>
           <div class="diss"><b>Interests</b><i>Applying GAMs to the cycle · cyclical sleep sensitivity</i></div>
           <div class="diss"><b>Funding</b><a href="https://reporter.nih.gov/project-details/11336322">F30 (NIMH)</a></div>
@@ -549,6 +563,7 @@ footer .affil .shield{height:40px; width:33.1px}
         <div class="body">
           <div class="pn">Jordan Barone, <span>MD/PhD</span></div>
           <div class="pr">Former MD/PhD Student</div>
+          <div class="pd">PhD in Neuroscience</div>
           <div class="diss"><b>Dissertation</b><i>Peripheral GABA-A receptor subunit expression in perimenstrual exacerbation of affect and suicidality</i></div>
           <div class="diss"><b>Interests</b><i>Peripheral biomarker screening in menstrual-cycle affective change</i></div>
           <div class="diss"><b>Funding</b><a href="https://researchtraining.nih.gov/programs/training-grants/T32">T32</a></div>

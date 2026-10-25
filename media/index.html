@@ -240,6 +240,25 @@ h1 { font: 800 clamp(2rem, 5vw, 3.1rem)/1.05 var(--font-display); letter-spacing
   .foot { grid-template-columns: minmax(0, 1fr); }
 }
 @media (prefers-reduced-motion: no-preference) { .tab, .copy, .entry h3 a { transition: color .15s, border-color .15s, background .15s; } }
+/* ---- calm (Tory, 2026-10-24: "really busy/overwhelming"): a plain list, colour only in small icons ---- */
+.entry { background: transparent; border: 0; border-bottom: 1px solid var(--line); border-radius: 0; }
+.kicker .type, .feat .type { background: transparent; color: var(--muted); padding: 0; letter-spacing: 0.08em; }
+.kicker .type .ico, .feat .type .ico { color: var(--tc); }
+.entry .thumb { border: 0; border-radius: 3px; }
+.chip-voice { background: transparent; border: 0; color: var(--ink-soft); padding: 0; font-style: italic; letter-spacing: 0.02em; }
+.chip-voice .ico { color: var(--muted); }
+.study-head { background: transparent; border: 0; padding: 4px 0 0; }
+.study-label { color: var(--muted); }
+.study-text { color: var(--ink-soft); }
+.study-items { border-left-color: var(--line); }
+.cluster:not(.study) { gap: 0; }
+.year-body, .study-items { gap: 0; }
+.feat { border: 0; border-top: 0; background: transparent; }
+.feat .thumb { border-radius: 3px; }
+.chart-box { background: transparent; border: 0; padding: 0; }
+.press { background: var(--wash); border-left-color: var(--line); }
+.top-grid { margin-bottom: 22px; }
+.banner { max-width: 520px; margin-bottom: 20px; border: 0; }
 /* ---- compact sizing (Tory, 2026-10-24: "each thing is too big") ---- */
 .year { padding: 18px 0 6px; }
 .year-body { gap: 10px; }
@@ -318,7 +337,6 @@ h1 { font: 800 clamp(2rem, 5vw, 3.1rem)/1.05 var(--font-display); letter-spacing
 
   <div class="top-grid">
     <div>
-      <div class="stats"><div class="stat t-print"><b>77</b><span><svg class="ico" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4h10v8.5a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 2 12.5V6h1"/><path d="M5 6.5h6M5 9h6M5 11.5h4"/><path d="M13 7h1v5.5a1.5 1.5 0 0 1-1.5 1.5"/></svg>Print & online</span></div><div class="stat t-audio"><b>8</b><span><svg class="ico" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="5.5" y="1.5" width="5" height="8" rx="2.5"/><path d="M3 7.5a5 5 0 0 0 10 0M8 12.5V15M5.5 15h5"/></svg>Radio & podcasts</span></div><div class="stat t-video"><b>4</b><span><svg class="ico" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="1.5" y="3" width="13" height="10" rx="2"/><path d="M6.5 5.8v4.4L10.3 8z" fill="currentColor"/></svg>Video & talks</span></div><div class="stat t-book"><b>22</b><span><svg class="ico" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3.2c2-.9 4-.9 6 .6 2-1.5 4-1.5 6-.6v9.6c-2-.9-4-.9-6 .6-2-1.5-4-1.5-6-.6z"/><path d="M8 3.8v9.6"/></svg>Books</span></div></div>
       <p class="meta-line">111 mentions · 2014–2026 · last updated 24 October 2026</p>
     </div>
     <aside class="press">
@@ -407,18 +425,6 @@ h1 { font: 800 clamp(2rem, 5vw, 3.1rem)/1.05 var(--font-display); letter-spacing
     <details class="chart-table"><summary>Show as a table</summary><div class="table-scroll"><table>
       <thead><tr><th>Year</th><th>Print & online</th><th>Radio & podcasts</th><th>Video & talks</th><th>Books</th><th>Total</th></tr></thead><tbody><tr><th>2026</th><td>5</td><td>0</td><td>1</td><td>4</td><td>10</td></tr><tr><th>2025</th><td>4</td><td>0</td><td>1</td><td>2</td><td>7</td></tr><tr><th>2024</th><td>14</td><td>1</td><td>0</td><td>6</td><td>21</td></tr><tr><th>2023</th><td>14</td><td>1</td><td>0</td><td>2</td><td>17</td></tr><tr><th>2022</th><td>4</td><td>3</td><td>0</td><td>3</td><td>10</td></tr><tr><th>2021</th><td>0</td><td>3</td><td>0</td><td>2</td><td>5</td></tr><tr><th>2020</th><td>1</td><td>0</td><td>0</td><td>0</td><td>1</td></tr><tr><th>2019</th><td>9</td><td>0</td><td>1</td><td>0</td><td>10</td></tr><tr><th>2018</th><td>18</td><td>0</td><td>0</td><td>1</td><td>19</td></tr><tr><th>2017</th><td>1</td><td>0</td><td>0</td><td>1</td><td>2</td></tr><tr><th>2016</th><td>3</td><td>0</td><td>0</td><td>0</td><td>3</td></tr><tr><th>2015</th><td>1</td><td>0</td><td>0</td><td>0</td><td>1</td></tr><tr><th>2014</th><td>1</td><td>0</td><td>0</td><td>0</td><td>1</td></tr></tbody></table></div></details>
   </section>
-  
-  <section class="howto" aria-labelledby="howto-title">
-    <h2 id="howto-title" class="section-label">How to read this page</h2>
-    <div class="howto-grid">
-      <div><p class="howto-h">Colour = kind of coverage</p><div class="howto-row"><span class="key-type t-print"><span class="type"><svg class="ico" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4h10v8.5a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 2 12.5V6h1"/><path d="M5 6.5h6M5 9h6M5 11.5h4"/><path d="M13 7h1v5.5a1.5 1.5 0 0 1-1.5 1.5"/></svg>Print & online</span></span><span class="key-type t-audio"><span class="type"><svg class="ico" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="5.5" y="1.5" width="5" height="8" rx="2.5"/><path d="M3 7.5a5 5 0 0 0 10 0M8 12.5V15M5.5 15h5"/></svg>Radio & podcasts</span></span><span class="key-type t-video"><span class="type"><svg class="ico" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="1.5" y="3" width="13" height="10" rx="2"/><path d="M6.5 5.8v4.4L10.3 8z" fill="currentColor"/></svg>Video & talks</span></span><span class="key-type t-book"><span class="type"><svg class="ico" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3.2c2-.9 4-.9 6 .6 2-1.5 4-1.5 6-.6v9.6c-2-.9-4-.9-6 .6-2-1.5-4-1.5-6-.6z"/><path d="M8 3.8v9.6"/></svg>Books</span></span></div></div>
-      <div><p class="howto-h">Tags = how Dr. E appears</p><div class="howto-row">
-        <span class="chip chip-voice"><svg class="ico" viewBox="0 0 16 16" width="12" height="12" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"><path d="M2.5 3.5h11v7h-6l-3 2.5v-2.5h-2z"/></svg>Dr. E quoted</span><span class="howto-t">she speaks in the piece</span>
-        <span class="chip">Research cited</span><span class="howto-t">the lab's research is described</span></div></div>
-      <div><p class="howto-h">Grey box = one study</p><div class="howto-row"><span class="study-label"><svg class="ico" viewBox="0 0 16 16" width="13" height="13" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 1.5h5.5L12.5 4.5v10h-8.5z"/><path d="M9.5 1.5v3h3M6.5 8h4M6.5 10.5h4"/></svg>About the study</span>
-        <span class="howto-t">groups the stories that covered the same paper</span></div></div>
-    </div>
-  </section>
 
   <div class="controls">
     <div class="modes" role="group" aria-label="Group the archive by">
@@ -470,7 +476,7 @@ h1 { font: 800 clamp(2rem, 5vw, 3.1rem)/1.05 var(--font-display); letter-spacing
           <div class="entry-text">
           <div class="kicker"><span class="type"><svg class="ico" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4h10v8.5a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 2 12.5V6h1"/><path d="M5 6.5h6M5 9h6M5 11.5h4"/><path d="M13 7h1v5.5a1.5 1.5 0 0 1-1.5 1.5"/></svg>News</span>
             <span class="outlet">Brain &amp; Behavior Research Foundation</span><span class="meta">18 Apr 2024</span>
-            <span class="chips"><span class="chip">Research cited</span></span></div>
+            <span class="chips"></span></div>
           <h3><a href="https://bbrfoundation.org/node/14194" target="_blank" rel="noopener">Suicide Risk Fluctuates Across the Menstrual Cycle, Affecting Different Women Differently, Study Finds</a></h3>
           <p class="annot" tabindex="0" title="Show the whole description">The foundation&#x27;s summary of her team&#x27;s American Journal of Psychiatry study of daily suicidal ideation across the cycle in 119 outpatients, naming her as team leader and a 2018 BBRF Young Investigator.</p>
           </div>
@@ -569,7 +575,7 @@ h1 { font: 800 clamp(2rem, 5vw, 3.1rem)/1.05 var(--font-display); letter-spacing
           <div class="entry-text">
           <div class="kicker"><span class="type"><svg class="ico" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4h10v8.5a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 2 12.5V6h1"/><path d="M5 6.5h6M5 9h6M5 11.5h4"/><path d="M13 7h1v5.5a1.5 1.5 0 0 1-1.5 1.5"/></svg>News</span>
             <span class="outlet">American Psychiatric Association (APA Blogs)</span><span class="meta">20 Dec 2023</span>
-            <span class="chips"><span class="chip">Research cited</span></span></div>
+            <span class="chips"></span></div>
           <h3><a href="https://psychiatry.org/News-room/APA-Blogs/The-Menstrual-Cycle-and-Mental-Health-Concerns" target="_blank" rel="noopener">The Menstrual Cycle and Mental Health</a></h3>
           <p class="annot" tabindex="0" title="Show the whole description">The APA&#x27;s summary of the American Journal of Psychiatry study: suicidal thoughts worsened just before menstruation, and hopelessness and perceived burdensomeness predicted suicidal planning.</p>
           </div>
@@ -613,7 +619,7 @@ h1 { font: 800 clamp(2rem, 5vw, 3.1rem)/1.05 var(--font-display); letter-spacing
           <div class="entry-text">
           <div class="kicker"><span class="type"><svg class="ico" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4h10v8.5a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 2 12.5V6h1"/><path d="M5 6.5h6M5 9h6M5 11.5h4"/><path d="M13 7h1v5.5a1.5 1.5 0 0 1-1.5 1.5"/></svg>News</span>
             <span class="outlet">Psychiatric News Alert (American Psychiatric Association)</span><span class="meta">14 Dec 2023</span>
-            <span class="chips"><span class="chip">Research cited</span></span></div>
+            <span class="chips"></span></div>
           <h3><a href="https://alert.psychnews.org/2023/12/suicidal-symptoms-may-worsen-for-some.html" target="_blank" rel="noopener">Suicidal Symptoms May Worsen for Some Women Before, During Menses</a></h3>
           <p class="annot" tabindex="0" title="Show the whole description">Reports the study of 119 outpatients with recent suicidal ideation, which found that suicidal symptoms worsened before and during menses for many participants and that the pattern varied from person to person.</p>
           </div>
@@ -647,7 +653,7 @@ h1 { font: 800 clamp(2rem, 5vw, 3.1rem)/1.05 var(--font-display); letter-spacing
           <div class="entry-text">
           <div class="kicker"><span class="type"><svg class="ico" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4h10v8.5a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 2 12.5V6h1"/><path d="M5 6.5h6M5 9h6M5 11.5h4"/><path d="M13 7h1v5.5a1.5 1.5 0 0 1-1.5 1.5"/></svg>Magazine</span>
             <span class="outlet">The Mental Elf (National Elf Service)</span><span class="meta">13 Dec 2023</span>
-            <span class="chips"><span class="chip">Research cited</span></span></div>
+            <span class="chips"></span></div>
           <h3><a href="https://www.nationalelfservice.net/mental-health/suicide/menstrual-cycle-suicidal-ideation/" target="_blank" rel="noopener">What&#x27;s the relationship between the menstrual cycle and suicidal ideation?</a></h3>
           <p class="annot" tabindex="0" title="Show the whole description">An evidence summary of the Owens et al. daily-ratings study, which found that suicidal ideation worsens perimenstrually in female outpatients, framing the cycle as a predictable risk factor for acute suicide risk.</p>
           </div>
@@ -692,7 +698,7 @@ h1 { font: 800 clamp(2rem, 5vw, 3.1rem)/1.05 var(--font-display); letter-spacing
           <div class="entry-text">
           <div class="kicker"><span class="type"><svg class="ico" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4h10v8.5a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 2 12.5V6h1"/><path d="M5 6.5h6M5 9h6M5 11.5h4"/><path d="M13 7h1v5.5a1.5 1.5 0 0 1-1.5 1.5"/></svg>Press release</span>
             <span class="outlet">International Association for Premenstrual Disorders (IAPMD)</span><span class="meta">13 Jun 2022</span>
-            <span class="chips"><span class="chip">Research cited</span><span class="chip chip-warn">Name not yet confirmed in text</span></span></div>
+            <span class="chips"><span class="chip chip-warn">Name not yet confirmed in text</span></span></div>
           <h3><a href="https://iapmd.org/press-releases/2022/6/13/global-study-reveals-alarming-34-of-people-with-menstrual-related-disorder-have-attempted-suicide" target="_blank" rel="noopener">Global Study Reveals Alarming 34% of People with Menstrual Related Disorder Have Attempted Suicide</a></h3>
           <p class="annot" tabindex="0" title="Show the whole description">IAPMD&#x27;s press release announcing the global PMDD suicidality study she led with IAPMD.</p>
           </div>
@@ -778,7 +784,7 @@ h1 { font: 800 clamp(2rem, 5vw, 3.1rem)/1.05 var(--font-display); letter-spacing
           <div class="entry-text">
           <div class="kicker"><span class="type"><svg class="ico" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4h10v8.5a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 2 12.5V6h1"/><path d="M5 6.5h6M5 9h6M5 11.5h4"/><path d="M13 7h1v5.5a1.5 1.5 0 0 1-1.5 1.5"/></svg>Magazine</span>
             <span class="outlet">The Cut (New York Magazine)</span><span class="meta">25 Sep 2026</span>
-            <span class="chips"><span class="chip">Research cited</span></span></div>
+            <span class="chips"></span></div>
           <h3><a href="https://www.thecut.com/article/ways-pmdd-affects-married-couples-relationships.html" target="_blank" rel="noopener">Me, My Husband, and My PMDD</a></h3>
           <p class="annot" tabindex="0" title="Show the whole description">Robyn Huang&#x27;s first-person essay on how PMDD, diagnosed after years of premenstrual blowups, reshaped her marriage. It cites the PMDD prevalence meta-analysis she co-authored for the figure that about 3 percent of people who menstruate have PMDD.</p>
           </div>
@@ -789,7 +795,7 @@ h1 { font: 800 clamp(2rem, 5vw, 3.1rem)/1.05 var(--font-display); letter-spacing
           <div class="entry-text">
           <div class="kicker"><span class="type"><svg class="ico" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4h10v8.5a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 2 12.5V6h1"/><path d="M5 6.5h6M5 9h6M5 11.5h4"/><path d="M13 7h1v5.5a1.5 1.5 0 0 1-1.5 1.5"/></svg>News</span>
             <span class="outlet">Nursing in Practice</span><span class="meta">1 Feb 2024</span>
-            <span class="chips"><span class="chip">Research cited</span></span></div>
+            <span class="chips"></span></div>
           <h3><a href="https://www.nursinginpractice.com/clinical/womens-health/new-data-a-wake-up-call-on-prevalence-of-premenstrual-dysphoric-disorder" target="_blank" rel="noopener">New data a &#x27;wake-up call&#x27; on prevalence of Premenstrual Dysphoric Disorder</a></h3>
           <p class="annot" tabindex="0" title="Show the whole description">Reports the review of 44 studies (50,659 participants): 1.6% prevalence when DSM criteria are strictly applied, with 3.2% confirmed and 7.7% provisional across all studies.</p>
           </div>
@@ -800,7 +806,7 @@ h1 { font: 800 clamp(2rem, 5vw, 3.1rem)/1.05 var(--font-display); letter-spacing
           <div class="entry-text">
           <div class="kicker"><span class="type"><svg class="ico" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4h10v8.5a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 2 12.5V6h1"/><path d="M5 6.5h6M5 9h6M5 11.5h4"/><path d="M13 7h1v5.5a1.5 1.5 0 0 1-1.5 1.5"/></svg>News</span>
             <span class="outlet">IANS (Indo-Asian News Service, wire)</span><span class="meta">31 Jan 2024</span>
-            <span class="chips"><span class="chip">Research cited</span></span></div>
+            <span class="chips"></span></div>
           <h3><a href="https://ianslive.in/31-mn-women-girls-globally-suffer-premenstrual-dysphoric-disorder-study--20240131123305" target="_blank" rel="noopener">31 mn women &amp; girls globally suffer premenstrual dysphoric disorder: Study</a></h3>
           <p class="annot" tabindex="0" title="Show the whole description">Wire story on the review&#x27;s estimate that 1.6% of women and girls, about 31 million people, have PMDD.</p>
           </div>
@@ -811,7 +817,7 @@ h1 { font: 800 clamp(2rem, 5vw, 3.1rem)/1.05 var(--font-display); letter-spacing
           <div class="entry-text">
           <div class="kicker"><span class="type"><svg class="ico" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4h10v8.5a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 2 12.5V6h1"/><path d="M5 6.5h6M5 9h6M5 11.5h4"/><path d="M13 7h1v5.5a1.5 1.5 0 0 1-1.5 1.5"/></svg>Press release</span>
             <span class="outlet">University of Oxford News</span><span class="meta">29 Jan 2024</span>
-            <span class="chips"><span class="chip">Research cited</span><span class="chip chip-warn">Name not yet confirmed in text</span></span></div>
+            <span class="chips"><span class="chip chip-warn">Name not yet confirmed in text</span></span></div>
           <h3><a href="https://www.ox.ac.uk/news/2024-01-29-new-data-shows-prevalence-premenstrual-dysphoric-disorder-pmdd" target="_blank" rel="noopener">New data shows prevalence of Premenstrual Dysphoric Disorder (PMDD)</a></h3>
           <p class="annot" tabindex="0" title="Show the whole description">Oxford&#x27;s press release for the meta-analysis estimating that about 1.6% of women and girls, around 31 million worldwide, have confirmed PMDD.</p>
           </div>
@@ -835,7 +841,7 @@ h1 { font: 800 clamp(2rem, 5vw, 3.1rem)/1.05 var(--font-display); letter-spacing
           <div class="entry-text">
           <div class="kicker"><span class="type"><svg class="ico" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3.2c2-.9 4-.9 6 .6 2-1.5 4-1.5 6-.6v9.6c-2-.9-4-.9-6 .6-2-1.5-4-1.5-6-.6z"/><path d="M8 3.8v9.6"/></svg>Book</span>
             <span class="outlet">Mary Ryan</span><span class="meta">2026 · Gill Books</span>
-            <span class="chips"><span class="chip">Research cited</span></span></div>
+            <span class="chips"></span></div>
           <h3><a href="https://books.google.com/books?id=tQrJEQAAQBAJ" target="_blank" rel="noopener">It&#x27;s Probably Your Period</a></h3>
           <p class="annot" tabindex="0" title="Show the whole description">An Irish guide to the menstrual cycle across the lifespan. Its chapter on the &#x27;period blues&#x27; cites her 2022 study of suicidality in PMDD.</p>
           </div>
@@ -871,7 +877,7 @@ h1 { font: 800 clamp(2rem, 5vw, 3.1rem)/1.05 var(--font-display); letter-spacing
           <div class="entry-text">
           <div class="kicker"><span class="type"><svg class="ico" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3.2c2-.9 4-.9 6 .6 2-1.5 4-1.5 6-.6v9.6c-2-.9-4-.9-6 .6-2-1.5-4-1.5-6-.6z"/><path d="M8 3.8v9.6"/></svg>Book</span>
             <span class="outlet">Victoria White</span><span class="meta">2025 · Pinter &amp; Martin</span>
-            <span class="chips"><span class="chip">Research cited</span></span></div>
+            <span class="chips"></span></div>
           <h3><a href="https://books.google.com/books?id=yF95EQAAQBAJ" target="_blank" rel="noopener">Why Neurodivergent Birth Matters</a></h3>
           <p class="annot" tabindex="0" title="Show the whole description">A book on pregnancy and birth for autistic and other neurodivergent people. It cites her 2022 work on premenstrual symptoms.</p>
           </div>
@@ -883,7 +889,7 @@ h1 { font: 800 clamp(2rem, 5vw, 3.1rem)/1.05 var(--font-display); letter-spacing
           <div class="entry-text">
           <div class="kicker"><span class="type"><svg class="ico" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4h10v8.5a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 2 12.5V6h1"/><path d="M5 6.5h6M5 9h6M5 11.5h4"/><path d="M13 7h1v5.5a1.5 1.5 0 0 1-1.5 1.5"/></svg>News</span>
             <span class="outlet">Tampa Bay Times / KFF Health News</span><span class="meta">2 Jul 2024</span>
-            <span class="chips"><span class="chip">Research cited</span></span></div>
+            <span class="chips"></span></div>
           <h3><a href="https://www.tampabay.com/news/health/2024/07/02/its-not-just-pms-some-periods-come-with-severe-mental-health-effects/" target="_blank" rel="noopener">It&#x27;s not just PMS: For some, periods come with severe mental health effects</a></h3>
           <p class="annot" tabindex="0" title="Show the whole description">Profiles a woman with PMDD and how poorly the disorder is understood and treated. It features the CLEAR Lab&#x27;s research and quotes the lab&#x27;s associate director, Jaclyn Ross.</p>
           </div>
@@ -919,7 +925,7 @@ h1 { font: 800 clamp(2rem, 5vw, 3.1rem)/1.05 var(--font-display); letter-spacing
           <div class="entry-text">
           <div class="kicker"><span class="type"><svg class="ico" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3.2c2-.9 4-.9 6 .6 2-1.5 4-1.5 6-.6v9.6c-2-.9-4-.9-6 .6-2-1.5-4-1.5-6-.6z"/><path d="M8 3.8v9.6"/></svg>Book</span>
             <span class="outlet">Nadine Evans</span><span class="meta">2024 · FriesenPress</span>
-            <span class="chips"><span class="chip">Research cited</span></span></div>
+            <span class="chips"></span></div>
           <h3><a href="https://books.google.com/books?id=szkZEQAAQBAJ" target="_blank" rel="noopener">Mastering the Monthly Madness: How Therapy Helps Ease the Mayhem of PMDD</a></h3>
           <p class="annot" tabindex="0" title="Show the whole description">A therapist&#x27;s self-help book on PMDD. It cites her 2017 paper on predictors of premenstrual impairment and recommends IAPMD.</p>
           </div>
@@ -943,7 +949,7 @@ h1 { font: 800 clamp(2rem, 5vw, 3.1rem)/1.05 var(--font-display); letter-spacing
           <div class="entry-text">
           <div class="kicker"><span class="type"><svg class="ico" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3.2c2-.9 4-.9 6 .6 2-1.5 4-1.5 6-.6v9.6c-2-.9-4-.9-6 .6-2-1.5-4-1.5-6-.6z"/><path d="M8 3.8v9.6"/></svg>Book</span>
             <span class="outlet">Estrella Montoya</span><span class="meta">2024 · Singel Uitgeverijen</span>
-            <span class="chips"><span class="chip">Research cited</span></span></div>
+            <span class="chips"></span></div>
           <h3><a href="https://books.google.com/books?id=CTnxEAAAQBAJ" target="_blank" rel="noopener">Hormonen en vrouwen</a></h3>
           <p class="annot" tabindex="0" title="Show the whole description">A Dutch popular-science book by a neuroscientist on hormones, the brain and emotion in women. It cites her 2022 global study of self-injurious thoughts and behaviours in PMDD.</p>
           </div>
@@ -978,7 +984,7 @@ h1 { font: 800 clamp(2rem, 5vw, 3.1rem)/1.05 var(--font-display); letter-spacing
           <div class="entry-text">
           <div class="kicker"><span class="type"><svg class="ico" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4h10v8.5a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 2 12.5V6h1"/><path d="M5 6.5h6M5 9h6M5 11.5h4"/><path d="M13 7h1v5.5a1.5 1.5 0 0 1-1.5 1.5"/></svg>Press release</span>
             <span class="outlet">UIC Today</span><span class="meta">21 Jun 2023</span>
-            <span class="chips"><span class="chip">Research cited</span></span></div>
+            <span class="chips"></span></div>
           <h3><a href="https://today.uic.edu/a-guide-to-treating-premenstrual-dysphoric-disorder/" target="_blank" rel="noopener">A guide to treating premenstrual dysphoric disorder</a></h3>
           <p class="annot" tabindex="0" title="Show the whole description">Research brief on a UIC paper about managing severe, treatment-resistant PMDD (including hormone suppression approaches). She is listed among the College of Medicine authors.</p>
           </div>
@@ -1014,7 +1020,7 @@ h1 { font: 800 clamp(2rem, 5vw, 3.1rem)/1.05 var(--font-display); letter-spacing
           <div class="entry-text">
           <div class="kicker"><span class="type"><svg class="ico" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="5.5" y="1.5" width="5" height="8" rx="2.5"/><path d="M3 7.5a5 5 0 0 0 10 0M8 12.5V15M5.5 15h5"/></svg>Podcast</span>
             <span class="outlet">Voices of Academia podcast</span><span class="meta">Jan 2022</span>
-            <span class="chips"><span class="chip">Research cited</span></span></div>
+            <span class="chips"></span></div>
           <h3><a href="https://anchor.fm/academicvoices/episodes/27--Premenstrual-Dysphoric-Disorder-PMDD-and-a-PhD-e1fmeg7" target="_blank" rel="noopener">Episode 27: Premenstrual Dysphoric Disorder (PMDD) and a PhD</a></h3>
           <p class="annot" tabindex="0" title="Show the whole description">A doctoral student describes living with PMDD during a PhD. The show notes list Eisenlohr-Moul among PMDD resources as a researcher of menstrual-cycle effects.</p>
           </div>
@@ -1026,7 +1032,7 @@ h1 { font: 800 clamp(2rem, 5vw, 3.1rem)/1.05 var(--font-display); letter-spacing
           <div class="entry-text">
           <div class="kicker"><span class="type"><svg class="ico" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3.2c2-.9 4-.9 6 .6 2-1.5 4-1.5 6-.6v9.6c-2-.9-4-.9-6 .6-2-1.5-4-1.5-6-.6z"/><path d="M8 3.8v9.6"/></svg>Book</span>
             <span class="outlet">Anna Buzzoni</span><span class="meta">2022 · Mimesis</span>
-            <span class="chips"><span class="chip">Research cited</span></span></div>
+            <span class="chips"></span></div>
           <h3><a href="https://books.google.com/books?id=OuKdEAAAQBAJ" target="_blank" rel="noopener">Questo è il ciclo</a></h3>
           <p class="annot" tabindex="0" title="Show the whole description">An Italian popular book on the menstrual cycle. It cites her primer on premenstrual disorders for psychologists.</p>
           </div>
@@ -1169,7 +1175,7 @@ h1 { font: 800 clamp(2rem, 5vw, 3.1rem)/1.05 var(--font-display); letter-spacing
           <div class="entry-text">
           <div class="kicker"><span class="type"><svg class="ico" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4h10v8.5a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 2 12.5V6h1"/><path d="M5 6.5h6M5 9h6M5 11.5h4"/><path d="M13 7h1v5.5a1.5 1.5 0 0 1-1.5 1.5"/></svg>News</span>
             <span class="outlet">Psychiatric News Alert (American Psychiatric Association)</span><span class="meta">22 Aug 2016</span>
-            <span class="chips"><span class="chip">Research cited</span></span></div>
+            <span class="chips"></span></div>
           <h3><a href="https://alert.psychnews.org/2016/08/new-scoring-system-may-improve.html" target="_blank" rel="noopener">New Scoring System May Improve Reliability of PMDD Diagnosis</a></h3>
           <p class="annot" tabindex="0" title="Show the whole description">Reports that the C-PASS, a computerized way to apply DSM-5 PMDD criteria to daily ratings, agreed with an expert clinician in 94.5% of 200 women.</p>
           </div>
@@ -1193,7 +1199,7 @@ h1 { font: 800 clamp(2rem, 5vw, 3.1rem)/1.05 var(--font-display); letter-spacing
           <div class="entry-text">
           <div class="kicker"><span class="type"><svg class="ico" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3.2c2-.9 4-.9 6 .6 2-1.5 4-1.5 6-.6v9.6c-2-.9-4-.9-6 .6-2-1.5-4-1.5-6-.6z"/><path d="M8 3.8v9.6"/></svg>Book</span>
             <span class="outlet">Sabia Roberta Sutton</span><span class="meta">Date unknown · self-published</span>
-            <span class="chips"><span class="chip">Research cited</span></span></div>
+            <span class="chips"></span></div>
           <h3><a href="https://books.google.com/books?id=krvGEQAAQBAJ" target="_blank" rel="noopener">Loving Someone with PMDD</a></h3>
           <p class="annot" tabindex="0" title="Show the whole description">A self-published guide for partners of people with PMDD. It cites her 2017 paper on diagnosing PMDD and the C-PASS scoring system.</p>
           </div>
@@ -1210,7 +1216,7 @@ h1 { font: 800 clamp(2rem, 5vw, 3.1rem)/1.05 var(--font-display); letter-spacing
           <div class="entry-text">
           <div class="kicker"><span class="type"><svg class="ico" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4h10v8.5a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 2 12.5V6h1"/><path d="M5 6.5h6M5 9h6M5 11.5h4"/><path d="M13 7h1v5.5a1.5 1.5 0 0 1-1.5 1.5"/></svg>Magazine</span>
             <span class="outlet">Psychology Today (blog)</span><span class="meta">31 Aug 2026</span>
-            <span class="chips"><span class="chip">Research cited</span></span></div>
+            <span class="chips"></span></div>
           <h3><a href="https://www.psychologytoday.com/nz/blog/missed-and-masked/202608/why-is-my-adhd-worse-before-my-period" target="_blank" rel="noopener">Why Is My ADHD Worse Before My Period?</a></h3>
           <p class="annot" tabindex="0" title="Show the whole description">A psychotherapist explains why ADHD symptoms can worsen premenstrually, citing her 2018 study with Roberts and Martel on reproductive steroids and ADHD symptoms across the cycle.</p>
           </div>
@@ -1222,7 +1228,7 @@ h1 { font: 800 clamp(2rem, 5vw, 3.1rem)/1.05 var(--font-display); letter-spacing
           <div class="entry-text">
           <div class="kicker"><span class="type"><svg class="ico" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4h10v8.5a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 2 12.5V6h1"/><path d="M5 6.5h6M5 9h6M5 11.5h4"/><path d="M13 7h1v5.5a1.5 1.5 0 0 1-1.5 1.5"/></svg>Magazine</span>
             <span class="outlet">ADDitude</span><span class="meta">29 Jan 2026</span>
-            <span class="chips"><span class="chip">Research cited</span></span></div>
+            <span class="chips"></span></div>
           <h3><a href="https://www.additudemag.com/cycle-syncing-adhd-meds-womens-treatment-study/" target="_blank" rel="noopener">Negative Mood, ADHD Symptoms Intensify with Menstruation: Study</a></h3>
           <p class="annot" tabindex="0" title="Show the whole description">Reports a study finding that ADHD symptoms and negative mood peak during menstruation and that women do not adjust medication across the cycle. The article cites her 2018 study with Roberts and Martel as earlier work that measured ovarian hormones directly, which the new study did not.</p>
           </div>
@@ -1234,7 +1240,7 @@ h1 { font: 800 clamp(2rem, 5vw, 3.1rem)/1.05 var(--font-display); letter-spacing
           <div class="entry-text">
           <div class="kicker"><span class="type"><svg class="ico" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3.2c2-.9 4-.9 6 .6 2-1.5 4-1.5 6-.6v9.6c-2-.9-4-.9-6 .6-2-1.5-4-1.5-6-.6z"/><path d="M8 3.8v9.6"/></svg>Book</span>
             <span class="outlet">Jolene Brighten</span><span class="meta">2026 · Rodale Books</span>
-            <span class="chips"><span class="chip">Research cited</span></span></div>
+            <span class="chips"></span></div>
           <h3><a href="https://books.google.com/books?id=55iqEQAAQBAJ" target="_blank" rel="noopener">ADHD and Women: A Guide to Optimizing Your Hormones and Thriving with ADHD</a></h3>
           <p class="annot" tabindex="0" title="Show the whole description">A consumer guide to hormones and ADHD in women. Its notes cite her 2018 study of reproductive steroids and ADHD symptoms across the cycle.</p>
           </div>
@@ -1246,7 +1252,7 @@ h1 { font: 800 clamp(2rem, 5vw, 3.1rem)/1.05 var(--font-display); letter-spacing
           <div class="entry-text">
           <div class="kicker"><span class="type"><svg class="ico" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4h10v8.5a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 2 12.5V6h1"/><path d="M5 6.5h6M5 9h6M5 11.5h4"/><path d="M13 7h1v5.5a1.5 1.5 0 0 1-1.5 1.5"/></svg>Magazine</span>
             <span class="outlet">The Cut (New York Magazine)</span><span class="meta">3 Jun 2025</span>
-            <span class="chips"><span class="chip">Research cited</span></span></div>
+            <span class="chips"></span></div>
           <h3><a href="https://www.thecut.com/article/adhd-treatment-in-women-drug-efficacy-estrogen-levels.html" target="_blank" rel="noopener">How the Menstrual Cycle Affects ADHD</a></h3>
           <p class="annot" tabindex="0" title="Show the whole description">A feature on how cyclical estrogen changes may worsen ADHD symptoms and blunt stimulant medication premenstrually, drawing on the CLEAR Lab&#x27;s ADHD-and-cycle work with Michelle Martel.</p>
           </div>
@@ -1257,7 +1263,7 @@ h1 { font: 800 clamp(2rem, 5vw, 3.1rem)/1.05 var(--font-display); letter-spacing
           <div class="entry-text">
           <div class="kicker"><span class="type"><svg class="ico" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4h10v8.5a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 2 12.5V6h1"/><path d="M5 6.5h6M5 9h6M5 11.5h4"/><path d="M13 7h1v5.5a1.5 1.5 0 0 1-1.5 1.5"/></svg>Magazine</span>
             <span class="outlet">Scientific American</span><span class="meta">8 Jan 2025</span>
-            <span class="chips"><span class="chip">Research cited</span></span></div>
+            <span class="chips"></span></div>
           <h3><a href="https://www.scientificamerican.com/article/adhd-symptoms-can-fluctuate-with-the-menstrual-cycle/" target="_blank" rel="noopener">How Menstrual Periods Can Affect ADHD Symptoms and Treatment</a></h3>
           <p class="annot" tabindex="0" title="Show the whole description">Reports preliminary findings from the CLEAR Lab&#x27;s R01 with Michelle Martel showing that ADHD symptoms and impulsivity fluctuate across the menstrual cycle.</p>
           </div>
@@ -1281,7 +1287,7 @@ h1 { font: 800 clamp(2rem, 5vw, 3.1rem)/1.05 var(--font-display); letter-spacing
           <div class="entry-text">
           <div class="kicker"><span class="type"><svg class="ico" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3.2c2-.9 4-.9 6 .6 2-1.5 4-1.5 6-.6v9.6c-2-.9-4-.9-6 .6-2-1.5-4-1.5-6-.6z"/><path d="M8 3.8v9.6"/></svg>Book</span>
             <span class="outlet">Joanne Steer (ed.)</span><span class="meta">2021 · Jessica Kingsley Publishers</span>
-            <span class="chips"><span class="chip">Research cited</span></span></div>
+            <span class="chips"></span></div>
           <h3><a href="https://books.google.com/books?id=4zEJEAAAQBAJ" target="_blank" rel="noopener">Understanding ADHD in Girls and Women</a></h3>
           <p class="annot" tabindex="0" title="Show the whole description">A book for parents, women and professionals on ADHD in females. It cites her 2018 work with Martel on cyclical changes in ADHD symptoms.</p>
           </div>
@@ -1298,7 +1304,7 @@ h1 { font: 800 clamp(2rem, 5vw, 3.1rem)/1.05 var(--font-display); letter-spacing
           <div class="entry-text">
           <div class="kicker"><span class="type"><svg class="ico" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4h10v8.5a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 2 12.5V6h1"/><path d="M5 6.5h6M5 9h6M5 11.5h4"/><path d="M13 7h1v5.5a1.5 1.5 0 0 1-1.5 1.5"/></svg>News</span>
             <span class="outlet">Psychiatric News (American Psychiatric Association)</span><span class="meta">Mar 2020</span>
-            <span class="chips"><span class="chip">Research cited</span><span class="chip chip-warn">Name not yet confirmed in text</span></span></div>
+            <span class="chips"><span class="chip chip-warn">Name not yet confirmed in text</span></span></div>
           <h3><a href="https://psychnews.psychiatryonline.org/doi/10.1176/appi.pn.2020.3a3" target="_blank" rel="noopener">Journal Digest: BDP, Antipsychotic, Chronic Fatigue Syndrome in Youth, Cannabis, TBI, Social Deprivation During Infancy</a></h3>
           <p class="annot" tabindex="0" title="Show the whole description">A news digest item reporting that in women with borderline personality disorder, proactive aggression peaked in the follicular phase, while irritability rose through the luteal phase and peaked at menses.</p>
           </div>
@@ -1321,7 +1327,7 @@ h1 { font: 800 clamp(2rem, 5vw, 3.1rem)/1.05 var(--font-display); letter-spacing
           <div class="entry-text">
           <div class="kicker"><span class="type"><svg class="ico" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4h10v8.5a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 2 12.5V6h1"/><path d="M5 6.5h6M5 9h6M5 11.5h4"/><path d="M13 7h1v5.5a1.5 1.5 0 0 1-1.5 1.5"/></svg>News</span>
             <span class="outlet">MGH Center for Women&#x27;s Mental Health</span><span class="meta">18 Jun 2018</span>
-            <span class="chips"><span class="chip">Research cited</span></span></div>
+            <span class="chips"></span></div>
           <h3><a href="https://womensmentalhealth.org/posts/borderline-personality-premenstrual/" target="_blank" rel="noopener">In Brief: Women with Borderline Personality May Experience Premenstrual Exacerbation of Symptoms</a></h3>
           <p class="annot" tabindex="0" title="Show the whole description">A clinical news brief on the study showing that borderline personality disorder symptoms worsen before and during the first week of menstruation.</p>
           </div>
@@ -1371,7 +1377,7 @@ h1 { font: 800 clamp(2rem, 5vw, 3.1rem)/1.05 var(--font-display); letter-spacing
           <div class="entry-text">
           <div class="kicker"><span class="type"><svg class="ico" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3.2c2-.9 4-.9 6 .6 2-1.5 4-1.5 6-.6v9.6c-2-.9-4-.9-6 .6-2-1.5-4-1.5-6-.6z"/><path d="M8 3.8v9.6"/></svg>Book</span>
             <span class="outlet">Evelyn K. Harper</span><span class="meta">2026 · eBookIt.com</span>
-            <span class="chips"><span class="chip">Research cited</span></span></div>
+            <span class="chips"></span></div>
           <h3><a href="https://books.google.com/books?id=mVbyEQAAQBAJ" target="_blank" rel="noopener">Emotional Side of Perimenopause</a></h3>
           <p class="annot" tabindex="0" title="Show the whole description">A self-published guide to mood during perimenopause. It cites her 2023 paper on life stress, hormone fluctuation and mood in peripubertal girls.</p>
           </div>
@@ -1383,7 +1389,7 @@ h1 { font: 800 clamp(2rem, 5vw, 3.1rem)/1.05 var(--font-display); letter-spacing
           <div class="entry-text">
           <div class="kicker"><span class="type"><svg class="ico" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3.2c2-.9 4-.9 6 .6 2-1.5 4-1.5 6-.6v9.6c-2-.9-4-.9-6 .6-2-1.5-4-1.5-6-.6z"/><path d="M8 3.8v9.6"/></svg>Book</span>
             <span class="outlet">Mikala Albertson, MD</span><span class="meta">2024 · Baker Books</span>
-            <span class="chips"><span class="chip">Research cited</span></span></div>
+            <span class="chips"></span></div>
           <h3><a href="https://books.google.com/books?id=k9T4EAAAQBAJ" target="_blank" rel="noopener">Everything I Wish I Could Tell You about Midlife</a></h3>
           <p class="annot" tabindex="0" title="Show the whole description">A physician&#x27;s consumer guide to midlife health. It cites her 2021 paper on how to study the menstrual cycle.</p>
           </div>
@@ -1395,7 +1401,7 @@ h1 { font: 800 clamp(2rem, 5vw, 3.1rem)/1.05 var(--font-display); letter-spacing
           <div class="entry-text">
           <div class="kicker"><span class="type"><svg class="ico" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3.2c2-.9 4-.9 6 .6 2-1.5 4-1.5 6-.6v9.6c-2-.9-4-.9-6 .6-2-1.5-4-1.5-6-.6z"/><path d="M8 3.8v9.6"/></svg>Book</span>
             <span class="outlet">Kristin Johnson &amp; Maria Claps</span><span class="meta">2024 · Fair Winds Press</span>
-            <span class="chips"><span class="chip">Research cited</span></span></div>
+            <span class="chips"></span></div>
           <h3><a href="https://books.google.com/books?id=ywfzEAAAQBAJ" target="_blank" rel="noopener">The Great Menopause Myth</a></h3>
           <p class="annot" tabindex="0" title="Show the whole description">A popular guide to perimenopause and menopause. It cites the 2018 JAMA Psychiatry trial of transdermal estradiol for preventing perimenopausal depression, which she coauthored.</p>
           </div>
@@ -1407,7 +1413,7 @@ h1 { font: 800 clamp(2rem, 5vw, 3.1rem)/1.05 var(--font-display); letter-spacing
           <div class="entry-text">
           <div class="kicker"><span class="type"><svg class="ico" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3.2c2-.9 4-.9 6 .6 2-1.5 4-1.5 6-.6v9.6c-2-.9-4-.9-6 .6-2-1.5-4-1.5-6-.6z"/><path d="M8 3.8v9.6"/></svg>Book</span>
             <span class="outlet">Heather Hirsch, MD</span><span class="meta">2023 · St. Martin&#x27;s Essentials</span>
-            <span class="chips"><span class="chip">Research cited</span></span></div>
+            <span class="chips"></span></div>
           <h3><a href="https://books.google.com/books?id=vVyBEQAAQBAJ" target="_blank" rel="noopener">Unlock Your Menopause Type</a></h3>
           <p class="annot" tabindex="0" title="Show the whole description">A menopause physician&#x27;s consumer guide. It cites the mindfulness-based stress reduction trial for preventing perimenopausal depression, which she coauthored.</p>
           </div>
@@ -1419,7 +1425,7 @@ h1 { font: 800 clamp(2rem, 5vw, 3.1rem)/1.05 var(--font-display); letter-spacing
           <div class="entry-text">
           <div class="kicker"><span class="type"><svg class="ico" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4h10v8.5a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 2 12.5V6h1"/><path d="M5 6.5h6M5 9h6M5 11.5h4"/><path d="M13 7h1v5.5a1.5 1.5 0 0 1-1.5 1.5"/></svg>Magazine</span>
             <span class="outlet">Saskatchewan Health Research Foundation (co-published in University of Regina Discourse Magazine)</span><span class="meta">1 Feb 2022</span>
-            <span class="chips"><span class="chip">Research cited</span></span></div>
+            <span class="chips"></span></div>
           <h3><a href="https://www.shrf.ca/post/mood-and-the-menopause-transition" target="_blank" rel="noopener">Mood and the menopause transition</a></h3>
           <p class="annot" tabindex="0" title="Show the whole description">A feature on Jennifer Gordon&#x27;s work showing that 39% of women had negative mood changes when their estradiol changed, the finding of the estradiol-sensitivity paper.</p>
           </div>
@@ -1431,7 +1437,7 @@ h1 { font: 800 clamp(2rem, 5vw, 3.1rem)/1.05 var(--font-display); letter-spacing
           <div class="entry-text">
           <div class="kicker"><span class="type"><svg class="ico" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3.2c2-.9 4-.9 6 .6 2-1.5 4-1.5 6-.6v9.6c-2-.9-4-.9-6 .6-2-1.5-4-1.5-6-.6z"/><path d="M8 3.8v9.6"/></svg>Book</span>
             <span class="outlet">Lara Briden</span><span class="meta">2021 · Greenpeak Publishing</span>
-            <span class="chips"><span class="chip">Research cited</span></span></div>
+            <span class="chips"></span></div>
           <h3><a href="https://books.google.com/books?id=gzsPEQAAQBAJ" target="_blank" rel="noopener">Hormone Repair Manual</a></h3>
           <p class="annot" tabindex="0" title="Show the whole description">A popular guide to perimenopause. Its section on progesterone sensitivity names her concept of &#x27;neurosteroid change sensitivity&#x27;.</p>
           </div>
@@ -1443,7 +1449,7 @@ h1 { font: 800 clamp(2rem, 5vw, 3.1rem)/1.05 var(--font-display); letter-spacing
           <div class="entry-text">
           <div class="kicker"><span class="type"><svg class="ico" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4h10v8.5a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 2 12.5V6h1"/><path d="M5 6.5h6M5 9h6M5 11.5h4"/><path d="M13 7h1v5.5a1.5 1.5 0 0 1-1.5 1.5"/></svg>News</span>
             <span class="outlet">Harvard Health Publishing (Harvard Health Blog)</span><span class="meta">16 Nov 2018</span>
-            <span class="chips"><span class="chip">Research cited</span></span></div>
+            <span class="chips"></span></div>
           <h3><a href="https://www.health.harvard.edu/blog/hormone-therapy-for-depression-are-the-risks-worth-the-benefits-2018111615378" target="_blank" rel="noopener">Hormone therapy for depression: Are the risks worth the benefits?</a></h3>
           <p class="annot" tabindex="0" title="Show the whole description">Describes the JAMA Psychiatry trial of an estradiol patch plus intermittent progesterone in 172 perimenopausal and early postmenopausal women, and weighs its risks and benefits.</p>
           </div>
@@ -1454,7 +1460,7 @@ h1 { font: 800 clamp(2rem, 5vw, 3.1rem)/1.05 var(--font-display); letter-spacing
           <div class="entry-text">
           <div class="kicker"><span class="type"><svg class="ico" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4h10v8.5a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 2 12.5V6h1"/><path d="M5 6.5h6M5 9h6M5 11.5h4"/><path d="M13 7h1v5.5a1.5 1.5 0 0 1-1.5 1.5"/></svg>News</span>
             <span class="outlet">Medical News Bulletin</span><span class="meta">27 Feb 2018</span>
-            <span class="chips"><span class="chip">Research cited</span></span></div>
+            <span class="chips"></span></div>
           <h3><a href="https://medicalnewsbulletin.com/estradiol-prevent-depression-menopause/" target="_blank" rel="noopener">HRT Staves Off Depression during Menopause</a></h3>
           <p class="annot" tabindex="0" title="Show the whole description">Summarizes the trial&#x27;s findings and subgroup results: more benefit early in the menopause transition and after stressful life events.</p>
           </div>
@@ -1465,7 +1471,7 @@ h1 { font: 800 clamp(2rem, 5vw, 3.1rem)/1.05 var(--font-display); letter-spacing
           <div class="entry-text">
           <div class="kicker"><span class="type"><svg class="ico" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4h10v8.5a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 2 12.5V6h1"/><path d="M5 6.5h6M5 9h6M5 11.5h4"/><path d="M13 7h1v5.5a1.5 1.5 0 0 1-1.5 1.5"/></svg>News</span>
             <span class="outlet">Contemporary OB/GYN</span><span class="meta">23 Jan 2018</span>
-            <span class="chips"><span class="chip">Research cited</span></span></div>
+            <span class="chips"></span></div>
           <h3><a href="https://contemporaryobgyn.net/view/can-hormone-therapy-prevent-depression-menopausal-women" target="_blank" rel="noopener">Can hormone therapy prevent depression in menopausal women?</a></h3>
           <p class="annot" tabindex="0" title="Show the whole description">Describes the JAMA Psychiatry randomized, double-blind trial in 172 women, which found hormone therapy more effective than placebo at preventing depressive symptoms.</p>
           </div>
@@ -1476,7 +1482,7 @@ h1 { font: 800 clamp(2rem, 5vw, 3.1rem)/1.05 var(--font-display); letter-spacing
           <div class="entry-text">
           <div class="kicker"><span class="type"><svg class="ico" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4h10v8.5a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 2 12.5V6h1"/><path d="M5 6.5h6M5 9h6M5 11.5h4"/><path d="M13 7h1v5.5a1.5 1.5 0 0 1-1.5 1.5"/></svg>News</span>
             <span class="outlet">Psychiatric News Alert (American Psychiatric Association)</span><span class="meta">11 Jan 2018</span>
-            <span class="chips"><span class="chip">Research cited</span></span></div>
+            <span class="chips"></span></div>
           <h3><a href="https://alert.psychnews.org/2018/01/study-suggests-hormone-therapy-may.html" target="_blank" rel="noopener">Study Suggests Hormone Therapy May Reduce Risk of Depression During Menopause Transition</a></h3>
           <p class="annot" tabindex="0" title="Show the whole description">Summarizes the JAMA Psychiatry trial of estradiol plus progesterone against placebo in 172 perimenopausal and early postmenopausal women. First author Jennifer Gordon is quoted.</p>
           </div>
@@ -1487,7 +1493,7 @@ h1 { font: 800 clamp(2rem, 5vw, 3.1rem)/1.05 var(--font-display); letter-spacing
           <div class="entry-text">
           <div class="kicker"><span class="type"><svg class="ico" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4h10v8.5a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 2 12.5V6h1"/><path d="M5 6.5h6M5 9h6M5 11.5h4"/><path d="M13 7h1v5.5a1.5 1.5 0 0 1-1.5 1.5"/></svg>Press release</span>
             <span class="outlet">UNC Health / UNC School of Medicine Newsroom</span><span class="meta">10 Jan 2018</span>
-            <span class="chips"><span class="chip">Research cited</span></span></div>
+            <span class="chips"></span></div>
           <h3><a href="https://news.unchealthcare.org/2018/01/hormone-therapy-could-effectively-prevent-depression-for-some-women-in-the-menopause-transition" target="_blank" rel="noopener">Hormone therapy could effectively prevent depression for some women in the menopause transition</a></h3>
           <p class="annot" tabindex="0" title="Show the whole description">UNC&#x27;s press release on the one-year randomized trial: 17% of women on transdermal estradiol plus intermittent progesterone developed clinically significant depression, against 32% on placebo. Senior author Susan Girdler is quoted.</p>
           </div>
@@ -1498,7 +1504,7 @@ h1 { font: 800 clamp(2rem, 5vw, 3.1rem)/1.05 var(--font-display); letter-spacing
           <div class="entry-text">
           <div class="kicker"><span class="type"><svg class="ico" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4h10v8.5a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 2 12.5V6h1"/><path d="M5 6.5h6M5 9h6M5 11.5h4"/><path d="M13 7h1v5.5a1.5 1.5 0 0 1-1.5 1.5"/></svg>News</span>
             <span class="outlet">HealthDay News</span><span class="meta">10 Jan 2018</span>
-            <span class="chips"><span class="chip">Research cited</span></span></div>
+            <span class="chips"></span></div>
           <h3><a href="https://www.healthday.com/health-news/women-health/hormone-therapy-may-ease-depression-linked-to-menopause-730036.html" target="_blank" rel="noopener">Hormone Therapy May Ease Depression Linked to Menopause</a></h3>
           <p class="annot" tabindex="0" title="Show the whole description">Reports the trial of 172 women aged 45 to 60, in which a year of the estrogen patch cut clinically significant depressive symptoms from about 32% to 17%. Co-author Susan Girdler is quoted.</p>
           </div>
@@ -1509,7 +1515,7 @@ h1 { font: 800 clamp(2rem, 5vw, 3.1rem)/1.05 var(--font-display); letter-spacing
           <div class="entry-text">
           <div class="kicker"><span class="type"><svg class="ico" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4h10v8.5a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 2 12.5V6h1"/><path d="M5 6.5h6M5 9h6M5 11.5h4"/><path d="M13 7h1v5.5a1.5 1.5 0 0 1-1.5 1.5"/></svg>News</span>
             <span class="outlet">CBC News Saskatchewan</span><span class="meta">Jan 2018</span>
-            <span class="chips"><span class="chip">Research cited</span><span class="chip chip-warn">Name not yet confirmed in text</span></span></div>
+            <span class="chips"><span class="chip chip-warn">Name not yet confirmed in text</span></span></div>
           <h3><a href="https://www.cbc.ca/news/canada/saskatchewan/new-promise-shown-in-fighting-depression-during-menopause-says-regina-researcher-1.4496507" target="_blank" rel="noopener">New promise shown in fighting depression during menopause, says Regina researcher</a></h3>
           <p class="annot" tabindex="0" title="Show the whole description">Reports the finding that estrogen patches protected against depression in some women entering menopause (17% against 32% on placebo). First author Jennifer Gordon is interviewed.</p>
           </div>
@@ -1520,7 +1526,7 @@ h1 { font: 800 clamp(2rem, 5vw, 3.1rem)/1.05 var(--font-display); letter-spacing
           <div class="entry-text">
           <div class="kicker"><span class="type"><svg class="ico" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4h10v8.5a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 2 12.5V6h1"/><path d="M5 6.5h6M5 9h6M5 11.5h4"/><path d="M13 7h1v5.5a1.5 1.5 0 0 1-1.5 1.5"/></svg>Magazine</span>
             <span class="outlet">Degrees Magazine (University of Regina)</span><span class="meta">2018</span>
-            <span class="chips"><span class="chip">Research cited</span></span></div>
+            <span class="chips"></span></div>
           <h3><a href="https://www.degreesmagazine.ca/depression-and-the-menopause-transition/" target="_blank" rel="noopener">Depression and the menopause transition</a></h3>
           <p class="annot" tabindex="0" title="Show the whole description">Feature on the JAMA Psychiatry trial: 17% of women on estrogen patches developed depression against 32% on placebo. First author Jennifer Gordon is quoted.</p>
           </div>
@@ -1532,7 +1538,7 @@ h1 { font: 800 clamp(2rem, 5vw, 3.1rem)/1.05 var(--font-display); letter-spacing
           <div class="entry-text">
           <div class="kicker"><span class="type"><svg class="ico" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4h10v8.5a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 2 12.5V6h1"/><path d="M5 6.5h6M5 9h6M5 11.5h4"/><path d="M13 7h1v5.5a1.5 1.5 0 0 1-1.5 1.5"/></svg>News</span>
             <span class="outlet">Medical News Today</span><span class="meta">4 Nov 2015</span>
-            <span class="chips"><span class="chip">Research cited</span></span></div>
+            <span class="chips"></span></div>
           <h3><a href="https://www.medicalnewstoday.com/articles/302017" target="_blank" rel="noopener">Menopause: estrogen fluctuation may increase depression likelihood</a></h3>
           <p class="annot" tabindex="0" title="Show the whole description">Reports the UNC study in Menopause linking estradiol variability during the menopausal transition to depressive symptoms, anger and rejection sensitivity, mainly alongside severe life stress.</p>
           </div>
@@ -1561,7 +1567,7 @@ h1 { font: 800 clamp(2rem, 5vw, 3.1rem)/1.05 var(--font-display); letter-spacing
           <div class="entry-text">
           <div class="kicker"><span class="type"><svg class="ico" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3.2c2-.9 4-.9 6 .6 2-1.5 4-1.5 6-.6v9.6c-2-.9-4-.9-6 .6-2-1.5-4-1.5-6-.6z"/><path d="M8 3.8v9.6"/></svg>Book</span>
             <span class="outlet">Sally King</span><span class="meta">2025 · Policy Press</span>
-            <span class="chips"><span class="chip">Research cited</span></span></div>
+            <span class="chips"></span></div>
           <h3><a href="https://books.google.com/books?id=P9QTEQAAQBAJ" target="_blank" rel="noopener">Menstrual Myth Busting: The Case of the Hormonal Female</a></h3>
           <p class="annot" tabindex="0" title="Show the whole description">A scholarly book for general readers that challenges the &#x27;hormonal female&#x27; stereotype. It cites her 2020 paper with Mendle on evolution and theoretical overreach, along with IAPMD materials.</p>
           </div>
@@ -1597,7 +1603,7 @@ h1 { font: 800 clamp(2rem, 5vw, 3.1rem)/1.05 var(--font-display); letter-spacing
           <div class="entry-text">
           <div class="kicker"><span class="type"><svg class="ico" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4h10v8.5a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 2 12.5V6h1"/><path d="M5 6.5h6M5 9h6M5 11.5h4"/><path d="M13 7h1v5.5a1.5 1.5 0 0 1-1.5 1.5"/></svg>News</span>
             <span class="outlet">Sexual Medicine Society of North America (SMSNA patient news / SexHealthMatters)</span><span class="meta">25 Jul 2023</span>
-            <span class="chips"><span class="chip">Research cited</span></span></div>
+            <span class="chips"></span></div>
           <h3><a href="https://www.sexhealthmatters.org/patients/news/does-the-menstrual-cycle-impact-sexual-desire" target="_blank" rel="noopener">Does the Menstrual Cycle Impact Sexual Desire?</a></h3>
           <p class="annot" tabindex="0" title="Show the whole description">Summarizes the Kiesner et al. study of 213 students: desire rose slightly at midcycle on average, but some women peaked midcycle, some perimenstrually and some not at all, and psychological changes outweighed physical ones.</p>
           </div>
@@ -1609,7 +1615,7 @@ h1 { font: 800 clamp(2rem, 5vw, 3.1rem)/1.05 var(--font-display); letter-spacing
           <div class="entry-text">
           <div class="kicker"><span class="type"><svg class="ico" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3.2c2-.9 4-.9 6 .6 2-1.5 4-1.5 6-.6v9.6c-2-.9-4-.9-6 .6-2-1.5-4-1.5-6-.6z"/><path d="M8 3.8v9.6"/></svg>Book</span>
             <span class="outlet">Le&#x27;Nise Brothers</span><span class="meta">2022 · Watkins</span>
-            <span class="chips"><span class="chip">Research cited</span></span></div>
+            <span class="chips"></span></div>
           <h3><a href="https://books.google.com/books?id=Pe3uEQAAQBAJ" target="_blank" rel="noopener">You Can Have a Better Period</a></h3>
           <p class="annot" tabindex="0" title="Show the whole description">A nutritionist&#x27;s self-help guide to period health. It cites her 2020 meta-analysis with Pinna on cortisol across the cycle.</p>
           </div>
@@ -1697,7 +1703,7 @@ h1 { font: 800 clamp(2rem, 5vw, 3.1rem)/1.05 var(--font-display); letter-spacing
           <div class="entry-text">
           <div class="kicker"><span class="type"><svg class="ico" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4h10v8.5a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 2 12.5V6h1"/><path d="M5 6.5h6M5 9h6M5 11.5h4"/><path d="M13 7h1v5.5a1.5 1.5 0 0 1-1.5 1.5"/></svg>Press release</span>
             <span class="outlet">Research Society on Alcohol (via Newswise)</span><span class="meta">20 Jan 2023</span>
-            <span class="chips"><span class="chip">Research cited</span></span></div>
+            <span class="chips"></span></div>
           <h3><a href="https://www.newswise.com/articles/ovulation-and-menstruation-trigger-heavy-drinking-in-psychiatric-outpatients" target="_blank" rel="noopener">Ovulation and menstruation trigger heavy drinking in psychiatric outpatients</a></h3>
           <p class="annot" tabindex="0" title="Show the whole description">The society&#x27;s press release for the paper: heavy weekend drinking was more likely around ovulation and around menstruation, and drinking to cope rose in the perimenstrual phase.</p>
           </div>
@@ -1709,7 +1715,7 @@ h1 { font: 800 clamp(2rem, 5vw, 3.1rem)/1.05 var(--font-display); letter-spacing
           <div class="entry-text">
           <div class="kicker"><span class="type"><svg class="ico" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3.2c2-.9 4-.9 6 .6 2-1.5 4-1.5 6-.6v9.6c-2-.9-4-.9-6 .6-2-1.5-4-1.5-6-.6z"/><path d="M8 3.8v9.6"/></svg>Book</span>
             <span class="outlet">Rachel Goldsmith Turow</span><span class="meta">2022 · Shambhala</span>
-            <span class="chips"><span class="chip">Research cited</span></span></div>
+            <span class="chips"></span></div>
           <h3><a href="https://books.google.com/books?id=qshwEAAAQBAJ" target="_blank" rel="noopener">The Self-Talk Workout</a></h3>
           <p class="annot" tabindex="0" title="Show the whole description">A self-help book on self-criticism. It cites the 2013 Mindfulness paper comparing sitting meditation, body scan and yoga, which she coauthored.</p>
           </div>
@@ -1721,7 +1727,7 @@ h1 { font: 800 clamp(2rem, 5vw, 3.1rem)/1.05 var(--font-display); letter-spacing
           <div class="entry-text">
           <div class="kicker"><span class="type"><svg class="ico" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3.2c2-.9 4-.9 6 .6 2-1.5 4-1.5 6-.6v9.6c-2-.9-4-.9-6 .6-2-1.5-4-1.5-6-.6z"/><path d="M8 3.8v9.6"/></svg>Book</span>
             <span class="outlet">Shuvendu Sen</span><span class="meta">2017 · Simon &amp; Schuster</span>
-            <span class="chips"><span class="chip">Research cited</span></span></div>
+            <span class="chips"></span></div>
           <h3><a href="https://books.google.com/books?id=o3I-DgAAQBAJ" target="_blank" rel="noopener">Why Buddha Never Had Alzheimer&#x27;s</a></h3>
           <p class="annot" tabindex="0" title="Show the whole description">A popular book on lifestyle approaches to dementia. It cites the Gordon et al. paper on estradiol variability, stressful life events and depression, which she coauthored.</p>
           </div>
@@ -1745,7 +1751,7 @@ h1 { font: 800 clamp(2rem, 5vw, 3.1rem)/1.05 var(--font-display); letter-spacing
           <div class="entry-text">
           <div class="kicker"><span class="type"><svg class="ico" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4h10v8.5a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 2 12.5V6h1"/><path d="M5 6.5h6M5 9h6M5 11.5h4"/><path d="M13 7h1v5.5a1.5 1.5 0 0 1-1.5 1.5"/></svg>Magazine</span>
             <span class="outlet">Greater Good Magazine (UC Berkeley)</span><span class="meta">21 Apr 2014</span>
-            <span class="chips"><span class="chip">Research cited</span></span></div>
+            <span class="chips"></span></div>
           <h3><a href="https://greatergood.berkeley.edu/article/item/which_kind_of_mindfulness_meditation_is_right_for_you" target="_blank" rel="noopener">Which Kind of Mindfulness Meditation is Right for You?</a></h3>
           <p class="annot" tabindex="0" title="Show the whole description">Describes the Mindfulness study that assigned 141 undergraduates to sitting meditation, body scan or mindful yoga, finding the largest well-being gains with yoga.</p>
           </div>
@@ -1757,7 +1763,7 @@ h1 { font: 800 clamp(2rem, 5vw, 3.1rem)/1.05 var(--font-display); letter-spacing
           <div class="entry-text">
           <div class="kicker"><span class="type"><svg class="ico" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4h10v8.5a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 2 12.5V6h1"/><path d="M5 6.5h6M5 9h6M5 11.5h4"/><path d="M13 7h1v5.5a1.5 1.5 0 0 1-1.5 1.5"/></svg>News</span>
             <span class="outlet">ACAMH (Association for Child and Adolescent Mental Health)</span><span class="meta">Date unknown</span>
-            <span class="chips"><span class="chip">Research cited</span></span></div>
+            <span class="chips"></span></div>
           <h3><a href="https://www.acamh.org/?p=10654" target="_blank" rel="noopener">Individual changes in stress-level predict non-suicidal self-injury</a></h3>
           <p class="annot" tabindex="0" title="Show the whole description">A research digest from the society that publishes the journal: young people self-injure most when stress rises above their own usual level.</p>
           </div>

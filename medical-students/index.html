@@ -67,11 +67,12 @@ section[id]{scroll-margin-top:54px}
 .brand .ucmark .shield{height:72px; width:59.6px; display:block}
 .brand .uccap{font-weight:600; font-size:11px; letter-spacing:.07em; text-transform:uppercase;
   color:var(--uchicago); text-align:center; line-height:1.3; max-width:104px}
-.shield.dark{display:none}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .shield.light{display:none}
-  :root:not([data-theme="light"]) .shield.dark{display:block}}
-:root[data-theme="dark"] .shield.light{display:none}
-:root[data-theme="dark"] .shield.dark{display:block}
+.brand .ucmark .shield.dark, footer .affil .shield.dark{display:none}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]) .brand .ucmark .shield.light, :root:not([data-theme="light"]) footer .affil .shield.light{display:none}
+  :root:not([data-theme="light"]) .brand .ucmark .shield.dark, :root:not([data-theme="light"]) footer .affil .shield.dark{display:block}}
+:root[data-theme="dark"] .brand .ucmark .shield.light, :root[data-theme="dark"] footer .affil .shield.light{display:none}
+:root[data-theme="dark"] .brand .ucmark .shield.dark, :root[data-theme="dark"] footer .affil .shield.dark{display:block}
 @media (max-width:720px){
   .brand{flex-wrap:wrap; gap:14px}
   .brand .markwrap{width:66px; height:66px; border-radius:13px}
@@ -82,6 +83,7 @@ section[id]{scroll-margin-top:54px}
     margin-left:0; padding-left:0; border-left:0; padding-top:13px; border-top:1px solid var(--border)}
   .brand .ucmark .shield{height:42px; width:34.8px}
   .brand .uccap{max-width:none; text-align:left; letter-spacing:.075em}
+  .brand .labname .forcyc{display:block; margin-top:2px}
 }
 
 /* section nav */

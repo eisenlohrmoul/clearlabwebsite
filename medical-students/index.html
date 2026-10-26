@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Medical Student Opportunities | The CLEAR Lab for Cyclical Neuroscience</title>
+<meta name="description" content="Research opportunities for medical students in the CLEAR Lab at the University of Chicago: data projects with dense daily symptom, hormone, and brain-imaging data, or hands-on clinical trials experience. No prior research experience required.">
+<link rel="icon" href="../assets/pines-badge.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* Same palette and type as the home page, so this reads as one site. */
+:root{
+  --navy:#1a2b3d; --red:#a50002; --gold:#fbca0e;
+  --bg:#ffffff; --surface:#f6f7f9; --border:#e2e7ec;
+  --ink:#1a2b3d; --ink-2:#46535f; --ink-3:#626d7a; --accent:var(--red);
+  --w1:#fdf8e8; --w2:#fdf2f1; --w3:#eff5f8;
+  --uchicago:#800000;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --navy:#a9c0da; --gold:#ffd94f;
+    --bg:#0e1a26; --surface:#16273a; --border:#23384f;
+    --ink:#eef2f6; --ink-2:#b7c4d2; --ink-3:#8fa0b3; --red:#e8706f;
+    --w1:#241f10; --w2:#2a1a19; --w3:#12242e; --uchicago:#d98f8f;
+  }
+}
+:root[data-theme="dark"]{
+  --navy:#a9c0da; --gold:#ffd94f;
+  --bg:#0e1a26; --surface:#16273a; --border:#23384f;
+  --ink:#eef2f6; --ink-2:#b7c4d2; --ink-3:#8fa0b3; --red:#e8706f;
+  --w1:#241f10; --w2:#2a1a19; --w3:#12242e; --uchicago:#d98f8f;
+}
+*{box-sizing:border-box}
+body{margin:0; background:var(--bg); color:var(--ink); font-size:17px; line-height:1.6;
+  font-family:'IBM Plex Sans',system-ui,-apple-system,sans-serif; -webkit-font-smoothing:antialiased}
+h1,h2,h3{line-height:1.15; text-wrap:balance; margin:0}
+h1{font-weight:700; letter-spacing:-.008em; font-size:clamp(25px,3.9vw,35px)}
+h2{font-weight:700; font-size:clamp(21px,2.8vw,27px)}
+p{margin:0 0 14px; max-width:64ch}
+a{color:var(--accent)}
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible{
+  outline:3px solid var(--gold); outline-offset:2px}
+img{max-width:100%}
+.rule{height:10px; background:linear-gradient(90deg,#1a2b3d 0 33%,#cc0001 33% 66%,#fbca0e 66% 100%)}
+.wrap{max-width:1000px; margin:0 auto; padding:0 24px}
+section{padding:46px 0; border-bottom:1px solid var(--border)}
+section[id]{scroll-margin-top:54px}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+
+/* masthead, as on the home page */
+.top{padding-top:34px; display:flex; align-items:center; justify-content:space-between; gap:26px; flex-wrap:wrap}
+.brand{display:flex; align-items:center; gap:18px; flex:1; min-width:0}
+.brand .markwrap{width:106px; height:106px; flex:none; background:#fff; border-radius:18px;
+  display:flex; align-items:center; justify-content:center}
+.brand .mark{width:94px; height:94px; display:block}
+.brand .word{flex:1; min-width:0}
+.brand .labname{font-weight:700; font-size:clamp(19px,2.9vw,30px); letter-spacing:-.012em; color:var(--navy); line-height:1.12}
+.brand .labname a{color:inherit; text-decoration:none}
+.brand .labname .redname{color:var(--red); font-weight:900}
+.brand .labname .forcyc{font-weight:700; font-size:.64em; color:var(--navy); letter-spacing:.005em}
+.brand .expansion{font-weight:400; font-size:13.5px; color:var(--navy); margin-top:7px; letter-spacing:.008em; line-height:1.45}
+.brand .expansion u{text-decoration:underline; text-decoration-thickness:1px; text-underline-offset:2px; text-decoration-color:var(--navy)}
+.brand .ucmark{flex:none; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:7px;
+  margin-left:auto; padding-left:20px; border-left:1px solid var(--border)}
+.brand .ucmark .shield{height:72px; width:59.6px; display:block}
+.brand .uccap{font-weight:600; font-size:11px; letter-spacing:.07em; text-transform:uppercase;
+  color:var(--uchicago); text-align:center; line-height:1.3; max-width:104px}
+.shield.dark{display:none}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .shield.light{display:none}
+  :root:not([data-theme="light"]) .shield.dark{display:block}}
+:root[data-theme="dark"] .shield.light{display:none}
+:root[data-theme="dark"] .shield.dark{display:block}
+@media (max-width:720px){
+  .brand{flex-wrap:wrap; gap:14px}
+  .brand .markwrap{width:66px; height:66px; border-radius:13px}
+  .brand .mark{width:58px; height:58px}
+  .brand .word{flex:1 1 200px; min-width:0}
+  .brand .expansion{font-size:12.5px; line-height:1.42; margin-top:6px}
+  .brand .ucmark{flex-basis:100%; flex-direction:row; align-items:center; justify-content:flex-start; gap:11px;
+    margin-left:0; padding-left:0; border-left:0; padding-top:13px; border-top:1px solid var(--border)}
+  .brand .ucmark .shield{height:42px; width:34.8px}
+  .brand .uccap{max-width:none; text-align:left; letter-spacing:.075em}
+}
+
+/* section nav */
+.nav{position:sticky; top:0; z-index:20; background:var(--bg); border-bottom:1px solid var(--border); margin-top:22px;
+  -webkit-backdrop-filter:saturate(140%) blur(8px); backdrop-filter:saturate(140%) blur(8px)}
+.nav .wrap{display:flex; align-items:center; gap:4px; flex-wrap:nowrap; overflow-x:auto; scrollbar-width:none; padding-top:9px; padding-bottom:9px}
+.nav .wrap::-webkit-scrollbar{display:none}
+.nav a{font-weight:600; font-size:13.5px; letter-spacing:-.005em; color:var(--ink-2); text-decoration:none;
+  padding:6px 11px; border-radius:7px; white-space:nowrap}
+.nav a:hover{background:var(--surface); color:var(--ink)}
+.nav a:focus-visible{outline:2px solid var(--red); outline-offset:2px}
+.nav a.cta{margin-left:auto; color:var(--red)}
+.nav a.cta:hover{background:var(--red); color:#fff}
+@media (max-width:560px){.nav a{font-size:12.5px; padding-left:9px; padding-right:9px}}
+@media (max-width:374px){.nav .wrap{flex-wrap:wrap; overflow-x:visible; gap:2px 4px} .nav a.cta{margin-left:0}}
+
+/* hero */
+.hero{padding-top:30px; padding-bottom:36px; border-bottom:1px solid var(--border);
+  display:grid; grid-template-columns:1fr 300px; gap:40px; align-items:start}
+@media (max-width:840px){.hero{grid-template-columns:1fr; gap:26px}}
+.eyebrow{font-weight:700; font-size:11.5px; letter-spacing:.15em; text-transform:uppercase; color:var(--accent); margin:0 0 14px}
+.hero h1{max-width:24ch; margin-top:0}
+.hero .lede{font-size:clamp(16.5px,2vw,18.5px); color:var(--ink-2); margin-top:16px; max-width:58ch}
+.hero .lede b{color:var(--ink)}
+.welcome{display:flex; flex-direction:column; gap:14px; background:var(--surface); border:1px solid var(--border);
+  border-top:4px solid var(--red); border-radius:3px 3px 13px 13px; padding:20px 21px 19px}
+.welcome .pi{width:96px; height:96px; border-radius:50%; object-fit:cover; object-position:50% 32%; display:block;
+  border:3px solid var(--bg); box-shadow:0 0 0 1px var(--border)}
+.welcome-name{font-weight:700; font-size:16.5px; line-height:1.25; color:var(--ink); letter-spacing:-.008em}
+.welcome-name span{font-weight:600; color:var(--ink-2)}
+.welcome-title{font-size:13px; line-height:1.4; color:var(--navy); font-weight:600; margin-top:5px}
+.welcome-title .uc-inline{color:var(--uchicago); font-weight:600}
+
+/* buttons */
+.btn{display:inline-flex; align-items:center; gap:8px; font-weight:700; font-size:15px; line-height:1;
+  padding:13px 20px; border-radius:10px; border:2px solid var(--red); background:var(--red); color:#fff;
+  text-decoration:none; cursor:pointer; font-family:inherit}
+.btn:hover{filter:brightness(1.08)}
+.btn.alt{background:transparent; color:var(--red)}
+.btn.alt:hover{background:var(--w2); filter:none}
+@media (prefers-color-scheme:dark){ :root:not([data-theme="light"]) .btn{color:#0e1a26} :root:not([data-theme="light"]) .btn.alt{color:var(--red)} }
+:root[data-theme="dark"] .btn{color:#0e1a26} :root[data-theme="dark"] .btn.alt{color:var(--red)}
+.hero .btn{margin-top:8px}
+
+/* the two tracks, in the home page's card style */
+.cards{display:grid; grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr)); gap:16px; margin-top:22px}
+.card{border:1px solid var(--border); border-top:4px solid; border-radius:12px; overflow:hidden; display:flex; flex-direction:column}
+.card .inner{padding:21px 23px 22px; display:flex; flex-direction:column; flex:1}
+.card.a{border-top-color:var(--navy); background:var(--surface)}
+.card.b{border-top-color:var(--gold); background:var(--w1)}
+.card .n{font-weight:700; font-size:11px; letter-spacing:.13em; text-transform:uppercase; color:var(--ink-3); margin-bottom:9px}
+.card h3{font-size:18.5px; margin-bottom:10px}
+.card p{font-size:15px; color:var(--ink-2); margin-bottom:12px}
+.card .fit{margin-top:auto; padding-top:12px; border-top:1px solid var(--border); font-size:13.5px; color:var(--ink-2); margin-bottom:0}
+.card .fit b{color:var(--ink)}
+
+/* getting in touch */
+.touch{display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-top:22px; align-items:start}
+@media (max-width:840px){.touch{grid-template-columns:1fr}}
+.oh{margin:0; background:var(--w3); border:1px solid var(--border); border-left:6px solid var(--navy);
+  border-radius:12px; padding:20px 22px 18px}
+.oh .k{font-weight:700; font-size:11.5px; letter-spacing:.13em; text-transform:uppercase; color:var(--ink-3); margin-bottom:6px}
+.oh .when{font-weight:700; font-size:18px; color:var(--ink); line-height:1.3}
+.oh p{font-size:14.5px; color:var(--ink-2); margin:8px 0 0}
+.oh .links{display:flex; flex-wrap:wrap; gap:10px; margin-top:14px}
+.oh .links a{display:inline-flex; align-items:center; gap:6px; font-weight:600; font-size:14px; text-decoration:none;
+  color:var(--navy); background:var(--bg); border:1px solid var(--border); border-radius:999px; padding:8px 14px}
+.oh .links a:hover{border-color:var(--navy)}
+.oh .links a.primary{background:var(--navy); color:var(--bg); border-color:var(--navy)}
+.hero-mail{margin-top:18px}
+.hero-mail a{font-weight:700; font-size:clamp(17px,2.4vw,21px); text-decoration:none; border-bottom:2px solid color-mix(in srgb,var(--accent) 35%,transparent)}
+
+/* contact box */
+.formwrap{background:var(--surface); border:1px solid var(--border); border-top:4px solid var(--red); border-radius:3px 3px 14px 14px;
+  padding:24px 24px 22px; margin:0}
+.formwrap p{font-size:15px; color:var(--ink-2)}
+.formwrap .k{font-weight:700; font-size:11.5px; letter-spacing:.13em; text-transform:uppercase; color:var(--ink-3)}
+.formwrap a.big{display:inline-block; margin-top:6px; font-weight:700; font-size:clamp(19px,2.6vw,24px); text-decoration:none;
+  border-bottom:2px solid color-mix(in srgb,var(--accent) 35%,transparent)}
+footer{padding:24px 0 34px}
+footer p{font-size:13.5px; color:var(--ink-3); line-height:1.55; margin:0; max-width:72ch}
+footer .affil{display:flex; align-items:center; gap:13px}
+footer .affil .shield{height:40px; width:33.1px; display:block; object-fit:contain}
+.affil-uni{font-weight:600; font-size:14.5px; color:var(--uchicago); line-height:1.25; letter-spacing:-.004em}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<div class="rule"></div>
+
+<div class="wrap top">
+  <div class="brand">
+    <span class="markwrap"><img class="mark" src="../assets/web/clear-mark.png?v6" alt=""></span>
+    <div class="word">
+      <div class="labname"><a href="../"><span class="redname">The CLEAR Lab</span> <span class="forcyc">for Cyclical Neuroscience</span></a></div>
+      <div class="expansion"><u>CL</u>arifying the <u>E</u>ndocrinology of <u>A</u>cute <u>R</u>isk for distress, substance use, and suicide across the menstrual cycle.</div>
+    </div>
+    <span class="ucmark"><img class="shield light" src="../assets/web/uchicago-shield.svg" alt=""><img class="shield dark" src="../assets/web/uchicago-shield-white.svg" alt=""><span class="uccap">University of Chicago</span></span>
+  </div>
+</div>
+
+<nav class="nav" aria-label="Sections"><div class="wrap">
+  <a href="../">Home</a>
+  <a href="../#work">What we do</a>
+  <a href="../#people">Meet the lab</a>
+  <a href="../pines/">PINES trial</a>
+  <a href="../media/">In the media</a>
+  <a class="cta" href="mailto:temo@uchicago.edu?subject=Medical%20student%20interest">Contact</a>
+</div></nav>
+
+<div class="wrap hero">
+  <div>
+    <p class="eyebrow">For medical students</p>
+    <h1>Medical student opportunities in the CLEAR Lab</h1>
+    <p class="lede">We study why the menstrual cycle shapes mood, substance use, and suicide risk in <b>some people and not others</b>. Medical students have contributed to this work from the beginning.</p>
+    <p class="hero-mail"><a href="mailto:temo@uchicago.edu?subject=Medical%20student%20interest">temo@uchicago.edu</a></p>
+  </div>
+  <aside class="welcome">
+    <img class="pi" src="../assets/web/tory.jpg" alt="Tory Eisenlohr-Moul">
+    <div>
+      <div class="welcome-name">Tory Eisenlohr-Moul, <span>PhD</span></div>
+      <div class="welcome-title">Professor of Psychiatry and Behavioral Neuroscience, and of Obstetrics and Gynecology, <span class="uc-inline">The University of Chicago</span></div>
+    </div>
+  </aside>
+</div>
+
+<section id="tracks">
+  <div class="wrap">
+    <h2>How students get involved</h2>
+    <p class="after">Most students begin by helping with data collection in our clinical trials, which is the best way to learn what the measurements mean, and go on to a scholarly project using data from the lab&rsquo;s completed studies. The arrangement is flexible; a student with strong analytic skills, for example, may work on data analysis from the start.</p>
+    <div class="cards">
+
+      <div class="card a"><div class="inner">
+        <div class="n">1 &middot; Data collection</div>
+        <h3>Help run our clinical trials.</h3>
+        <p>Participant visits, structured clinical interviews, daily safety check-in calls, biospecimen collection, and fMRI sessions. Our next trial, <a href="../pines/">PINES</a>, pairs perimenstrual estradiol with resting-state fMRI.</p>
+        <p class="fit">A small, regular commitment is enough to begin.</p>
+      </div></div>
+
+      <div class="card b"><div class="inner">
+        <div class="n">2 &middot; Scholarly projects</div>
+        <h3>Analyze data from the lab&rsquo;s completed studies.</h3>
+        <p>Daily symptom and hormone data together with neuroimaging, alongside senior MD/PhD students. Projects routinely lead to conference posters and coauthored papers.</p>
+        <p class="fit">Suited to a research requirement, a summer, or a research year.</p>
+      </div></div>
+
+    </div>
+  </div>
+</section>
+
+<section id="interest">
+  <div class="wrap">
+    <h2>Getting in touch</h2>
+    <p class="after">Send a short note, then come and talk.</p>
+    <div class="touch">
+      <div class="formwrap">
+        <div class="k">Email</div>
+        <a class="big" href="mailto:temo@uchicago.edu?subject=Medical%20student%20interest">temo@uchicago.edu</a>
+        <p style="margin:18px 0 0">A few lines about yourself and your interests, with your CV, is all that is needed.</p>
+      </div>
+      <div class="oh" id="office-hours">
+        <div class="k">Office hours</div>
+        <div class="when">Wednesdays, 3:00&ndash;4:00 pm Central, on Zoom</div>
+        <p>Drop in after adding your name to the <a href="https://bit.ly/officehourstemo">heads-up board</a>, or book a time on Calendly.</p>
+        <div class="links">
+          <a class="primary" href="../office-hours/">About office hours</a>
+          <a href="https://bit.ly/temocal">Book a time on Calendly</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer><div class="wrap">
+  <div class="affil">
+    <img class="shield light" src="../assets/web/uchicago-shield.svg" alt="">
+    <img class="shield dark" src="../assets/web/uchicago-shield-white.svg" alt="">
+    <div class="affil-uni">The University of Chicago</div>
+  </div>
+</div></footer>
+</body>
+</html>

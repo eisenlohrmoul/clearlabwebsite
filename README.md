@@ -11,6 +11,9 @@ Public pages for the **CLEAR Lab**, served by GitHub Pages from `main`.
 /           the landing page: what the lab studies, three research cards,
             the roster, and the upcoming PINES trial
 /pines/     the PINES study site: a hub plus four audience pages
+/medical-students/  opportunities for medical students: how involvement is
+            structured, office hours, and the email address with what to include
+/media/     press, radio, podcasts and talks, grouped by topic
 /assets/    logos, headshots, the PINES badge
 ```
 

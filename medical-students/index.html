@@ -40,15 +40,7 @@ img{max-width:100%}
 .head .lab{display:flex; align-items:center; gap:10px; border:0; color:var(--navy); font-weight:600; font-size:14px; line-height:1.3}
 .head .lab img{width:34px; height:34px; display:block}
 .head .lab b{color:var(--red); font-weight:700}
-.head .uni{display:flex; align-items:center; gap:8px; color:var(--uchicago); font-weight:600; font-size:11px;
-  letter-spacing:.07em; text-transform:uppercase; white-space:nowrap}
-.head .uni img{height:30px; width:24.8px; display:block}
-.head .uni .shield.dark{display:none}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .head .uni .shield.light{display:none}
-  :root:not([data-theme="light"]) .head .uni .shield.dark{display:block}}
-:root[data-theme="dark"] .head .uni .shield.light{display:none}
-:root[data-theme="dark"] .head .uni .shield.dark{display:block}
-@media (max-width:560px){.head .uni span{display:none} .head .lab .forcyc{display:block; font-weight:500}}
+@media (max-width:560px){.head .lab .forcyc{display:block; font-weight:500}}
 
 h1{font-size:clamp(27px,4.5vw,34px); font-weight:700; line-height:1.15; letter-spacing:-.01em; margin:56px 0 18px; text-wrap:balance}
 h2{font-size:20px; font-weight:700; line-height:1.25; margin:52px 0 12px; color:var(--navy)}
@@ -83,7 +75,6 @@ footer a{color:inherit; border:0}
 <div class="col">
   <div class="head">
     <a class="lab" href="../"><img src="../assets/web/clear-mark.png?v6" alt=""><span><b>The CLEAR Lab</b> <span class="forcyc">for Cyclical Neuroscience</span></span></a>
-    <span class="uni"><img class="shield light" src="../assets/web/uchicago-shield.svg" alt=""><img class="shield dark" src="../assets/web/uchicago-shield-white.svg" alt=""><span>University of Chicago</span></span>
   </div>
 
   <h1>Medical student opportunities</h1>

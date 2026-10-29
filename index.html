@@ -196,7 +196,7 @@ footer p{font-size:13.5px; color:var(--ink-3); line-height:1.55; margin:0; max-w
 .nav summary::after{content:"\25BE"; margin-left:5px; font-size:11px}
 .nav summary:hover,.nav details[open] summary{background:var(--surface); color:var(--ink)}
 .nav summary:focus-visible{outline:2px solid var(--red); outline-offset:2px}
-.nav .menu{position:absolute; top:calc(100% + 4px); left:0; min-width:180px; display:flex; flex-direction:column;
+.nav .menu{position:absolute; z-index:5; top:calc(100% + 4px); left:0; min-width:180px; display:flex; flex-direction:column;
   background:var(--bg); border:1px solid var(--border); border-radius:9px; padding:5px;
   box-shadow:0 8px 24px rgba(0,0,0,.10)}
 .nav a{font-family:'IBM Plex Sans',sans-serif; font-weight:600; font-size:13.5px;
@@ -289,7 +289,7 @@ footer .affil .shield{height:40px; width:33.1px}
     .brand .labname .forcyc{display:block; margin-top:2px}
   }
 
-  @media (max-width:374px){
+  @media (max-width:640px){
     .nav .wrap{flex-wrap:wrap; gap:2px 4px}
     .nav a.cta{margin-left:0}
   }
@@ -315,18 +315,26 @@ footer .affil .shield{height:40px; width:33.1px}
 
 <nav class="nav" aria-label="Sections"><div class="wrap">
   <details class="dd">
-    <summary>About</summary>
+    <summary>Patients &amp; clinicians</summary>
     <div class="menu">
       <a href="#work">What we do</a>
-      <a href="#people">Meet the lab</a>
-      <a href="media/">In the media</a>
+      <a href="pines/participants/">Join the PINES trial</a>
+      <a href="pines/clinicians/">PINES for clinicians</a>
     </div>
   </details>
   <details class="dd">
-    <summary>Get involved</summary>
+    <summary>Researchers &amp; trainees</summary>
     <div class="menu">
-      <a href="pines/">PINES trial</a>
+      <a href="#people">Meet the lab</a>
+      <a href="pines/researchers/">PINES for researchers</a>
       <a href="medical-students/">Medical students</a>
+    </div>
+  </details>
+  <details class="dd">
+    <summary>Press &amp; supporters</summary>
+    <div class="menu">
+      <a href="media/">In the media</a>
+      <a href="pines/press/">PINES press kit</a>
       <a href="#support">Support our work</a>
     </div>
   </details>

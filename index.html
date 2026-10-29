@@ -344,7 +344,7 @@ footer .affil .shield{height:40px; width:33.1px}
 document.addEventListener('click',function(e){document.querySelectorAll('.nav details[open]').forEach(function(d){if(!d.contains(e.target))d.removeAttribute('open')})});
 document.addEventListener('keydown',function(e){if(e.key==='Escape')document.querySelectorAll('.nav details[open]').forEach(function(d){d.removeAttribute('open');d.querySelector('summary').focus()})});
 document.querySelectorAll('.nav .menu a').forEach(function(a){a.addEventListener('click',function(){a.closest('details').removeAttribute('open')})});
-document.querySelectorAll('.nav details').forEach(function(d){d.addEventListener('toggle',function(){if(d.open)document.querySelectorAll('.nav details[open]').forEach(function(o){if(o!==d)o.removeAttribute('open')})})});
+document.querySelectorAll('.nav details').forEach(function(d){d.addEventListener('toggle',function(){if(d.open)document.querySelectorAll('.nav details[open]').forEach(function(o){if(o!==d)o.removeAttribute('open')});if(d.open){var m=d.querySelector('.menu');m.style.left='';var r=m.getBoundingClientRect(),over=r.right-(document.documentElement.clientWidth-8);if(over>0)m.style.left=-Math.min(over,r.left-8)+'px'}})});
 </script>
 
 <div class="wrap hero">

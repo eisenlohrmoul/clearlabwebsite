@@ -85,25 +85,62 @@ OUT = HERE / "index.html"
 # The site's menu bar, styled with the archive's own colour names so it follows
 # the archive's light and dark modes. Not sticky: the archive's filter bar is.
 NAV_STYLE = """
-.site-nav { background: var(--paper); border-bottom: 1px solid var(--line); }
-.site-nav .in { max-width: 1040px; margin: 0 auto; padding: 9px 20px; display: flex; align-items: center;
-  gap: 4px; overflow-x: auto; scrollbar-width: none; }
-.site-nav .in::-webkit-scrollbar { display: none; }
-.site-nav a { font: 600 13.5px/1 var(--font-body); color: var(--ink-soft); text-decoration: none;
+.site-nav { position: relative; z-index: 10; background: var(--paper); border-bottom: 1px solid var(--line); }
+.site-nav .in { max-width: 1040px; margin: 0 auto; padding: 9px 20px; display: flex; align-items: center; gap: 4px; }
+.site-nav a, .site-nav summary { font: 600 13.5px/1 var(--font-body); color: var(--ink-soft); text-decoration: none;
   padding: 7px 11px; border-radius: 7px; white-space: nowrap; }
-.site-nav a:hover { background: var(--wash); color: var(--ink); }
-.site-nav a[aria-current="page"] { color: var(--ink); background: var(--wash); }
+.site-nav a:hover, .site-nav summary:hover, .site-nav details[open] summary { background: var(--wash); color: var(--ink); }
+.site-nav a[aria-current="page"], .site-nav summary.current { color: var(--ink); background: var(--wash); }
 .site-nav a.cta { margin-left: auto; color: var(--red); }
-@media (max-width: 560px) { .site-nav a { font-size: 12.5px; padding: 7px 9px; } }
+.site-nav .dd { position: relative; }
+.site-nav summary { list-style: none; cursor: pointer; user-select: none; }
+.site-nav summary::-webkit-details-marker { display: none; }
+.site-nav summary::after { content: "\\25BE"; margin-left: 5px; font-size: 11px; }
+.site-nav summary:focus-visible, .site-nav a:focus-visible { outline: 2px solid var(--red); outline-offset: 2px; }
+.site-nav .menu { position: absolute; z-index: 5; top: calc(100% + 4px); left: 0; min-width: 180px; display: flex;
+  flex-direction: column; background: var(--paper); border: 1px solid var(--line); border-radius: 9px; padding: 5px;
+  box-shadow: 0 8px 24px rgba(0,0,0,.12); }
+.site-nav .menu a { padding: 9px 11px; }
+@media (max-width: 640px) {
+  .site-nav .in { flex-wrap: wrap; gap: 2px 4px; }
+  .site-nav a.cta { margin-left: 0; }
+  .site-nav a, .site-nav summary { font-size: 12.5px; padding: 7px 9px; }
+}
 """
 
 NAV = """<nav class="site-nav" aria-label="CLEAR Lab website"><div class="in">
   <a href="../">CLEAR Lab home</a>
-  <a href="../#people">Meet the lab</a>
-  <a href="../pines/">PINES trial</a>
-  <a href="./" aria-current="page">In the media</a>
+  <details class="dd">
+    <summary>Patients &amp; clinicians</summary>
+    <div class="menu">
+      <a href="../#work">What we do</a>
+      <a href="../pines/participants/">Join the PINES trial</a>
+      <a href="../pines/clinicians/">PINES for clinicians</a>
+    </div>
+  </details>
+  <details class="dd">
+    <summary>Researchers &amp; trainees</summary>
+    <div class="menu">
+      <a href="../#people">Meet the lab</a>
+      <a href="../pines/researchers/">PINES for researchers</a>
+      <a href="../medical-students/">Medical students</a>
+    </div>
+  </details>
+  <details class="dd">
+    <summary class="current">Press &amp; supporters</summary>
+    <div class="menu">
+      <a href="./" aria-current="page">In the media</a>
+      <a href="../pines/press/">PINES press kit</a>
+      <a href="../#support">Support our work</a>
+    </div>
+  </details>
   <a class="cta" href="mailto:temo@uchicago.edu">Contact</a>
 </div></nav>
+<script>
+document.addEventListener('click',function(e){document.querySelectorAll('.site-nav details[open]').forEach(function(d){if(!d.contains(e.target))d.removeAttribute('open')})});
+document.addEventListener('keydown',function(e){if(e.key==='Escape')document.querySelectorAll('.site-nav details[open]').forEach(function(d){d.removeAttribute('open');d.querySelector('summary').focus()})});
+document.querySelectorAll('.site-nav details').forEach(function(d){d.addEventListener('toggle',function(){if(d.open)document.querySelectorAll('.site-nav details[open]').forEach(function(o){if(o!==d)o.removeAttribute('open')});if(d.open){var m=d.querySelector('.menu');m.style.left='';var r=m.getBoundingClientRect(),over=r.right-(document.documentElement.clientWidth-8);if(over>0)m.style.left=-Math.min(over,r.left-8)+'px'}})});
+</script>
 """
 
 

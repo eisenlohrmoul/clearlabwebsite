@@ -17,6 +17,39 @@
   <span><strong>Not a crisis service.</strong> If you are in crisis, call or text <strong>988</strong> in the US, or see <a href="https://findahelpline.com">findahelpline.com</a>.</span>
 </div></div>
 <div class="rule"></div>
+<nav class="site-nav" aria-label="CLEAR Lab website"><div class="wrap">
+  <a href="../../">CLEAR Lab home</a>
+  <details class="dd">
+    <summary>Patients &amp; clinicians</summary>
+    <div class="menu">
+      <a href="../../#work">What we do</a>
+      <a href="../../pines/participants/">Join the PINES trial</a>
+      <a href="../../pines/clinicians/">PINES for clinicians</a>
+    </div>
+  </details>
+  <details class="dd">
+    <summary class="current">Researchers &amp; trainees</summary>
+    <div class="menu">
+      <a href="../../#people">Meet the lab</a>
+      <a href="../../pines/researchers/" aria-current="page">PINES for researchers</a>
+      <a href="../../medical-students/">Medical students</a>
+    </div>
+  </details>
+  <details class="dd">
+    <summary>Press &amp; supporters</summary>
+    <div class="menu">
+      <a href="../../media/">In the media</a>
+      <a href="../../pines/press/">PINES press kit</a>
+      <a href="../../#support">Support our work</a>
+    </div>
+  </details>
+  <a class="cta" href="mailto:temo@uchicago.edu">Contact</a>
+</div></nav>
+<script>
+document.addEventListener('click',function(e){document.querySelectorAll('.site-nav details[open]').forEach(function(d){if(!d.contains(e.target))d.removeAttribute('open')})});
+document.addEventListener('keydown',function(e){if(e.key==='Escape')document.querySelectorAll('.site-nav details[open]').forEach(function(d){d.removeAttribute('open');d.querySelector('summary').focus()})});
+document.querySelectorAll('.site-nav details').forEach(function(d){d.addEventListener('toggle',function(){if(d.open)document.querySelectorAll('.site-nav details[open]').forEach(function(o){if(o!==d)o.removeAttribute('open')});if(d.open){var m=d.querySelector('.menu');m.style.left='';var r=m.getBoundingClientRect(),over=r.right-(document.documentElement.clientWidth-8);if(over>0)m.style.left=-Math.min(over,r.left-8)+'px'}})});
+</script>
 
 <header><div class="wrap">
   <div class="brandrow"><a href="../">

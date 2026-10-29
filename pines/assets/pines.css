@@ -30,6 +30,29 @@ p{text-wrap:pretty}
 a{color:var(--accent)}
 .wrap{max-width:var(--maxw); margin:0 auto; padding:0 24px}
 
+/* CLEAR Lab site menu bar — hub, clinicians, researchers and press pages.
+   Not on participants/: that page stays isolated from cycle and hormone content. */
+.site-nav{position:relative; z-index:10; background:var(--bg); border-bottom:1px solid var(--border)}
+.site-nav .wrap{display:flex; align-items:center; gap:4px; padding-top:9px; padding-bottom:9px}
+.site-nav a,.site-nav summary{font-weight:600; font-size:14px; line-height:1; color:var(--ink-2); text-decoration:none;
+  padding:8px 11px; border-radius:7px; white-space:nowrap}
+.site-nav a:hover,.site-nav summary:hover,.site-nav details[open] summary{background:var(--surface); color:var(--ink)}
+.site-nav a[aria-current="page"],.site-nav summary.current{background:var(--surface); color:var(--ink)}
+.site-nav a.cta{margin-left:auto; color:var(--red)}
+.site-nav a:focus-visible,.site-nav summary:focus-visible{outline:2px solid var(--red); outline-offset:2px}
+.site-nav .dd{position:relative}
+.site-nav summary{list-style:none; cursor:pointer; user-select:none}
+.site-nav summary::-webkit-details-marker{display:none}
+.site-nav summary::after{content:"\25BE"; margin-left:5px; font-size:11px}
+.site-nav .menu{position:absolute; z-index:5; top:calc(100% + 4px); left:0; min-width:190px; display:flex; flex-direction:column;
+  background:var(--bg); border:1px solid var(--border); border-radius:9px; padding:5px; box-shadow:0 8px 24px rgba(0,0,0,.12)}
+.site-nav .menu a{padding:10px 11px}
+@media (max-width:640px){
+  .site-nav .wrap{flex-wrap:wrap; gap:2px 4px}
+  .site-nav a.cta{margin-left:0}
+  .site-nav a,.site-nav summary{font-size:13px; padding:7px 9px}
+}
+
 /* crisis banner — present on every page */
 .crisis{background:var(--navy); color:#fff; font-size:15px; padding:12px 0}
 .crisis strong{color:var(--gold)}
